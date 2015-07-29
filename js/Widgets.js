@@ -1,17 +1,10 @@
   /**
-	*  _ ____        _ _     _ 
-	* (_) __ ) _   _(_) | __| |
-	* | |  _ \| | | | | |/ _` |
-	* | | |_) | |_| | | | (_| |
-	* |_|____/ \__,_|_|_|\__,_|
-	*
 	* Widget that contains all Dijit / Other components
 	* 
 	* @link      http://websemantics.ca/ibuild
 	* @link      http://ibuild.io
 	* @author    WebSemantics, Inc. <info@websemantics.ca>
 	* @author    Adnan Sagar <msagar@websemantics.ca>
-	* @copyright 2012-2015 Web Semantics, Inc.
 	*/
 
 /* https://github.com/Esri/dojo-theme-flat */
