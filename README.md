@@ -8,6 +8,9 @@ A new method of building Dijit Themes following the Semantic UI approach with a 
 
 Dijit widgets directly import  and inherint CSS from their Semantic UI conterparts, if any!
 
+
+![Demo](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/semantic-dojo.png "Demo")
+
 ## Progress
 
 This project is still in development. The following widgets have been partially ported:
