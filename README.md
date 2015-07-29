@@ -28,7 +28,10 @@ This project is still in development. The following widgets have been partially 
 
 ## Installation
 
-Clone the git repo locally and launch index.html 
+- Clone the git repo locally 
+- Install Dojo from project folder, 
+	`bower install dojo/dojo dojo/dijit dojo/dojox dojo/util`
+- Launch index.html 
 
 ## Guide
 
