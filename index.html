@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Semantic Dojo Theme</title>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet/less" type="text/css" href="less/semantic-dojo.less" />
+
+    <script>
+        var dojoConfig = {
+            parseOnLoad: true,
+            async: true,
+            // baseUrl: "",
+            isDebug: true,
+            selectorEngine: 'lite',
+            tlmSiblingOfDojo: false
+        };
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.7/semantic.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+    <script>require([ '/semantic-dojo/js/App.js' ]);</script>
+
+</head>
+<body class="claro">
+    <div id="container" data-dojo-attach-point="container" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design: 'sidebar'">
+        
+        <div  id="header" data-dojo-attach-point="header" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region: 'top'"> 
+            <h3>
+                <span id="header-text">Loading ...</span>
+                <span id="disable-button"></span><label id="disable-button-label"></label>
+            </h3>
+         </div>
+        
+        <div  id="center" data-dojo-attach-point="center" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region: 'center', splitter: false, gutters: false">
+            <div id="widgets"></div>
+        </div>
+    </div>
+</body>
+</html>

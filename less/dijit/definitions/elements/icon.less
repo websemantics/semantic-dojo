@@ -1,0 +1,100 @@
+/* Dijit widget common icons*/
+
+@type    : 'element';
+@element : 'icon';
+
+@import (multiple) '../../theme.config';
+
+@font-face {
+  font-family: 'Icons';
+  src: @fallbackSRC;
+  src: @src;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+.dijitIconSave,
+.dijitIconPrint,
+.dijitIconCut,
+.dijitIconCopy,
+.dijitIconClear,
+.dijitIconDelete,
+.dijitIconUndo,
+.dijitIconEdit,
+.dijitIconNewTask,
+.dijitIconEditTask,
+.dijitIconEditProperty,
+.dijitIconTask,
+.dijitIconFilter,
+.dijitIconConfigure,
+.dijitIconSearch,
+.dijitIconApplication,
+.dijitIconBookmark,
+.dijitIconChart,
+.dijitIconConnector,
+.dijitIconDatabase,
+.dijitIconDocuments,
+.dijitIconMail,
+.dijitLeaf,
+.dijitIconFile,
+.dijitIconFunction,
+.dijitIconKey,
+.dijitIconPackage,
+.dijitIconSample,
+.dijitIconTable,
+.dijitIconUsers,
+.dijitFolderClosed,
+.dijitIconFolderClosed,
+.dijitFolderOpened,
+.dijitIconFolderOpen,
+.dijitIconError,
+.dijitIconLoading,
+.dijitEditorIcon,
+.dijitDropDownButton .dijitArrowButtonInner,
+.dijitArrowButton  {
+  
+  display: inline-block;
+  opacity: @opacity;
+
+  margin: 0em @distanceFromText 0em 0em;
+
+  width: @width;
+  height: @height;
+
+  font-family: 'Icons';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-align: center;
+
+  speak: none;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+  }
+
+.dijitIconLoading:before {
+  content: "\f021"; 
+  animation: spinning 2s linear infinite;
+}
+
+.dj_ie8 .dijitIconLoading,
+.dj_ie9 .dijitIconLoading {
+  background:url('images/loadingAnimation_rtl.gif') no-repeat;
+  height: 20px;
+  width: 20px;
+}
+
+.dj_ie8 .dijitIconLoading:before,
+.dj_ie9 .dijitIconLoading:before {content: "";}
+
+@keyframes spinning {
+  from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+.loadUIOverrides();

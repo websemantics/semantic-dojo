@@ -1,0 +1,59 @@
+/*******************************
+        Import Directives
+*******************************/
+
+@theme : @@element;
+
+/*--------------------
+   Import Target Less (for more control)
+---------------------*/
+
+ @import "@{targetFolder}/theme.less"; 
+
+/*--------------------
+   Dijit Site Variables
+---------------------*/
+
+/* Default */
+@import "@{targetFolder}/@{themesFolder}/default/globals/site.variables";
+
+/* Packaged Theme */
+@import (optional) "@{targetFolder}/@{themesFolder}/@{site}/globals/site.variables";
+
+/* Site Theme */
+@import (optional) "@{targetFolder}/@{siteFolder}/globals/site.variables";
+
+/*-------------------
+ Dijit Component Variables
+---------------------*/
+
+/* Default */
+@import "@{targetFolder}/@{themesFolder}/default/@{type}s/@{element}.variables";
+
+/* Packaged Theme */
+@import "@{targetFolder}/@{themesFolder}/@{theme}/@{type}s/@{element}.variables";
+
+/* Site Theme */
+@import (optional) "@{targetFolder}/@{siteFolder}/@{type}s/@{element}.variables";
+
+
+/*******************************
+             Mix-ins
+*******************************/
+
+/*------------------
+       Fonts
+-------------------*/
+
+.loadFonts() when (@importGoogleFonts) {
+  @import url('@{googleProtocol}fonts.googleapis.com/css?family=@{googleFontRequest}');
+}
+
+/*------------------
+     Overrides
+-------------------*/
+
+.loadUIOverrides() {
+  @import "@{targetFolder}/@{themesFolder}/@{theme}/@{type}s/@{element}.overrides";
+  @import (optional) "@{targetFolder}/@{siteFolder}/@{type}s/@{element}.overrides";
+}

@@ -1,0 +1,74 @@
+/* Button | DropDownButton | ComboButton | ToggleButton
+ * 
+ * Styling Buttons mainly includes:
+ * 
+ * 1. Containers
+ *    .dijitButton
+ *    .dijitDropDownButton
+ *    .dijitComboButton
+ *    .dijitButtonNode - common button/arrow wrapper shared across all three button types 
+ *
+ * 2. Button text
+ *    .dijitButtonText
+ * 
+ * 3. Arrows - only for DropDownButton and ComboButton
+ *       There are total four directions arrows - down, left, right, up:
+ *    .dijitArrowButtonInner - down arrow by default
+ *      .dijitLeftArrowButton .dijitArrowButtonInner - left arrow
+ *      .dijitRightArrowButton .dijitArrowButtonInner - right arrow
+ *      .dijitUpArrowButton .dijitArrowButtonInner - up arrow
+ * 
+ * 4. States - Hover, Active, Disabled, e.g.
+ *    .dijitButtonHover .dijitButtonNode
+ *    .dijitButtonActive .dijitButtonNode
+ *    .dijitButtonDisabled .dijitButtonNode
+ *      
+ *      .dijitDisabled .dijitArrowButtonInner  - disabled arrow states 
+ */
+
+@type    : 'element';
+@element : 'button';
+
+@import (multiple) '../../theme.config';
+
+ .claro .dijitButtonNode,
+ .claro .dijitButtonContents {
+      /* Clean-up */
+      border: none;
+      vertical-align:inherit;
+  }
+
+.dijitButtonDisabled,
+.dijitDropDownButtonDisabled,
+.dijitComboButtonDisabled,
+.dijitToggleButtonDisabled { 
+  .dijitButtonNode {
+    /* Inherit from Semantic Ui Button */
+    .ui.disabled.button;
+  }
+}
+
+
+/* arrow styles for down/up/left/right directions */
+
+.dijitDropDownButton .dijitArrowButtonInner,
+.dijitArrowButton  {
+}
+
+.dijitDropDownButton .dijitArrowButtonInner:before,
+.dijitArrowButton:before {
+	content: "\f0d7";
+}
+
+.dijitLeftArrowButton:before {
+	content: "\f0d9";
+}
+
+.dijitRightArrowButton:before {
+	content: "\f0da";
+}
+
+.dijitUpArrowButton:before {
+	content: "\f0d8";
+}
+.loadUIOverrides();
