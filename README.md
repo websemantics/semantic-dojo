@@ -1,6 +1,6 @@
 # Semantic Dojo
 
-A superior Dijit Theme for powerful and modern Web apps.
+A Dijit Theme for modern Web apps. 
 
 This project harness the style awesomeness of the [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets.
 
