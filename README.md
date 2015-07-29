@@ -10,6 +10,10 @@ Dijit widgets directly import and inherint CSS from their Semantic UI conterpart
 
 
 ![Demo1](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/semantic-dojo.png "Demo1")
+![Buttons1](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-1.png "Buttons1")
+![Buttons2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-2.png "Buttons2")
+![Buttons3](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-3.png "Buttons3")
+![Buttons4](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-4.png "Buttons4")
 ![Demo2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/progress-bar.png "Demo2")
 
 ## Progress
