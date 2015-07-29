@@ -2,7 +2,7 @@
 
 A superior Dijit Theme for powerful and modern web apps.
 
-This project harness the style awesomeness of the Semantic UI Framework with Dojo Toolkit powerful UI widgets.
+This project harness the style awesomeness of the [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets.
 
 A new method of building Dijit Themes following the Semantic UI approach with a similar folder structure throught throught this project.
 
@@ -27,11 +27,11 @@ Clone the git repo locally and launch index.html
 
 ## Guide
 
-Semantic UI is an awesome CSS framework that provides a wide range of UI components. A powerful feature of Semantic UI is ability to build various themes to each of its compoenents. For example, the Button widget comes with a varity of themes for example, flat default, basic, github, raised and many more. 
+[Semantic UI](http://semantic-ui.com/) is an awesome CSS framework that provides a wide range of UI components. A powerful feature of Semantic UI is the ability to build various themes to each of its compoenents. For example, the Button widget comes with a varity of themes for example, flat default, basic, github, raised and many more. 
 
 Semantic Dojo brings these awesome features to Dojo Toolkit, allowing those who love TDK to build modern Web apps.
 
-To test different themes for the supported widgets, go to 'less/theme.config' and change the Button theme from 'default' to 'raised': @button     : 'raised';
+To test different themes for the supported widgets, go to 'less/theme.config' and change the Button theme from 'default' to 'raised': `@button     : 'raised';`
 
 Enjoy!
 
