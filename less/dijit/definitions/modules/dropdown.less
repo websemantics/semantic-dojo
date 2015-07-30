@@ -60,50 +60,56 @@
  *********************************************************************/
 
 .dijitSelect {
-  // button-style();
-  table-layout: fixed;
-
+  display: inline-table;
+  .ui.selection.dropdown;
+  
   .dijitButtonContents,
   .dijitArrowButton {
     line-height: 20px;
-    // padding: $button-padding;
+    padding: 10px;
     border: 0;
-    // border-radius: 0 $button-border-radius $button-border-radius 0;
   }
   .dijitButtonContents {
     padding:0;
     overflow: hidden;
     text-overflow: ellipsis;
-    // border-radius: $button-border-radius 0 0 $button-border-radius;
   }
   .dijitInputField {
-    // padding: 0 0 0 $input-padding*3;
+    padding: 0 0 0 10px;
   }
   .dijitArrowButton {
     width: 10px;
+    float: right
   }
 }
 
 /* hover */
 
 .dijitSelectHover {
-  // button-hover-style();
+  border-color: @selectionActiveHoverBorderColor;
 }
 
 .dijitSelectActive {
-  // button-active-style();
+  border-color: @selectionVisibleBorderColor;
 }
 
 /* focused */
 
 .dijitSelectFocused {
-  // border: $select-focus-border;
+  border-color: @selectionFocusBorderColor;
 }
 
 /* disabled */
+.dijitSelectDisabled,
+.dijitSelect.dijitSelectErrorDisabled {
+  color: @selectionTextColor;
+  background: @selectionBackground;
+  border: @selectionBorder;
+  .ui.disabled.dropdown;
+}
 
-.dijitSelectDisabled {
-  // button-disabled-style();
+.dijitSelect.dijitSelectErrorDisabled .dijitValidationContainer {
+  display:none;
 }
 
 /***********************************************************************
@@ -126,7 +132,7 @@
 /* disabled */
 
 .dijitComboBoxDisabled .dijitButtonNode {
-  // button-disabled-style();
+  .ui.disabled.dropdown;
 }
 
 // remove arrow when wrapped in a toolbar dijit
@@ -135,17 +141,26 @@
 }
 
 /***********************************************************************
+ * DateTextBox (Change the icon in the arrow button)
+ ***********************************************************************/
+
+.dijitDateTextBox .dijitArrowButton:before {
+  font-family: 'Icons';
+  content: "\f073";
+}
+
+/***********************************************************************
  * Multiple Select
  ***********************************************************************/
 
 select  {
-  // padding: $input-padding 0;
-  // border: $input-border;
-  // box-shadow: $input-shadow;
+  height: @selectHeight;
+  padding: @selectPadding;
+  border: @selectBorder;
+  visibility: @selectVisibility;
 }
 
 select option {
-  // padding: $input-padding $input-padding * 2;
 }
 
 /***********************************************************************

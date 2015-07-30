@@ -39,8 +39,8 @@
 }
 
 .ui.input.dijitTextBox input {
-	width:100%;
-	padding:0px;
+  width:100%;
+  padding:0px;
 }
 
 /*--------------------
@@ -75,8 +75,8 @@
 
 /* NEW: fix */
 .ui.input.dijitTextBoxError.dijitTextBox input {
-	padding:0px;
-	border:none;
+  padding:0px;
+  border:none;
 }
 
 .ui.input.dijitTextBoxError.dijitTextBox {
@@ -97,7 +97,7 @@
 
 /* Dijit Fixes */
 .ui.input.dijitTextBox .dijitInputContainer {
-	width:100%;
+  width:100%;
 }
 
 /* disabled state */
@@ -123,4 +123,18 @@
     display: none;
   }
 }
+
+/*********************************************************************
+ * Select
+ *********************************************************************/
+
+/* error */
+
+.dijitSelect.dijitSelectError {
+  background-color: @errorBackground;
+  border-color: @errorBorder;
+  color: @errorColor;
+  box-shadow: @errorBoxShadow;
+}
+
 .loadUIOverrides();

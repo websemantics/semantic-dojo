@@ -1,0 +1,155 @@
+/*******************************
+            Theme
+*******************************/
+
+@type    : 'collection';
+@element : 'menu';
+
+@import (multiple) '../../theme.config';
+
+.dijitMenu {
+	.ui.menu;
+}
+
+.dijitMenuTable,
+.dijitComboBoxMenu {
+	// padding: $menu-padding 0;
+}
+
+.dijitComboBoxMenu {
+	margin-left:0;
+	background-image: none;
+}
+
+.dijitMenuTable {
+	/* this prevents jiggling upon hover of a menu item */
+	border-collapse:separate;
+	border-spacing:0 0;
+}
+
+/* Menu Item */
+
+.dijitMenuItem,
+.dijitMenuItem td {
+	.ui.menu .item;
+}
+
+/* Menu Item: Hover */
+
+.dijitMenuItemHover td,
+.dijitMenuItemHover {
+  background: @dropdownHoveredItemBackground !important;
+  color: @dropdownHoveredItemColor !important;
+}
+
+/* Menu Item: Active */
+
+.dijitMenuItemActive td,
+.dijitMenuItemActive {
+  background: @dropdownActiveItemBackground !important;
+  font-weight: @dropdownActiveItemFontWeight !important;
+  color: @dropdownActiveItemColor !important;
+}
+
+/* Menu Item: Selected */
+
+.dijitMenuItemSelected td,
+.dijitMenuItemSelected {
+  background: @activeItemBackground;
+  color: @activeItemTextColor;
+  font-weight: @activeItemFontWeight;
+  box-shadow: @activeItemBoxShadow;
+}
+
+/* Menu Item Separator */
+
+.dijitMenuSeparatorTop {
+	height: auto;
+	margin-top: 1px; /* prevents spacing above/below separator */
+	// border-bottom: $menu-item-separator-top;
+}
+
+.dijitMenuSeparatorBottom {
+	height: auto;
+	margin-bottom:1px;
+	// border-top: $menu-item-separator-Bottom;
+}
+
+/* TODO: Menu Item Icon */
+
+td.dijitMenuItemIconCell {
+	padding: $padding;
+	// margin: 0 0 0 $padding;
+}
+
+.dijitMenuExpand {
+	// _icon-core-style();
+	background-color: red;
+	&:before {
+		content: "\f0da";
+	}
+}
+
+/* the checked icon */
+
+.dijitCheckedMenuItemIconChar {
+	display: none;
+}
+.dijitCheckedMenuItemIcon {
+	// _icon-core-style();
+
+}
+
+.dijitCheckedMenuItemChecked .dijitCheckedMenuItemIcon {
+	&:before {
+		content: "\f00c";
+	}
+}
+
+.dijitMenuPreviousButton, .dijitMenuNextButton {
+	font-style: italic;
+}
+
+/* Menu Bar */
+
+.dijitMenuBar {
+	margin: 0;
+	padding: 0;
+	// background: $menubar-background;
+
+	.dijitMenuItem {  
+		// padding: $menubar-item-padding;
+		margin: 0;	
+	}
+	.dijitMenuItemHover {
+		// background: $menubar-item-hover-background;
+	}
+	.dijitMenuItemActive {
+		// background: $menubar-item-active-background;
+	}
+	.dijitMenuItemSelected,
+	.dijitMenuItemHover.dijitMenuItemSelected,
+	.dijitMenuItemActive.dijitMenuItemSelected {
+		// color: $menubar-item-selected-text-color;
+		// background: $menubar-item-selected-background;
+	}
+}
+
+/* MenuBar Dropdown */
+
+.dijitMenuPopup {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+	.dijitMenu {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+	.dijitMenuItem, 
+	.dijitMenuItem td {
+		// padding: $menubar-popup-item-padding;
+	}
+}
+
+
+.loadUIOverrides();

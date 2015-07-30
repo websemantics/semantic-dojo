@@ -29,9 +29,8 @@
 
 @import (multiple) '../../theme.config';
 
-
 /***********************
- * TextBox 
+ * TextArea 
  ***********************/
 
 .ui.input.dijitTextArea {
@@ -64,109 +63,6 @@
   background: @textAreaFocusBackground;
   box-shadow: @textAreaFocusBoxShadow;
   -webkit-appearance: none;
-}
-
-/* arrows */
-
-.dijitSelect,
-.dijitComboBox {
-  .dijitArrowButtonInner {
-    margin: 0;
-    width:0;
-    height: 0;
-  }
-}
-
-/*********************************************************************
- * Select (most of styles are inherited from "form/Button")
- *********************************************************************/
-
-.dijitSelect {
-  table-layout: fixed;
-
-  .dijitButtonContents,
-  .dijitArrowButton {
-    line-height: 20px;
-    border: 0;
-  }
-  .dijitButtonContents {
-    padding:0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .dijitInputField {
-  }
-  .dijitArrowButton {
-    width: 10px;
-  }
-}
-
-/* hover */
-
-.dijitSelectHover {}
-
-.dijitSelectActive {}
-
-/* focused */
-
-.dijitSelectFocused {
-}
-
-/* disabled */
-
-.dijitSelectDisabled {
-}
-
-/***********************************************************************
- * Combobox (has styles inherited from "form/Textbox" and "form/Button")
- ***********************************************************************/
-
-.dijitComboBox .dijitButtonNode {
-}
-
-/* hover */
-
-.dijitComboBoxOpenHover .dijitButtonNode,
-.dijitComboBox .dijitDownArrowButtonHover {
-  box-shadow: none;
-}
-
-/* disabled */
-
-.dijitComboBoxDisabled .dijitButtonNode {
-}
-
-// remove arrow when wrapped in a toolbar dijit
-.dijitToolbar .dijitComboBox .dijitArrowButtonInner {
-  border: none;
-}
-
-/***********************************************************************
- * DateTextBox (Change the icon in the arrow button)
- ***********************************************************************/
-
-.dijitDateTextBox .dijitArrowButton:before {
-  font-family: 'Icons';
-  content: "\f073";
-}
-
-/***********************************************************************
- * Multiple Select
- ***********************************************************************/
-
-select  {}
-
-select option {}
-
-/***********************************************************************
- * Dropdown menu styles for "Select" 
- * Most of menu styles are defined in Menu.styl 
- ***********************************************************************/
-
-.dijitSelectMenu td.dijitMenuItemIconCell,
-.dijitSelectMenu td.dijitMenuArrowCell { 
-  /* so that arrow and icon cells from MenuItem are not displayed */
-  display: none;
 }
 
 .loadUIOverrides();
