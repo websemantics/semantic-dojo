@@ -2,13 +2,23 @@
             Slider
 *******************************/
 
+@import "../../../../semantic-ui/themes/default/globals/site.variables";
+
 /* Built on, https://github.com/Esri/dojo-theme-flat */
+
+@padding 													: 			5px;
+@sliderPrimaryColor : red;
+@sliderHighlightColor : blue;
+@iconSize : 16px;
+@borderRadius 										: 			5px;
+@borderColor  										:				@strongBorderColor;
+@containerBackgroundColor         :       @pageBackground ;
 
 // most of the styles are applied to both horizontal and vertical sliders, variables
 // specifically applied to the vertical slider are defined at the last of this section
  
-@sliderTextColor                :           @text-color;                        // text color for labeling
-@sliderDisabledTextColor           :        @disabled-text-color;
+@sliderTextColor                	 :        @textColor;   // text color for labeling
+@sliderDisabledTextColor           :        @disabledTextColor;
 
 // outer container, only normal styles are offered
 
@@ -16,27 +26,25 @@
 @sliderContainerPadding           :           0;
 @sliderContainerBorder            :           0 none;
 @sliderContainerBorderRadius         :           0;
-@sliderContainerBoxShadow          :           none;
 
 //// bar 
 
 @sliderBarWidth               :           6px;                            // the height for the horizontal slider and the width for the vertical slider
-@sliderBarRadius                :           @border-radius;
+@sliderBarRadius                :           @borderRadius;
 @sliderBarSpacing               :           @padding;                         // the spacing between the buttons and the bar
   
 // honrizontal slider
 
 ////// normal 
 
-@sliderProgressbarBorderColor        :           darken(@highlight-color, 15%);
-@slider-progressbar-background-color      :           @highlight-color;                                   // Background color for the progress(highlight) part of slider bar, this will be used to generate the linear-gradient as well fallback background in "Form/SLider.styl"
-@sliderRemainingbarBorderColor       :           @border-color;
-@sliderRemainingbarBackgroundColor     :           @container-background-color;                              // Background color for the remaining part of slider bar
-@sliderRemainingbarBoxShadow         :           1px 1px 1px rgba(0, 0, 0, 0.075) inset;
+@sliderProgressbarBorderColor        :           darken(@highlightColor, 15%);
+@slider-progressbar-background-color      :           @highlightColor;                                   // Background color for the progress(highlight) part of slider bar, this will be used to generate the linear-gradient as well fallback background in "Form/SLider.styl"
+@sliderRemainingbarBorderColor       :           @borderColor;
+@sliderRemainingbarBackgroundColor     :           @containerBackgroundColor;                              // Background color for the remaining part of slider bar
 
 ////// hover
 
-@sliderHoveredProgressbarBorderColor    :           darken(@highlight-color, 25%);                          
+@sliderHoveredProgressbarBorderColor    :           darken(@highlightColor, 25%);                          
 
 ////// focus
 
@@ -51,10 +59,9 @@
 ////// normal 
 
 @sliderProgressbarVerticalBorderColor       :           @sliderProgressbarBorderColor;
-@sliderProgressbarVerticalrBackgroundColor      :           @highlight-color;           
+@sliderProgressbarVerticalrBackgroundColor      :           @highlightColor;           
 @sliderRemainingbarVerticalBorderColor        :           @sliderRemainingbarBorderColor;
 @sliderRemainingbarVerticalBackgroundColor      :           @sliderRemainingbarBackgroundColor;                          
-@sliderRemainingbarVerticalBoxShadow        :           1px -1px 1px rgba(0, 0, 0, 0.075) inset;
 
 ////// hover
 
@@ -69,9 +76,9 @@
 
 // thumbs
 
-@sliderThumbBackgroundColor              :           @primary-color;                                     // Used to calculate background color and image for "dijitSliderImageHandle" in "form/Slider.styl"
+@sliderThumbBackgroundColor          :           @sliderPrimaryColor;                                     // Used to calculate background color and image for "dijitSliderImageHandle" in "form/Slider.styl"
 @sliderThumbBoxShadow                :           0 2px 3px rgba(0,0,0,0.5);
-@sliderThumbBorderRadius               :           50%;
+@sliderThumbBorderRadius             :           50%;
 @sliderThumbBorder                  :           1px solid @slider-progressbar-background-color;
 @sliderThumbHeight                  :           16px;
 @sliderThumbWidth                   :           16px;
@@ -86,12 +93,11 @@
 @sliderThumbInnerHoverheight            :           6px;
 @sliderThumbInnerHoverWidth             :           6px;
 @sliderThumbInnerHoverBorderWidth          :           2px;
-@sliderThumbInnerHoverBorderColor          :           darken(@primary-color, 10%) @primary-color lighten(@primary-color, 85%);
+@sliderThumbInnerHoverBorderColor          :           darken(@sliderPrimaryColor, 10%) @sliderPrimaryColor lighten(@sliderPrimaryColor, 85%);
 
 // ruler
 
-@sliderRulerColor                   :           @gray-color;
-@sliderRulerShadowColor                :           @white-color;                                     // the shadow of the ruler
+@sliderRulerColor                   :           @grey;
 @sliderRulerPadding                 :           @padding * 0.5;
 
 // increment and decrement buttons:

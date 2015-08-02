@@ -4,6 +4,9 @@
 
 /* Built on, https://github.com/Esri/dojo-theme-flat */
 
+@borderColor  												:				@strongBorderColor;
+@containerBackgroundColor             :       @pageBackground ;
+
 // since tab container widget is more complex than others, so we have some basic 
 // variables defined only for this widget
 
@@ -12,15 +15,15 @@
 
 // TabContainer: Wrapper (the outer container)
 
-@tabWrapperBackground             :           @pageBackground ;
-@tabWrapperBorder                 :           1px solid @strongBorderColor;
+@tabWrapperBackground             :           @containerBackgroundColor ;
+@tabWrapperBorder                 :           1px solid @borderColor;
 @tabWrapperBorderRadius           :           @relativeBorderRadius;
 
 // Tabs
 
 @tabBackground                 :           transparent;
 @tabBorderRadius               :           none;
-// @tabBorder                     :           1px solid @strongBorderColor;
+// @tabBorder                     :           1px solid @borderColor;
 @tabBorder                     :           none;
 @tabSpacing                    :           -1px;   // space between tabs
 
