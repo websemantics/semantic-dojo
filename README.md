@@ -1,6 +1,6 @@
 # Semantic Dojo
 
-A superior Dijit Theme for powerful and modern Web apps.
+A Dijit Theme for powerful and modern Web apps.
 
 This project harness the style awesomeness of the [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets.
 
@@ -21,7 +21,8 @@ Dijit widgets directly import and inherint CSS from their Semantic UI conterpart
 This project is still in development. The following widgets have been partially ported:
 
 - Buttons
-- Progress Bars (partial support)
+- Progress Bars
+- Tabs
 - Textbox
 - TextArea
 - Icons

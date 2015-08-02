@@ -2,7 +2,7 @@
               Tab
 *******************************/
 
-/* https://github.com/Esri/dojo-theme-flat */
+/* Built on, https://github.com/Esri/dojo-theme-flat */
 
 // since tab container widget is more complex than others, so we have some basic 
 // variables defined only for this widget
