@@ -37,6 +37,7 @@
 @tabCheckedBorder               :           @tabWrapperBorder;
 @tabCheckedBackground           :           @tabWrapperBackground;
 @tabCheckedTextColor            :           @textColor;
+@tabCheckedBorderFontWeight     :           bold;
 @tabCheckedpadding              :           5px 0 5px 0;
 @tabTopCheckedBorderRadius      :           5px 5px 0 0;
 @tabBottomCheckedBorderRadius   :           0 0 5px 5px;
