@@ -18,14 +18,15 @@
 
 // Tabs
 
-@tabBackground                 :           @tabWrapperBackground;
+@tabBackground                 :           transparent;
 @tabBorderRadius               :           none;
-@tabBorder                     :           1px solid @strongBorderColor;
+// @tabBorder                     :           1px solid @strongBorderColor;
+@tabBorder                     :           none;
 @tabSpacing                    :           -1px;   // space between tabs
 
 //// hover
 
-@tabHoverBackground            :           @white;
+@tabHoverBackground            :           transparent;
 
 //// active
 
@@ -36,6 +37,11 @@
 @tabCheckedBorder               :           @tabWrapperBorder;
 @tabCheckedBackground           :           @tabWrapperBackground;
 @tabCheckedTextColor            :           @textColor;
+@tabCheckedpadding              :           5px 0 5px 0;
+@tabTopCheckedBorderRadius      :           5px 5px 0 0;
+@tabBottomCheckedBorderRadius   :           0 0 5px 5px;
+@tabLeftCheckedBorderRadius     :           5px 0 0 5px;
+@tabRightCheckedBorderRadius    :           0 5px 5px 0;
 
 //// disabled
 //// no property is exposed, the disabled tab will have an opacity of 0.65 set to it
@@ -60,7 +66,7 @@
 
 // Tabs: Top
 
-@tabTopPadding                 :           @tabPadding @tabPadding * 4;
+@tabTopPadding                 :           @tabPadding *2 @tabPadding * 4;
 
 // Tabs: Bottom
 

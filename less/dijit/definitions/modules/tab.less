@@ -87,9 +87,6 @@
   background: @tabBackground;
   text-align: center;
   border-radius: @tabBorderRadius;
-  transition-property: background, padding, margin;
-  transition-duration: .2s;
-  transition-timing-function: ease;
   position: relative;
   z-index: 0;
 }
@@ -110,10 +107,10 @@
 
 .dijitTabChecked {
   z-index: 1;
+  background: @tabCheckedBackground;
+  border: @tabCheckedBorder;
   &.dijitTabHover,
   &.dijitTabActive {
-    border: @tabCheckedBorder;
-    background: @tabCheckedBackground;
     color: @tabCheckedTextColor;
   }
 }
@@ -170,6 +167,7 @@
 
 .dijitTabContainerTop-tabs .dijitTabChecked {
   border-bottom: 1px solid @tabWrapperBackground;
+  border-radius: @tabTopCheckedBorderRadius;
 }
 
 .dijitTabListContainer-top {
@@ -198,10 +196,11 @@
 
 .dijitTabContainerBottom-tabs .dijitTabChecked {
   border-top: 1px solid @tabWrapperBackground;
+  border-radius: @tabBottomCheckedBorderRadius;
 }
 
 .dijitTabListContainer-bottom {
-  margin-top: -1px;
+  margin-top: -3px; /* FIX 1 August 2015 */
   .dijitTab {
     top:0;
   }
@@ -221,12 +220,13 @@
     margin-left: @tabPadding;
     padding: @tabLeftPadding;
     vertical-align: middle;
-    left:3px; /* FIX @ 1 August 2015 */
+    left:4px; /* FIX @ 1 August 2015 */
   }
 }
 
 .dijitTabContainerLeft-tabs .dijitTabChecked {
   border-right: 1px solid @tabWrapperBackground;
+  border-radius: @tabLeftCheckedBorderRadius;
 }
 
 /************** end left tabs *************/
@@ -250,6 +250,7 @@
 
 .dijitTabContainerRight-tabs .dijitTabChecked {
   border-left: 1px solid @tabWrapperBackground;
+  border-radius: @tabRightCheckedBorderRadius;
 }
 
 /************* end right tabs *************/
@@ -258,7 +259,6 @@
 .tabStripButton {
   background-color: transparent;
   border: 0;
-  transition-property: background-color;
 }
 
 .dijitTabListContainer-top ,
@@ -333,8 +333,6 @@
     padding: @nestedtabPadding;
     border: @nestedTabBorder;
     border-radius: @nestedTabBorderRadius;
-    transition-property: background-color, border-color;
-    transition-duration: .3s;
   }
   .dijitTabHover {
     background: @nestedTabHoverBackground;
