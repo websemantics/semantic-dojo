@@ -8,21 +8,22 @@ A new method of building Dijit Themes following the Semantic UI approach with a 
 
 Dijit widgets directly import and inherint CSS from their Semantic UI conterparts, if any!
 
-
-![Demo1](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/semantic-dojo.png "Demo1")
-![Buttons1](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-1.png "Buttons1")
-![Buttons3](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-3.png "Buttons3")
-![Buttons4](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-4.png "Buttons4")
-
 ## Progress
 
 This project is still in development. The following widgets have been partially ported:
 
 - Textbox
+![Textbox](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/textbox.png "Textbox")
 - TextArea
+![TextArea](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/textarea.png "TextArea")
 - Icons
+![Icons](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/icons.png "Icons")
 - Buttons
 ![Buttons2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-2.png "Buttons2")
+![Buttons1](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-1.png "Buttons1")
+![Buttons3](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-3.png "Buttons3")
+![Buttons4](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-4.png "Buttons4")
+![Buttons5](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-5.png "Buttons5")
 - Progress Bars
 ![ProgressBar2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/progress-bar.png "ProgressBar2")
 - Tabs
