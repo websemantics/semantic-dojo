@@ -111,8 +111,7 @@
   .dijitSliderProgressBarH, 
   .dijitSliderLeftBumper {
     border-color: @sliderProgressbarBorderColor;
-    background-color: @slider-progressbar-background-color;
-    background-image: linear-gradient(lighten(@slider-progressbar-background-color, 3%), @slider-progressbar-background-color);
+    background-color: @sliderProgressbarBackgroundColor;
   }
   .dijitSliderRemainingBarH,
   .dijitSliderRightBumper {
@@ -127,8 +126,7 @@
   .dijitSliderProgressBarH,
   .dijitSliderLeftBumper {
     border-color: @sliderHoveredProgressbarBorderColor;
-    background-color: darken(@slider-progressbar-background-color, 8%);
-    background-image: linear-gradient(lighten(@slider-progressbar-background-color, 5%), darken(@slider-progressbar-background-color, 8%));
+    background-color: @sliderHoveredProgressbarBackgroundColor;
   }
 }
 
@@ -138,6 +136,7 @@
   .dijitSliderProgressBarH,
   .dijitSliderLeftBumper {
     border-color: @sliderFocusedProgressbarBorderColor;
+    background-color: @sliderFocusedProgressbarBackgroundColor;
   }
 }
 
@@ -171,7 +170,6 @@
   .dijitSliderBottomBumper {
     border-color: @sliderProgressbarVerticalBorderColor;
     background-color: @sliderProgressbarVerticalrBackgroundColor;
-    background-image: linear-gradient(to right, lighten(@sliderProgressbarVerticalrBackgroundColor,3%), @sliderProgressbarVerticalrBackgroundColor);
   }
   .dijitSliderRemainingBarV,
   .dijitSliderTopBumper {
@@ -186,12 +184,8 @@
   .dijitSliderProgressBarV,
   .dijitSliderBottomBumper{
     border-color: @sliderHoveredprogressbarVerticalBorderColor;
-    background-color: darken(@sliderProgressbarVerticalrBackgroundColor, 8%);
-    background-image: linear-gradient(to right, lighten(@sliderProgressbarVerticalrBackgroundColor, 5%), darken(@sliderProgressbarVerticalrBackgroundColor, 8%));
+    background-color: @sliderHoveredprogressbarVerticalBackgroundColor;
   }
-//  .dijitSliderRemainingBarV,
-//  .dijitSliderTopBumper {
-//  }
 }
 
 /* focused */
@@ -200,37 +194,20 @@
   .dijitSliderProgressBarV,
   .dijitSliderBottomBumper{
     border-color: @sliderFocusedProgressbarVerticalBorderColor;
+    background-color: @sliderFocusedProgressbarVerticalBackgroundColor;
 }
-//  .dijitSliderRemainingBarV,
-//  .dijitSliderTopBumper {
-//    // Do nothing
-//  }
 }
 
 /* ------- Thumbs ------- */
 
 .dijitSliderImageHandle {
   background: @sliderThumbBackgroundColor;
-  background: linear-gradient(lighten(@sliderThumbBackgroundColor, 85%) 0%, @sliderThumbBackgroundColor 100%);
-  box-shadow: @sliderThumbBoxShadow;
   border-radius: @sliderThumbBorderRadius;
   border: @sliderThumbBorder;
   width: @sliderThumbWidth;
   height: @sliderThumbHeight;
   margin-top: -1px;
   position: absolute;
-  &:after {
-    content: "";
-    display: block;
-    background: @sliderPrimaryColor;
-    background: linear-gradient(darken(@sliderPrimaryColor, 10%), lighten(@sliderPrimaryColor, 85%) 100%);
-    border-radius: @sliderThumbInnerBorderRadius;
-    height: @sliderThumbInnerHeight;
-    width: @sliderThumbInnerWidth;
-    left: (@sliderThumbWidth - @sliderThumbInnerWidth) * 0.5;
-    top: (@sliderThumbHeight - @sliderThumbInnerHeight) * 0.5;
-    position: absolute;
-  }
 }
 
 /* hover & focused */
@@ -238,15 +215,8 @@
 .dijitSliderHover,
 .dijitSliderFocused {
   .dijitSliderImageHandle {
-    &:after {
-      background: @sliderHighlightColor;
-      background: linear-gradient(lighten(@sliderHighlightColor,4%) 0, darken(@sliderHighlightColor,6%) 100%);
-      height: @sliderThumbInnerHoverheight;
-      width: @sliderThumbInnerHoverWidth;
-      border-width: @sliderThumbInnerHoverBorderWidth;
-      border-style: solid;
-      border-color: @sliderThumbInnerHoverBorderColor;
-    }
+      background: @sliderThumbBackgroundHoverColor;
+      border: @sliderHoverFocusedThumbBorder;
   }
 }
 

@@ -2,17 +2,22 @@
             Slider
 *******************************/
 
+/* Import site variables directly from Semantic UI since there's no 
+equivalent semantic ui component */
+
 @import "../../../../semantic-ui/themes/default/globals/site.variables";
+@import "../../../themes/default/globals/site.variables";
+@import "../../../site/globals/site.variables";
 
 /* Built on, https://github.com/Esri/dojo-theme-flat */
 
 @padding 													: 			5px;
-@sliderPrimaryColor : red;
-@sliderHighlightColor : blue;
-@iconSize : 16px;
+@iconSize 												: 			16px;
 @borderRadius 										: 			5px;
-@borderColor  										:				@strongBorderColor;
-@containerBackgroundColor         :       @pageBackground ;
+
+@fillColor 												: 			@primaryColor;
+@emptyColor  											:				@lightGrey;
+@handleColor 											: 			@white;
 
 // most of the styles are applied to both horizontal and vertical sliders, variables
 // specifically applied to the vertical slider are defined at the last of this section
@@ -22,33 +27,38 @@
 
 // outer container, only normal styles are offered
 
-@sliderContainerBackground          :           transparent;
-@sliderContainerPadding           :           0;
-@sliderContainerBorder            :           0 none;
-@sliderContainerBorderRadius         :           0;
+@sliderContainerBackground         :         transparent; // slider background color
+@sliderContainerPadding            :         0;
+@sliderContainerBorder             :         0 none;
+@sliderContainerBorderRadius       :         0;
 
 //// bar 
 
-@sliderBarWidth               :           6px;                            // the height for the horizontal slider and the width for the vertical slider
-@sliderBarRadius                :           @borderRadius;
-@sliderBarSpacing               :           @padding;                         // the spacing between the buttons and the bar
+@sliderBarWidth                    :          6px;            // the height for the horizontal slider and the width for the vertical slider
+@sliderBarRadius                   :          @borderRadius;
+@sliderBarSpacing                  :          @padding;       // the spacing between the buttons and the bar
   
 // honrizontal slider
 
 ////// normal 
 
-@sliderProgressbarBorderColor        :           darken(@highlightColor, 15%);
-@slider-progressbar-background-color      :           @highlightColor;                                   // Background color for the progress(highlight) part of slider bar, this will be used to generate the linear-gradient as well fallback background in "Form/SLider.styl"
-@sliderRemainingbarBorderColor       :           @borderColor;
-@sliderRemainingbarBackgroundColor     :           @containerBackgroundColor;                              // Background color for the remaining part of slider bar
+/////// empty side
+@sliderRemainingbarBorderColor       :           @emptyColor;
+@sliderRemainingbarBackgroundColor   :           @emptyColor; // Background color for the remaining part of slider bar
+
+/////// filled side
+@sliderProgressbarBorderColor        :           @fillColor;
+@sliderProgressbarBackgroundColor    :           @fillColor;  // Background color for the progress(highlight) part of slider bar, this will be used to generate the linear-gradient as well fallback background in "Form/SLider.styl"
 
 ////// hover
 
-@sliderHoveredProgressbarBorderColor    :           darken(@highlightColor, 25%);                          
+@sliderHoveredProgressbarBorderColor    :           darken(@sliderProgressbarBorderColor, 10%);                          
+@sliderHoveredProgressbarBackgroundColor: 					darken(@sliderProgressbarBackgroundColor, 10%);
 
 ////// focus
 
-@sliderFocusedProgressbarBorderColor    :           @sliderProgressbarBorderColor;
+@sliderFocusedProgressbarBorderColor    		:          darken(@sliderProgressbarBorderColor, 10%);                          
+@sliderFocusedProgressbarBackgroundColor    :          darken(@sliderProgressbarBackgroundColor, 10%);
 
 ////// disabled
 /////// Nothing
@@ -59,46 +69,37 @@
 ////// normal 
 
 @sliderProgressbarVerticalBorderColor       :           @sliderProgressbarBorderColor;
-@sliderProgressbarVerticalrBackgroundColor      :           @highlightColor;           
-@sliderRemainingbarVerticalBorderColor        :           @sliderRemainingbarBorderColor;
-@sliderRemainingbarVerticalBackgroundColor      :           @sliderRemainingbarBackgroundColor;                          
+@sliderProgressbarVerticalrBackgroundColor  :           @sliderProgressbarBackgroundColor;  
+
+@sliderRemainingbarVerticalBorderColor      :           @sliderRemainingbarBorderColor;
+@sliderRemainingbarVerticalBackgroundColor  :           @sliderRemainingbarBackgroundColor;                          
 
 ////// hover
 
 @sliderHoveredprogressbarVerticalBorderColor   :           @sliderHoveredProgressbarBorderColor;
+@sliderHoveredprogressbarVerticalBackgroundColor   :       @sliderHoveredProgressbarBackgroundColor;
 
 ////// focus
 
-@sliderFocusedProgressbarVerticalBorderColor   :           @sliderProgressbarVerticalBorderColor;                          
+@sliderFocusedProgressbarVerticalBorderColor   		 :           @sliderHoveredProgressbarBorderColor;                          
+@sliderFocusedProgressbarVerticalBackgroundColor   :           @sliderHoveredProgressbarBackgroundColor;                          
 
 ////// disabled
 /////// Nothing
 
 // thumbs
 
-@sliderThumbBackgroundColor          :           @sliderPrimaryColor;                                     // Used to calculate background color and image for "dijitSliderImageHandle" in "form/Slider.styl"
-@sliderThumbBoxShadow                :           0 2px 3px rgba(0,0,0,0.5);
-@sliderThumbBorderRadius             :           50%;
-@sliderThumbBorder                  :           1px solid @slider-progressbar-background-color;
+@sliderThumbBorderRadius            :           50%;
 @sliderThumbHeight                  :           16px;
 @sliderThumbWidth                   :           16px;
-
-//// The ":after" part of the thumb
-@sliderThumbInnerBorderRadius           :           50%;
-@sliderThumbInnerHeight                :           10px;
-@sliderThumbInnerWidth               :           10px;
+@sliderThumbBackgroundColor         :           @handleColor; // Used to calculate background color and image for "dijitSliderImageHandle" in "form/Slider.styl"
+@sliderThumbBorder                  :           2px solid @fillColor;
+@sliderHoverFocusedThumbBorder      :           2px solid darken(@fillColor,10%);
 
 ////// hover (& focused)
-
-@sliderThumbInnerHoverheight            :           6px;
-@sliderThumbInnerHoverWidth             :           6px;
-@sliderThumbInnerHoverBorderWidth          :           2px;
-@sliderThumbInnerHoverBorderColor          :           darken(@sliderPrimaryColor, 10%) @sliderPrimaryColor lighten(@sliderPrimaryColor, 85%);
+@sliderThumbBackgroundHoverColor  : 						@handleColor;
 
 // ruler
 
 @sliderRulerColor                   :           @grey;
 @sliderRulerPadding                 :           @padding * 0.5;
-
-// increment and decrement buttons:
-// same as "form/Button"
