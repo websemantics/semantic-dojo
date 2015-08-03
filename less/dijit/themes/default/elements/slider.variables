@@ -5,9 +5,14 @@
 /* Import site variables directly from Semantic UI since there's no 
 equivalent semantic ui component */
 
+/* Default */
 @import "../../../../semantic-ui/themes/default/globals/site.variables";
-@import "../../../themes/default/globals/site.variables";
-@import "../../../site/globals/site.variables";
+
+/* Packaged Theme */
+@import (optional) "../../../themes/default/globals/site.variables";
+
+/* Site Theme */
+@import (optional) "../../../site/globals/site.variables";
 
 @padding 													: 			5px;
 @iconSize 												: 			16px;

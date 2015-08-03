@@ -118,7 +118,6 @@ header h2 {
 }
 .content-table > tbody > tr > td,
 .content-table > thead > tr > th {
-    line-height: 20px;
     padding: 8px 8px 8px 15px;
     text-align: left;
     vertical-align: middle;

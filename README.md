@@ -30,6 +30,8 @@ This project is still in development. The following widgets have been partially 
 ![Tabs](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/tabs.png "Tabs")
 - Slider
 ![Sliders](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/sliders.png "Sliders")
+- Color Palette
+![ColorPalette](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/palette.png "ColorPalette")
 
 ## Installation
 

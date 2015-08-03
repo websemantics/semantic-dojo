@@ -480,29 +480,6 @@
 // @calendar-month-dropdown-menu-item-hovered-background :       @menu-item-hovered-background;
 
 // /****************************************************************************************
-//  * Color Palette
-//  ****************************************************************************************/
-
-// @colorpalette-background            :           @container-background-color;
-// @colorpalette-padding             :           @padding;
-// @colorpalette-border              :           1px solid @border-color;
-// @colorpalette-border-radius           :           @border-radius;
-
-// // Swatch
-// @colorpalette-swatch-width            :           15px;
-// @colorpalette-swatch-height           :           15px;
-// @colorpalette-swatch-border           :           1px solid transparent;
-// @colorpalette-swatch-radius           :           2px;
-
-// //// Hover
-// @colorpalette-swatch-hover-border       :           1px solid @border-color;
-// @colorpalette-swatch-hover-box-shadow     :           0 1px 1px rgba(0,0,0,0.25);
-
-// //// Active, Selected
-// @colorpalette-swatch-selected-border      :           1px solid @highlight-color;
-// @colorpalette-swatch-selected-box-shadow    :           0 3px 3px rgba(0,0,0,0.25);
-
-// /****************************************************************************************
 //  * Editor
 //  ****************************************************************************************/
 
