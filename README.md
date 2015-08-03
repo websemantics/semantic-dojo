@@ -11,22 +11,24 @@ Dijit widgets directly import and inherint CSS from their Semantic UI conterpart
 
 ![Demo1](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/semantic-dojo.png "Demo1")
 ![Buttons1](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-1.png "Buttons1")
-![Buttons2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-2.png "Buttons2")
 ![Buttons3](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-3.png "Buttons3")
 ![Buttons4](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-4.png "Buttons4")
-![Demo2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/progress-bar.png "Demo2")
 
 ## Progress
 
 This project is still in development. The following widgets have been partially ported:
 
-- Buttons
-- Progress Bars
-- Tabs
 - Textbox
 - TextArea
 - Icons
+- Buttons
+![Buttons2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-2.png "Buttons2")
+- Progress Bars
+![ProgressBar2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/progress-bar.png "ProgressBar2")
+- Tabs
+![Tabs](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/tabs.png "Tabs")
 - Slider
+![Sliders](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/sliders.png "Sliders")
 
 ## Installation
 

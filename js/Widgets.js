@@ -166,6 +166,19 @@ define(["dojo/_base/declare",
 					sliderRulesV.placeAt(verticalSliderAdvanced.containerNode);
 					sliderRuleLabelsV.placeAt(verticalSliderAdvanced.containerNode);
 
+					// Colored Sliders
+					var colors = ['red','orange','yellow','olive','green','teal','blue','violet','purple','pink','brown','grey','black'];
+						for (var i = 0; i < colors.length; i++) {
+							var color = colors[i];
+							new dijit.form.VerticalSlider({
+							name: "default vertical slider",
+							'class': color + " make-disabled",value: Math.floor((Math.random() * 100) + 1),
+							intermediateChanges: true,
+							style: "margin:10px 30px 10px 10px;height:240px;float:left",
+							showButtons: false
+						}, this['verticalSliderNormal' + (i+1)]);
+					}
+
 					//programmatically create number spinners
 					new dijit.form.NumberSpinner({
 						value: 1000,

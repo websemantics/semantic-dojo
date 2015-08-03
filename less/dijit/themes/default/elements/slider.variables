@@ -9,13 +9,11 @@ equivalent semantic ui component */
 @import "../../../themes/default/globals/site.variables";
 @import "../../../site/globals/site.variables";
 
-/* Built on, https://github.com/Esri/dojo-theme-flat */
-
 @padding 													: 			5px;
 @iconSize 												: 			16px;
 @borderRadius 										: 			5px;
 
-@fillColor 												: 			@primaryColor;
+@primary 													: 			@primaryColor;
 @emptyColor  											:				@lightGrey;
 @handleColor 											: 			@white;
 
@@ -37,64 +35,13 @@ equivalent semantic ui component */
 @sliderBarWidth                    :          6px;            // the height for the horizontal slider and the width for the vertical slider
 @sliderBarRadius                   :          @borderRadius;
 @sliderBarSpacing                  :          @padding;       // the spacing between the buttons and the bar
-  
-// honrizontal slider
-
-////// normal 
-
-/////// empty side
-@sliderRemainingbarBorderColor       :           @emptyColor;
-@sliderRemainingbarBackgroundColor   :           @emptyColor; // Background color for the remaining part of slider bar
-
-/////// filled side
-@sliderProgressbarBorderColor        :           @fillColor;
-@sliderProgressbarBackgroundColor    :           @fillColor;  // Background color for the progress(highlight) part of slider bar, this will be used to generate the linear-gradient as well fallback background in "Form/SLider.styl"
-
-////// hover
-
-@sliderHoveredProgressbarBorderColor    :           darken(@sliderProgressbarBorderColor, 10%);                          
-@sliderHoveredProgressbarBackgroundColor: 					darken(@sliderProgressbarBackgroundColor, 10%);
-
-////// focus
-
-@sliderFocusedProgressbarBorderColor    		:          darken(@sliderProgressbarBorderColor, 10%);                          
-@sliderFocusedProgressbarBackgroundColor    :          darken(@sliderProgressbarBackgroundColor, 10%);
-
-////// disabled
-/////// Nothing
-
-
-// vertical slider
-
-////// normal 
-
-@sliderProgressbarVerticalBorderColor       :           @sliderProgressbarBorderColor;
-@sliderProgressbarVerticalrBackgroundColor  :           @sliderProgressbarBackgroundColor;  
-
-@sliderRemainingbarVerticalBorderColor      :           @sliderRemainingbarBorderColor;
-@sliderRemainingbarVerticalBackgroundColor  :           @sliderRemainingbarBackgroundColor;                          
-
-////// hover
-
-@sliderHoveredprogressbarVerticalBorderColor   :           @sliderHoveredProgressbarBorderColor;
-@sliderHoveredprogressbarVerticalBackgroundColor   :       @sliderHoveredProgressbarBackgroundColor;
-
-////// focus
-
-@sliderFocusedProgressbarVerticalBorderColor   		 :           @sliderHoveredProgressbarBorderColor;                          
-@sliderFocusedProgressbarVerticalBackgroundColor   :           @sliderHoveredProgressbarBackgroundColor;                          
-
-////// disabled
-/////// Nothing
 
 // thumbs
 
 @sliderThumbBorderRadius            :           50%;
 @sliderThumbHeight                  :           16px;
 @sliderThumbWidth                   :           16px;
-@sliderThumbBackgroundColor         :           @handleColor; // Used to calculate background color and image for "dijitSliderImageHandle" in "form/Slider.styl"
-@sliderThumbBorder                  :           2px solid @fillColor;
-@sliderHoverFocusedThumbBorder      :           2px solid darken(@fillColor,10%);
+@sliderThumbBackgroundColor         :           darken(@handleColor, 1%); // Used to calculate background color and image for "dijitSliderImageHandle" in "form/Slider.styl"
 
 ////// hover (& focused)
 @sliderThumbBackgroundHoverColor  : 						@handleColor;

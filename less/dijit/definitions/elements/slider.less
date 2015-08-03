@@ -2,6 +2,9 @@
 /* Slider 
  * 
  * Styling Slider mainly includes styling the Slider progress bar (dijitSliderProgressBar)
+ * This support many colors that comes with Semantic Ui:
+ *
+ *  red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black
  * 
  * Slider progress bar:
  * 1. Slider progress bar (default styling): 
@@ -110,13 +113,13 @@
 
   .dijitSliderProgressBarH, 
   .dijitSliderLeftBumper {
-    border-color: @sliderProgressbarBorderColor;
-    background-color: @sliderProgressbarBackgroundColor;
+    border-color: @primary;
+    background-color: @primary;
   }
   .dijitSliderRemainingBarH,
   .dijitSliderRightBumper {
-    border-color: @sliderRemainingbarBorderColor;
-    background-color: @sliderRemainingbarBackgroundColor;
+    border-color: @emptyColor;
+    background-color: @emptyColor;
   }
 }
 
@@ -125,8 +128,8 @@
 .dijitSliderHover {
   .dijitSliderProgressBarH,
   .dijitSliderLeftBumper {
-    border-color: @sliderHoveredProgressbarBorderColor;
-    background-color: @sliderHoveredProgressbarBackgroundColor;
+    border-color: darken(@primary, 10%);
+    background-color: darken(@primary, 10%);
   }
 }
 
@@ -135,10 +138,11 @@
 .dijitSliderFocused {
   .dijitSliderProgressBarH,
   .dijitSliderLeftBumper {
-    border-color: @sliderFocusedProgressbarBorderColor;
-    background-color: @sliderFocusedProgressbarBackgroundColor;
+    border-color: darken(@primary, 10%);
+    background-color: darken(@primary, 10%);
   }
 }
+
 
 /* ----- Vertical Slider ----- */
 
@@ -168,13 +172,13 @@
 
   .dijitSliderProgressBarV,
   .dijitSliderBottomBumper {
-    border-color: @sliderProgressbarVerticalBorderColor;
-    background-color: @sliderProgressbarVerticalrBackgroundColor;
+    border-color: @primary;
+    background-color: @primary;
   }
   .dijitSliderRemainingBarV,
   .dijitSliderTopBumper {
-    border-color: @sliderRemainingbarVerticalBorderColor;
-    background-color: @sliderRemainingbarVerticalBackgroundColor;
+    border-color: @emptyColor;
+    background-color: @emptyColor;
   }
 }
 
@@ -183,8 +187,8 @@
 .dijitSliderHover {
   .dijitSliderProgressBarV,
   .dijitSliderBottomBumper{
-    border-color: @sliderHoveredprogressbarVerticalBorderColor;
-    background-color: @sliderHoveredprogressbarVerticalBackgroundColor;
+    border-color: darken(@primary, 10%);
+    background-color: darken(@primary, 10%);
   }
 }
 
@@ -193,8 +197,8 @@
 .dijitSliderFocused {
   .dijitSliderProgressBarV,
   .dijitSliderBottomBumper{
-    border-color: @sliderFocusedProgressbarVerticalBorderColor;
-    background-color: @sliderFocusedProgressbarVerticalBackgroundColor;
+    border-color: darken(@primary, 10%);
+    background-color: darken(@primary, 10%);
 }
 }
 
@@ -203,7 +207,7 @@
 .dijitSliderImageHandle {
   background: @sliderThumbBackgroundColor;
   border-radius: @sliderThumbBorderRadius;
-  border: @sliderThumbBorder;
+  border: 2px solid @primary;
   width: @sliderThumbWidth;
   height: @sliderThumbHeight;
   margin-top: -1px;
@@ -216,7 +220,7 @@
 .dijitSliderFocused {
   .dijitSliderImageHandle {
       background: @sliderThumbBackgroundHoverColor;
-      border: @sliderHoverFocusedThumbBorder;
+      border: 2px solid darken(@primary,10%);
   }
 }
 
@@ -315,5 +319,83 @@
   margin-left: @sliderRulerPadding;
   margin-right: @sliderRulerPadding;
 }
+
+
+/* ------------------------------------------------------------------ */
+/* --------------- Generate other colors for the slider ------------- */
+/* ------------------------------------------------------------------ */
+
+@colors: red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black;
+
+/* FOR LOOP OVER ALL COLORS */
+
+.-(@i: length(@colors)) when (@i > 0) {
+    @name: extract(@colors, @i);
+
+    /* ----- COLOR: @{name} ----- */
+
+    &.@{name}.dijitSlider {
+      /* normal */
+      .dijitSliderProgressBarH, 
+      .dijitSliderLeftBumper {
+        border-color: @@name;
+        background-color: @@name;
+      }
+      /* vertical */
+      .dijitSliderProgressBarV,
+      .dijitSliderBottomBumper {
+        border-color: @@name;
+        background-color: @@name;
+      }
+      /* handle */
+      .dijitSliderImageHandle {
+        border: 2px solid @@name;
+      }
+    }
+
+    /* hover */
+    &.@{name}.dijitSliderHover {
+      /* normal */
+      .dijitSliderProgressBarH,
+      .dijitSliderLeftBumper {
+        border-color: darken(@@name, 10%);
+        background-color: darken(@@name, 10%);
+      }
+      /* vertical */
+      .dijitSliderProgressBarV,
+      .dijitSliderBottomBumper{
+        border-color: darken(@@name, 10%);
+        background-color: darken(@@name, 10%);
+      }
+      /* handle */
+      .dijitSliderImageHandle {
+          border: 2px solid darken(@@name,10%);
+      }
+    }
+
+    /* focus */
+    &.@{name}.dijitSliderFocused {
+      /* normal */
+      .dijitSliderProgressBarH,
+      .dijitSliderLeftBumper {
+        border-color: darken(@@name, 10%);
+        background-color: darken(@@name, 10%);
+      }
+      /* vertical */
+      .dijitSliderProgressBarV,
+      .dijitSliderBottomBumper{
+        border-color: darken(@@name, 10%);
+        background-color: darken(@@name, 10%);
+      }
+      /* handle */
+      .dijitSliderImageHandle {
+          border: 2px solid darken(@@name,10%);
+      }
+    }
+
+    .-((@i - 1));
+} .-;
+
+
 
 .loadUIOverrides();
