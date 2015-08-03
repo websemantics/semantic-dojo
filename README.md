@@ -26,6 +26,7 @@ This project is still in development. The following widgets have been partially 
 - Textbox
 - TextArea
 - Icons
+- Slider
 
 ## Installation
 
