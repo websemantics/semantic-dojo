@@ -28,10 +28,12 @@ This project is still in development. The following widgets have been partially 
 ![ProgressBar2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/progress-bar.png "ProgressBar2")
 - Tabs
 ![Tabs](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/tabs.png "Tabs")
-- Slider
+- Sliders
 ![Sliders](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/sliders.png "Sliders")
 - Color Palette
 ![ColorPalette](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/palette.png "ColorPalette")
+- Radio / Checkbox
+![RadioCheckbox](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/radio-checkbox.png "RadioCheckbox")
 
 ## Installation
 

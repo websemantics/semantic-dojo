@@ -1,3 +1,13 @@
+/*******************************
+            Form
+*******************************/
+
+@type    : 'collection';
+@element : 'form';
+
+@import (multiple) '../../theme.config';
+
+
 /* Text Inputs: [TextBox | DateTextBox | CurrencyTextBox | ValidationTextBox | ...] | TextArea
  * Mainly includes:
  * 
@@ -16,22 +26,7 @@
  *      .dijitTextBoxError
  *      .dijitTextBoxErrorFocused
  *
- *
- * NOT ACCURATE!
 */
-
-/*******************************
-            Theme
-*******************************/
-
-@type    : 'collection';
-@element : 'form';
-
-@import (multiple) '../../theme.config';
-
-/***********************
- * TextArea 
- ***********************/
 
 .ui.input.dijitTextArea {
   width: 100%;
@@ -53,7 +48,6 @@
   resize: @textAreaResize;
   min-height: @textAreaMinHeight;
   max-height: @textAreaMaxHeight;
-
 }
 
 .ui.input.dijitTextBoxFocused.dijitTextArea {

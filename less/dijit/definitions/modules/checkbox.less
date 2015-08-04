@@ -1,0 +1,213 @@
+/*******************************
+      CheckBox / RadioButton
+*******************************/
+
+@type    : 'module';
+@element : 'checkbox';
+
+@import (multiple) '../../theme.config';
+
+/* CheckBox
+ * 
+ * Styling CheckBox mainly includes:
+ * 
+ * 1. Containers
+ *    .dijitCheckBox
+ * 
+ * 2. CheckBox within ToggleButton
+ *    .dijitCheckBoxIcon
+ * 
+ * 3. States - Checked, Hover, Disabled.
+ *    .dijitCheckBoxChecked
+ *    .dijitCheckBoxHover
+ *    .dijitCheckBoxCheckedHover
+ *    .dijitCheckBoxDisabled
+ *    .dijitCheckBoxCheckedDisabled
+ */
+
+.dijitCheckBox {
+  color: @checkboxColor;
+  background: @checkboxBackground;
+  border: @checkboxBorder;
+  width: @checkboxCheckSize;
+  height: @checkboxCheckSize;
+  line-height: @checkboxLineHeight;
+  border-radius: @checkboxBorderRadius;
+  transition: @checkboxTransition;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  input {
+    position: absolute;
+    top: 0;
+  }
+}
+
+
+/* Icon */
+.dijitCheckBoxIcon,
+.dijitCheckBoxChecked,
+.dijitCheckBoxCheckedDisabled {
+  &:before {
+    font-family: 'Checkbox';
+    font-size: @checkboxCheckFontSize;
+    content: '\e800';
+  }
+}
+
+/* This is the checkbox icon within a widget, e.g. toggle button */
+.dijitCheckBoxIcon {
+  padding: 0px;
+  &:before {
+    color: @highlightColor;
+  }
+}
+
+.btn-alt {
+  .dijitCheckBoxIcon {
+    &:before {
+      color: @checkboxColor;
+    }
+  }
+}
+
+/* checked */
+
+.dijitCheckBoxChecked {
+  background: @checkboxActiveBackground;
+  border-color: @checkboxActiveBorderColor;
+}
+
+/* hover */
+
+/* over unchecked */
+.dijitCheckBoxHover {
+  background: @checkboxHoverBackground;
+  border-color: @checkboxHoverBorderColor;
+}
+
+/* over checked */
+.dijitCheckBoxCheckedHover {
+  background: @checkboxPressedBackground;
+  border-color: @checkboxPressedBorderColor;
+}
+
+/* disabled */
+
+.dijitCheckBoxDisabled,
+.dijitCheckBoxCheckedDisabled {
+  cursor: default;
+  opacity: @disabledCheckboxOpacity;
+  color: @disabledCheckboxLabelColor;
+}
+
+/* RadioButton
+ * 
+ * Styling RadioButton mainly includes:
+ * 
+ * 1. Containers
+ *    .dijitRadio|.dijitRadioIcon
+ * 
+ * 2. RadioButton within ToggleButton
+ *    .dijitToggleButton|.dijitToggleButtonChecked
+ * 
+ * 3. Checked state
+ *    .dijitRadioChecked
+ *    .dijitToggleButtonChecked
+ * 
+ * 4. Hover state
+ *    .dijitRadioHover|.dijitRadioCheckedHover
+ * 
+ * 5. Disabled state
+ *    .dijitRadioDisabled|.dijitRadioCheckedDisabled
+ */
+
+/* This is the radio icon within a widget, e.g. toggle button */
+
+
+.dijitRadio,
+.dijitRadioIcon {   /* inside a toggle button */
+  width: @radioSize;
+  height: @radioSize;
+  border: @checkboxBorder;
+  background: @checkboxBackground;
+  border-radius: 50%;
+  position: relative;
+  overflow: visible;
+
+  &:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: @bulletColor;
+    border-radius: 50%;
+    opacity: 0;
+    margin: (@radioSize - 2px) * .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.dijitButtonNode .dijitRadioIcon {
+  border: @checkboxBorder;
+  position: relative;
+  top: 0px;
+}
+
+.btn-alt { 
+  .dijitButtonNode .dijitRadioIcon {
+    border-color: @white;
+    border-color: alpha(@white, 0.85);
+  }
+
+  &.dijitChecked .dijitRadioIcon {
+    &:after {
+      background: @white;
+    }
+  }
+
+}
+
+/* checked */
+.dijitRadioChecked,
+.dijitChecked .dijitRadioIcon {
+  &:after {
+    width: @radioSize - 2px - 6px;
+    height: @radioSize - 2px - 6px;
+    margin: 3px;
+    opacity: 1;
+  }
+}
+
+/* checked */
+
+.dijitRadioChecked {
+  background: @checkboxActiveBackground;
+  border-color: @checkboxActiveBorderColor;
+}
+
+/* hover */
+
+/* over unchecked */
+.dijitRadioHover {
+  background: @checkboxHoverBackground;
+  border-color: @checkboxHoverBorderColor;
+}
+
+/* over checked */
+.dijitRadioCheckedHover {
+  background: @checkboxPressedBackground;
+  border-color: @checkboxPressedBorderColor;
+}
+
+/* disabled */
+
+.dijitRadioDisabled {
+  cursor: default;
+  opacity: @disabledCheckboxOpacity;
+  color: @disabledCheckboxLabelColor;
+}
+
+.loadUIOverrides();
