@@ -56,7 +56,7 @@
 }
 
 /*********************************************************************
- * Select (most of styles are inherited from "form/Button")
+ * Select 
  *********************************************************************/
 
 .dijitSelect {
@@ -99,6 +99,12 @@
   border-color: @selectionFocusBorderColor;
 }
 
+/* opened */
+
+.dijitSelectOpened {
+  .ui.active.selection.dropdown;
+}
+
 /* disabled */
 .dijitSelectDisabled,
 .dijitSelect.dijitSelectErrorDisabled {
@@ -110,6 +116,31 @@
 
 .dijitSelect.dijitSelectErrorDisabled .dijitValidationContainer {
   display:none;
+}
+
+/*********************************************************************
+ * Select Menu
+ *********************************************************************/
+
+.dijitSelectMenu.dijitMenuActive {
+  .ui.selection.active.dropdown .menu;
+  border-top-width:0px!important;
+}
+
+.dijitSelectMenu .dijitMenuItem td {
+  border-top: @selectionItemDivider;
+  padding: @selectionItemPadding !important;
+  white-space: normal;
+  word-wrap: normal;
+}
+
+.dijitSelectMenu .dijitMenuItem td:first-child {
+  border-top-width: 0px;
+}
+
+.dijitSelectMenu  .dijitSelectSelectedOption td{
+  .ui.dropdown.selected;
+  font-weight: bold;
 }
 
 /***********************************************************************
@@ -125,7 +156,6 @@
 
 .dijitComboBoxOpenHover .dijitButtonNode,
 .dijitComboBox .dijitDownArrowButtonHover {
-  // button-hover-style();
   box-shadow: none;
 }
 
@@ -154,9 +184,9 @@
  ***********************************************************************/
 
 select  {
-  height: @selectHeight;
+  height : @selectHeight;
   padding: @selectPadding;
-  border: @selectBorder;
+  border : @selectBorder;
   visibility: @selectVisibility;
 }
 
@@ -173,6 +203,5 @@ select option {
   /* so that arrow and icon cells from MenuItem are not displayed */
   display: none;
 }
-
 
 .loadUIOverrides();

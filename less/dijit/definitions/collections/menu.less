@@ -1,19 +1,50 @@
-/*******************************
-            Theme
-*******************************/
+/* Menu 
+
+There are three areas of styling for the Menu:  
+ 
+ 1. The menu 
+ 	There are three types of menus:
+ 	i) Context Menu
+ 	ii) Drop down Menu
+ 	iii) Navigation Menu
+ 	All three types of menus are affected by the .dijitMenu class in which you can set the background-color, padding and border
+ 	.dijitMenu affects the drop down menu in TimeTextBox, Calendar, ComboBox and FilteringSelect
+  .dijitMenuTable - for padding - also affects Select widget 	
+  	
+ 2. The menu bar
+ 	.dijitMenuBar - for border, margins, padding, background-color of the menu bar
+ 	.dijitMenuBar .dijitMenuItem - for padding, text color of menu items in the menu bar (overrides .dijitMenuItem) 
+ 	
+ 3. Menu items - items in the menu.  
+ 	.dijitMenuItem - for color
+ 	.dijitMenuItemHover, .dijitMenuItemSelected - for background-color, border, text color, padding of a menu item or menubar item that has been hovered over or selected	
+ 	.dijitMenuItemActive - for background-color of an active (mousedown) menu item
+	td.dijitMenuItemIconCell - for padding around a  menu item's icon
+	td.dijitMenuItemLabel - for padding around a menu item's label	
+	.dijitMenuSeparatorTop - for border, top border, of the separator
+	.dijitMenuSeparatorBottom - for bottom margin of the separator
+	
+	Styles specific to ComboBox and FilteringSelect widgets: 
+	.dijitComboBoxMenu .dijitMenuItem - for padding and border of a menu item in a ComboBox or FilteringSelect widget's menu
+	.dijitComboBoxMenu .dijitMenuItemSelected- for text color, background-color and border of a menu item in a ComboBox or FilteringSelect widget's menu
+
+*/
 
 @type    : 'collection';
 @element : 'menu';
 
 @import (multiple) '../../theme.config';
 
+
 .dijitMenu {
 	.ui.menu;
+	display: table; /* Fix */
+	margin : 0px; /* Fix */
 }
 
 .dijitMenuTable,
 .dijitComboBoxMenu {
-	// padding: $menu-padding 0;
+	padding: 0px;
 }
 
 .dijitComboBoxMenu {
@@ -66,20 +97,20 @@
 .dijitMenuSeparatorTop {
 	height: auto;
 	margin-top: 1px; /* prevents spacing above/below separator */
-	// border-bottom: $menu-item-separator-top;
+	// border-bottom: @menu-item-separator-top;
 }
 
 .dijitMenuSeparatorBottom {
 	height: auto;
 	margin-bottom:1px;
-	// border-top: $menu-item-separator-Bottom;
+	// border-top: @menu-item-separator-Bottom;
 }
 
 /* TODO: Menu Item Icon */
 
 td.dijitMenuItemIconCell {
-	padding: $padding;
-	// margin: 0 0 0 $padding;
+	padding: 0;
+	margin: 0 0 0 0;
 }
 
 .dijitMenuExpand {
@@ -115,23 +146,23 @@ td.dijitMenuItemIconCell {
 .dijitMenuBar {
 	margin: 0;
 	padding: 0;
-	// background: $menubar-background;
+	// background: @menubar-background;
 
 	.dijitMenuItem {  
-		// padding: $menubar-item-padding;
+		// padding: @menubar-item-padding;
 		margin: 0;	
 	}
 	.dijitMenuItemHover {
-		// background: $menubar-item-hover-background;
+		// background: @menubar-item-hover-background;
 	}
 	.dijitMenuItemActive {
-		// background: $menubar-item-active-background;
+		// background: @menubar-item-active-background;
 	}
 	.dijitMenuItemSelected,
 	.dijitMenuItemHover.dijitMenuItemSelected,
 	.dijitMenuItemActive.dijitMenuItemSelected {
-		// color: $menubar-item-selected-text-color;
-		// background: $menubar-item-selected-background;
+		// color: @menubar-item-selected-text-color;
+		// background: @menubar-item-selected-background;
 	}
 }
 
@@ -147,9 +178,8 @@ td.dijitMenuItemIconCell {
 	}
 	.dijitMenuItem, 
 	.dijitMenuItem td {
-		// padding: $menubar-popup-item-padding;
+		// padding: @menubar-popup-item-padding;
 	}
 }
-
 
 .loadUIOverrides();

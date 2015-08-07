@@ -232,12 +232,10 @@
 // @accordion-content-border           :           @accordion-border;
 // @accordion-content-background         :           @container-background-color;
 
-
 // /****************************************************************************************
 //  ************************************ Common Dijits *************************************
 //  ****************************************************************************************/
 
- 
 // /***************************************************************************************
 //  * Common (Common.styl)
 //  ***************************************************************************************/
@@ -294,67 +292,11 @@
 // @tooltip-arrow-thickness            :           @dijit-arrow-thickness;             //thickness of the arrow on the edge of the container
 
 // /****************************************************************************************
-//  * Menu
-//  ****************************************************************************************/
-
-// @menu-background                :           @container-background-color;
-// @menu-border                  :           1px solid @border-color;
-// @menu-padding                 :           @padding * 2;
-// @menu-border-radius               :           @border-radius;
-
-// //// Menu item
-
-// @menu-item-padding                :           @padding;
-
-// ////// hover
-
-// @menu-item-hovered-text-color         :           @selected-text-color;
-// @menu-item-hovered-background         :           @highlight-background;
-
-// ////// active
-
-// @menu-item-active-text-color          :           @selected-text-color;
-// @menu-item-active-background          :           @highlight-background;
-
-// ////// selected
-
-// @menu-item-selected-text-color          :           @selected-text-color;
-// @menu-item-selected-background          :           @highlight-background;
-
-// ////// separator
-
-// @menu-item-separator-top            :           1px solid @border-color;
-// @menu-item-separator-Bottom           :           0 none;
-
-// // Menubar
-
-// @menubar-background               :           @primary-color;
-// @menubar-item-padding             :           @padding*2 @padding*3;
-
-// //// Hover
-
-// @menubar-item-hover-background          :           @highlight-background;
-
-// //// Active
-
-// @menubar-item-active-background         :           @highlight-background;
-
-// //// Selected
-
-// @menubar-item-selected-text-color       :           @selected-text-color;
-// @menubar-item-selected-background       :           @highlight-background;
-
-// //// Menubar dropdown (Popup)
-
-// @menubar-popup-item-padding           :           @padding*2;
-
-
-// /****************************************************************************************
 //  * Calendar
 //  ****************************************************************************************/
 
 // @calendar-background              :           @container-background-color;
-// @calendar-border                :           1px solid @border-color;
+// @calendar-border                :           1px solid @borderColor;
 // @calendar-padding               :           @padding;
 // @calendar-border-radius             :           @border-radius;
 // @calendar-box-shadow              :           @dialog-shadow;
@@ -438,24 +380,6 @@
 // @editor-iframe-disabled-border          :           1px solid transparent;
 // @editor-iframe-disabled-background        :           @disabled-color;
 // @editor-iframe-disabled-shadow          :           none;
-
-// /***************************************************************************************
-//  * Progress Bar
-//  ***************************************************************************************/
-// // Colors
-// @progress-bar-color               :           @dark-blue-color;
-// // @progress-bar-alternative-colors        :           {progress-bar-success: @green-color, progress-bar-info: @light-blue-color, progress-bar-warning: @yellow-color, progress-bar-danger: @red-color };
-
-// @progress-bar-empty-color           :           @gray-color;
-// @progress-bar-empty-box-shadow          :           inset 0 1px 2px rgba(0,0,0,.1);
-
-// @progress-bar-border              :           0 none;
-// @progress-bar-border-radius           :           @border-radius;
-// @progress-bar-strips-image-url          :           "images/progressBarStrips.png";
-
-// // Label
-// @progress-bar-text-color            :           @inverse-text-color;
-// @progress-bar-text-shadow           :           @inverse-text-shadow;
 
 // /****************************************************************************************
 //  * Toolbar
