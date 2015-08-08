@@ -245,13 +245,13 @@
 // @popup-border-radius              :           @border-radius;
 // @popup-box-shadow               :           @container-shadow;
 
-// /****************************************************************************************
-//  * Dialog, Tooltip, TooltipDialog
-//  ****************************************************************************************/
+// // /****************************************************************************************
+// //  * Dialog, Tooltip, TooltipDialog
+// //  ****************************************************************************************/
 
-// // Dialog
+// // // Dialog
 
-// @dialog-background                :           @container-background-color;
+// @dialog-background                :          @container-background-color;
 // @dialog-border                  :           1px solid @border-color;
 // @dialog-padding                 :           @padding * 2;
 // @dialog-border-radius             :           @border-radius;
@@ -277,23 +277,11 @@
 // @dialog-arrow-border-color            :           @border-color;
 // @dialog-arrow-background            :           @dialog-background;
 
-// // Tooltip
+// Tooltip
 
-// @tooltip-background               :           @inverse-container-background-color;        // Background for dojo dijit Popup.
-// @tooltip-text-color               :           @inverse-text-color;
-// @tooltip-padding                :           @padding;
-// @tooltip-border                 :           0 none;
-// @tooltip-border-radius              :           @border-radius;
-// @tooltip-opacity                :           0.8;
-
-// //// tooltip connector (arrow)
-
-// @tooltip-arrow-color              :           @inverse-container-background-color;        //color of the arrow on the edge of the container
-// @tooltip-arrow-thickness            :           @dijit-arrow-thickness;             //thickness of the arrow on the edge of the container
-
-// /****************************************************************************************
-//  * Calendar
-//  ****************************************************************************************/
+/****************************************************************************************
+ * Calendar
+ ****************************************************************************************/
 
 // @calendar-background              :           @container-background-color;
 // @calendar-border                :           1px solid @borderColor;

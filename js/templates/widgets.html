@@ -10,33 +10,60 @@
 					<!-- **************************************************** -->
 					<!-- ********************** Form ************************ -->
 					<!-- **************************************************** -->
-					<tr>
-						<td><span class="secondary">dijit/form/</span>Select</td>
-						<td>
-							<select class="make-disabled" name="select1" data-dojo-type="dijit.form.Select" required>
-								<option> -- select -- </option>	
-								<option value="TN">Tennessee</option>
-									<option value="VA" selected="selected">Virginia</option>
-									<option value="WA">Washington</option>
-									<option></option>
-									<option value="FL">Florida</option>
-									<option value="CA">California</option>
-							</select>
-
-						</td>
-						<td>
-							<select class="ui search dropdown">
-								<option> -- select -- </option>	
-								<option value="TN">Tennessee</option>
-									<option value="VA" selected="selected">Virginia</option>
-									<option value="WA">Washington</option>
-									<option></option>
-									<option value="FL">Florida</option>
-									<option value="CA">California</option>
-							</select>
-
-						</td>
-					</tr>
+						<!-- dijit/Dialog -->
+						<tr>
+							<td><span class="secondary">dijit/</span>Dialog</td>
+							<td>
+								<button data-dojo-props="dropDownPosition: ['below-centered'],'class':'make-disabled'" data-dojo-type="dijit.form.Button" onclick="theDialog.show();">Open Dojo Dialog</button>
+								<div data-dojo-type="dijit.Dialog" data-dojo-id="theDialog" title="Dialog" style="width: 500px">
+									<div class="dijitDialogPaneContentArea">
+										<br />
+										Content Area
+										<br />
+										<br />
+									</div>
+									<div class="dijitDialogPaneActionBar">
+										<button data-dojo-type="dijit/form/Button" type="submit" id="ok" data-dojo-props="class:'dojo-btn-success'">OK</button>
+										<button data-dojo-type="dijit/form/Button" type="button" data-dojo-props="onClick:function(){theDialog.hide();}">
+											Cancel
+										</button>
+									</div>
+								</div>
+							</td>
+						<td><!-- Not Available --></td>
+						</tr>
+						<!-- dijit/TooltipDialog -->
+						<tr>
+							<td><span class="secondary">dijit/</span>TooltipDialog <span class="secondary">(with action bar)</span></td>
+							<td>
+								<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton1" data-dojo-props="dropDownPosition: ['below-centered'],'class':'make-disabled'">
+									<span>below centered</span>
+								</div>
+								<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton2" data-dojo-props="dropDownPosition: ['above-centered'],'class':'make-disabled'">
+									<span>above-centered</span>
+								</div>
+								<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton3" data-dojo-props="dropDownPosition: ['before-centered'],'class':'make-disabled'">
+									<span>before-centered</span>
+								</div>
+								<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton4" data-dojo-props="dropDownPosition: ['after-centered'],'class':'make-disabled'">
+									<span>after centered</span>
+								</div>
+							</td>
+						<td><!-- Not Available --></td>
+						</tr>
+						<!-- dijit/Tooltip -->
+						<tr>
+							<td><span class="secondary">dijit/</span>Tooltip</td>
+							<td>
+								<span data-dojo-attach-point="tooltipAbove">above | </span>
+								<span data-dojo-attach-point="tooltipAboveCentered">above centered | </span>
+								<span data-dojo-attach-point="tooltipBelow">below | </span>
+								<span data-dojo-attach-point="tooltipBelowCentered">below centered | </span>
+								<span data-dojo-attach-point="tooltipBefore">before | </span>
+								<span data-dojo-attach-point="tooltipAfter">after </span>
+							</td>
+						<td><!-- Not Available --></td>
+						</tr>
 					<tr>
 						<td><span class="secondary">fonts/common/</span>FontAwesome</td>
 						<td colspan="2">
@@ -147,15 +174,6 @@
 						<td><!-- Not Available --></td>
 					</tr>
 					<tr>
-						<td><span class="secondary">dijit/form/</span>TimeTextBox</td>
-						<td>
-							<input class="ui dropdown selectionSelect make-disabled" type="text"
-								data-dojo-type="dijit.form.TimeTextBox"
-								data-dojo-props="value: 'T15:00:00', required:true"/>
-						</td>
-						<td><!-- Not Available --></td>
-					</tr>
-					<tr>
 						<td><span class="secondary">dijit/form/</span>Textarea,<br /><span class="secondary">dijit/form/</span>SimpleTextarea</td>
 						<td>
 							<textarea  class="ui input make-disabled" data-dojo-type="dijit.form.Textarea" rows="4" cols="30" style="width:auto;resize:vertical">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -168,6 +186,42 @@
 									</textarea>
 							  </div>
 							</div>
+						</td>
+					</tr>
+					<tr>
+						<td><span class="secondary">dijit/form/</span>TimeTextBox</td>
+						<td>
+							<input class="ui dropdown selectionSelect make-disabled" type="text"
+								data-dojo-type="dijit.form.TimeTextBox"
+								data-dojo-props="value: 'T15:00:00', required:true"/>
+						</td>
+						<td><!-- Not Available --></td>
+					</tr>
+					<tr>
+						<td><span class="secondary">dijit/form/</span>Select</td>
+						<td>
+							<select class="make-disabled" name="select1" data-dojo-type="dijit.form.Select" required>
+								<option> -- select -- </option>	
+								<option value="TN">Tennessee</option>
+									<option value="VA" selected="selected">Virginia</option>
+									<option value="WA">Washington</option>
+									<option></option>
+									<option value="FL">Florida</option>
+									<option value="CA">California</option>
+							</select>
+
+						</td>
+						<td>
+							<select class="ui search dropdown">
+								<option> -- select -- </option>	
+								<option value="TN">Tennessee</option>
+									<option value="VA" selected="selected">Virginia</option>
+									<option value="WA">Washington</option>
+									<option></option>
+									<option value="FL">Florida</option>
+									<option value="CA">California</option>
+							</select>
+
 						</td>
 					</tr>
 					<tr>
@@ -561,60 +615,6 @@
 							  <div class="bar" style="transition-duration: 300ms; -webkit-transition-duration: 300ms; width: 100%;"></div>
 							</div>
 						</td>
-						</tr>
-						<!-- dijit/Dialog -->
-						<tr>
-							<td><span class="secondary">dijit/</span>Dialog</td>
-							<td>
-								<button data-dojo-props="dropDownPosition: ['below-centered'],'class':'make-disabled'" data-dojo-type="dijit.form.Button" onclick="theDialog.show();">Open Dojo Dialog</button>
-								<div data-dojo-type="dijit.Dialog" data-dojo-id="theDialog" title="Dialog" style="width: 500px">
-									<div class="dijitDialogPaneContentArea">
-										<br />
-										Content Area
-										<br />
-										<br />
-									</div>
-									<div class="dijitDialogPaneActionBar">
-										<button data-dojo-type="dijit/form/Button" type="submit" id="ok" data-dojo-props="class:'dojo-btn-success'">OK</button>
-										<button data-dojo-type="dijit/form/Button" type="button" data-dojo-props="onClick:function(){theDialog.hide();}">
-											Cancel
-										</button>
-									</div>
-								</div>
-							</td>
-						<td><!-- Not Available --></td>
-						</tr>
-						<!-- dijit/TooltipDialog -->
-						<tr>
-							<td><span class="secondary">dijit/</span>TooltipDialog <span class="secondary">(with action bar)</span></td>
-							<td>
-								<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton1" data-dojo-props="dropDownPosition: ['below-centered'],'class':'make-disabled'">
-									<span>below centered</span>
-								</div>
-								<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton2" data-dojo-props="dropDownPosition: ['above-centered'],'class':'make-disabled'">
-									<span>above-centered</span>
-								</div>
-								<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton3" data-dojo-props="dropDownPosition: ['before-centered'],'class':'make-disabled'">
-									<span>before-centered</span>
-								</div>
-								<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton4" data-dojo-props="dropDownPosition: ['after-centered'],'class':'make-disabled'">
-									<span>after centered</span>
-								</div>
-							</td>
-						<td><!-- Not Available --></td>
-						</tr>
-						<!-- dijit/Tooltip -->
-						<tr>
-							<td><span class="secondary">dijit/</span>Tooltip</td>
-							<td>
-								<span data-dojo-attach-point="tooltipAbove">above | </span>
-								<span data-dojo-attach-point="tooltipAboveCentered">above centered | </span>
-								<span data-dojo-attach-point="tooltipBelow">below | </span>
-								<span data-dojo-attach-point="tooltipBelowCentered">below centered | </span>
-								<span data-dojo-attach-point="tooltipBefore">before | </span>
-								<span data-dojo-attach-point="tooltipAfter">after </span>
-							</td>
-						<td><!-- Not Available --></td>
 						</tr>
 						<tr><!-- dijit/ColorPalette -->
 							<td><span class="secondary">dijit/</span>ColorPalette</td>

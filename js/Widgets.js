@@ -451,11 +451,15 @@ define(["dojo/_base/declare",
           });
 
           var tooltipDialog1 = new dijit.TooltipDialog({
-              content:  '<form data-dojo-type="dijit/form/Form"><br/>This tooltip dialog has an action bar.<br/><br/>' +
+              content:  '<form style="padding:5px 0px" data-dojo-type="dijit/form/Form">This tooltip dialog has an action bar.<br/><br/>' +
 								'<div class="dijitDialogPaneActionBar">' +
-								'<button data-dojo-type="dijit/form/Button" type="reset">Reset</button>' +
-								'<button data-dojo-type="dijit/form/Button" type="submit">Login</button></div></form>'
+								'<div class="ui buttons tiny">' +
+								'<button class="ui button" data-dojo-type="dijit/form/Button" type="reset">Cancel</button>' +
+								'<div class="or"></div>' + 
+								'<button class="ui positive button" data-dojo-type="dijit/form/Button" type="submit">Save</button></div></form>' + 
+								'</div>'
           });
+
           this.tooltipdialogButton1.set("dropDown", tooltipDialog1);
 
           var tooltipDialog2 = new dijit.TooltipDialog({
@@ -464,11 +468,15 @@ define(["dojo/_base/declare",
           this.tooltipdialogButton2.set("dropDown", tooltipDialog2);
 
           var tooltipDialog3 = new dijit.TooltipDialog({
-              content: '<form data-dojo-type="dijit/form/Form"><br/>This tooltip dialog has an action bar.<br/><br/>' +
+              content: '<form style="padding:5px 0px" data-dojo-type="dijit/form/Form">This tooltip dialog has an action bar.<br/><br/>' +
 								'<div class="dijitDialogPaneActionBar">' +
-								'<button data-dojo-type="dijit/form/Button" type="reset">Reset</button>' +
-								'<button data-dojo-type="dijit/form/Button" type="submit">Login</button></div></form>'
+								'<div class="ui buttons tiny">' +
+								'<button class="ui button" data-dojo-type="dijit/form/Button" type="reset">Reset</button>' +
+								'<div class="or"></div>' + 
+								'<button class="ui primary button" data-dojo-type="dijit/form/Button" type="submit">Login</button></div></form>' + 
+								'</div>'
           });
+
           this.tooltipdialogButton3.set("dropDown", tooltipDialog3);
 
           var tooltipDialog4 = new dijit.TooltipDialog({
