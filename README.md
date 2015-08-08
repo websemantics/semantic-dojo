@@ -16,6 +16,8 @@ This project is still in development. The following widgets have been partially 
 ![Textbox](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/textbox.png "Textbox")
 - TextArea
 ![TextArea](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/textarea.png "TextArea")
+- Select
+![Select](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/select.png "Select")
 - Icons
 ![Icons](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/icons.png "Icons")
 - Buttons
@@ -26,6 +28,8 @@ This project is still in development. The following widgets have been partially 
 ![Buttons5](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/buttons-5.png "Buttons5")
 - Progress Bars
 ![ProgressBar2](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/progress-bar.png "ProgressBar2")
+- Tooltip / Dialogtip
+![Tooltip](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/tooltip.png "Tooltip")
 - Tabs
 ![Tabs](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/tabs.png "Tabs")
 - Sliders
