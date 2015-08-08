@@ -1,22 +1,3 @@
 /*******************************
              Popup
 *******************************/
-
-@padding                       :        4px;
-@arrowThickness                :        4px;
-
-@dialogBorder                  :        @border;
-@dialogBackground              :        @background;
-@dialogArrowThickness          :        @arrowThickness + 2px;
-@dialogArrowBorderColor        :        @borderColor;
-@dialogArrowBackground         :        @dialogBackground;
-@dialogBoxShadow               :        @boxShadow;
-@dialogTextColor               :        @color;
-
-@tooltipBackground             :        @invertedBackground;
-@tooltipTextColor              :        @invertedColor;
-@tooltipPadding                :        @padding;
-@tooltipBorder                 :        @invertedBorder;
-@tooltipOpacity                :        0.9;
-@tooltipArrowColor             :        @invertedBackground;
-@tooltipArrowThickness         :        @arrowThickness;
