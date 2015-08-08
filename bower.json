@@ -1,0 +1,23 @@
+{
+  "name": "Semantic Dojo",
+  "version": "0.1",
+  "homepage": "https://github.com/websemantics/semantic-dojo",
+  "authors": [
+    "Web Semantics, Inc. <hi@websemantics.ca>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "js/libs/dojo",
+    "js/libs/dijit",
+    "js/libs/dojox",
+    "js/libs/util"
+  ],
+  "dependencies": {
+    "dojo": "*",
+    "dijit": "*",
+    "dojox": "*",
+    "util": "*"
+  }
+}
