@@ -1,21 +1,22 @@
 /*******************************
-              Popup
- *******************************/
+             Popup
+*******************************/
 
-@tooltip-background               :           @background;        // Background for dojo dijit Popup.
-@tooltip-text-color               :           @color;
-@tooltip-padding                :           @verticalPadding @horizontalPadding;
-@tooltip-border                 :           0 none;
-@tooltip-border-radius              :           @borderRadius;
-@tooltip-opacity                :           0.8;
+@padding                       :        4px;
+@arrowThickness                :        4px;
 
-//// tooltip connector (arrow)
+@dialogBorder                  :        @border;
+@dialogBackground              :        @background;
+@dialogArrowThickness          :        @arrowThickness + 2px;
+@dialogArrowBorderColor        :        @borderColor;
+@dialogArrowBackground         :        @dialogBackground;
+@dialogBoxShadow               :        @boxShadow;
+@dialogTextColor               :        @color;
 
-@tooltip-arrow-color              :           @arrowBackground;        //color of the arrow on the edge of the container
-@tooltip-arrow-thickness            :           @arrowSize;             //thickness of the arrow on the edge of the container
-
-//// Tooltip Dialog connector
-
-@dialog-arrow-thickness             :           @arrowSize + 2px;         //thickness of the arrow on the edge of the container
-@dialog-arrow-border-color            :           @border;
-@dialog-arrow-background            :           @arrowBackground;
+@tooltipBackground             :        @invertedBackground;
+@tooltipTextColor              :        @invertedColor;
+@tooltipPadding                :        @padding;
+@tooltipBorder                 :        @invertedBorder;
+@tooltipOpacity                :        0.9;
+@tooltipArrowColor             :        @invertedBackground;
+@tooltipArrowThickness         :        @arrowThickness;
