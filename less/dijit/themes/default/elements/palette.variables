@@ -2,15 +2,6 @@
             Palette
 *******************************/
 
-/* Default */
-@import "../../../../semantic-ui/themes/default/globals/site.variables";
-
-/* Packaged Theme */
-@import (optional) "../../../themes/default/globals/site.variables";
-
-/* Site Theme */
-@import (optional) "../../../site/globals/site.variables";
-
 @minorBorderColor: transparent;
 
 // ColorPalette

@@ -18,6 +18,9 @@
     "dojo": "*",
     "dijit": "*",
     "dojox": "*",
-    "util": "*"
+    "util": "*",
+    "less": "*",
+    "jquery": "2.1.4",
+    "semantic" : "*"
   }
 }

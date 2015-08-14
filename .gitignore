@@ -1,5 +1,9 @@
+/test
 /js/libs/dojo
 /js/libs/dijit
 /js/libs/dojox
 /js/libs/util
-/js/libs/install
+/js/libs/less
+/js/libs/jquery
+/js/libs/semantic
+/less/semantic-ui-2
