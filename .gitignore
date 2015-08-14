@@ -1,8 +1,7 @@
-/js/libs/dojo
-/js/libs/dijit
-/js/libs/dojox
-/js/libs/util
-/js/libs/less
-/js/libs/jquery
-/js/libs/semantic
-/less/semantic-ui-2
+/libs/dojo
+/libs/dijit
+/libs/dojox
+/libs/util
+/libs/less
+/libs/jquery
+/libs/semantic
