@@ -47,17 +47,16 @@ This project is still in development. The following widgets have been partially 
 - Create file: libs/semantic/src/theme.config with config,
 
 		```
-			/* Path to this folder */
-			@targetFolder : @semanticUiFolder;
+		/* Path to this folder */
+    @targetFolder : @semanticUiFolder;
 
-			/*******************************
-			  Import a common Theme config
-			*******************************/
+    /*******************************
+      Import a common Theme config
+    *******************************/
 
-			@import "../../../../less/theme.config";
-
-			/* End Config */
-		```
+    @import "../../../less/theme.config";
+    /* End Config */
+    ```
 
 - View index.html 
 
