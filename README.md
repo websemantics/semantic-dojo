@@ -44,6 +44,7 @@ This project is still in development. The following widgets have been partially 
 - Clone locally, `git clone https://github.com/websemantics/semantic-dojo`
 - Install dependencies, `bower install`
 - Create file at `libs/semantic/src/theme.config`, copy/paste the following content:
+		
 		```
 		/* Path to this folder */
 
@@ -54,9 +55,10 @@ This project is still in development. The following widgets have been partially 
     *******************************/
 
     @import "../../../less/theme.config";
-    
+
     /* End Config */
     ```
+    
 - Browse to `semantic-dojo/index.html`
 
 ## Guide
