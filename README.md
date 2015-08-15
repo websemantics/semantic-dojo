@@ -46,7 +46,6 @@ This project is still in development. The following widgets have been partially 
 - Create file at `libs/semantic/src/theme.config`, copy/paste the following content:
 		
 		```
-		/* Path to this folder */
 
     `@targetFolder : @semanticUiFolder;`
 
