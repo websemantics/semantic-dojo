@@ -48,11 +48,9 @@ This project is still in development. The following widgets have been partially 
 		```
 		/* Path to this folder */
     @targetFolder : @semanticUiFolder;
-
     /*******************************
       Import a common Theme config
     *******************************/
-
     @import "../../../less/theme.config";
     /* End Config */
     ```
