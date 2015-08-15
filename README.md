@@ -52,11 +52,9 @@ This project is still in development. The following widgets have been partially 
 		 \___ \ / _ \ '_ ` _ \ / _` | '_ \| __| |/ __| | | | |/ _ \| |/ _ \ 
 		  ___) |  __/ | | | | | (_| | | | | |_| | (__  | |_| | (_) | | (_) |
 		 |____/ \___|_| |_| |_|\__,_|_| |_|\__|_|\___| |____/ \___// |\___/ 
-		                                                         |__/       
+		  Web Semantics, Inc.                                    |__/       
 
-		  Use a common Config file with Semantic UI and Dijit.
-
-			Web Semantics, Inc.
+		  Use a common Config file with Semantic UI and Dijit Themes.
 
 		*/
 	
