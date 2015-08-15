@@ -41,11 +41,9 @@ This project is still in development. The following widgets have been partially 
 
 ## Installation
 
-- Clone the git repo locally 
-- Install dependencies (Dojo)
-	`bower install`
-- Create file: libs/semantic/src/theme.config with config,
-
+- Clone locally, `git clone https://github.com/websemantics/semantic-dojo`
+- Install dependencies, `bower install`
+- Create file at `libs/semantic/src/theme.config with config`, copy/paste the following
 		```
 		/* Path to this folder */
     @targetFolder : @semanticUiFolder;
@@ -57,8 +55,7 @@ This project is still in development. The following widgets have been partially 
     @import "../../../less/theme.config";
     /* End Config */
     ```
-
-- View index.html 
+- Browse to `semantic-dojo/index.html`
 
 ## Guide
 
