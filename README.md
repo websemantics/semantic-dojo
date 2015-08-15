@@ -48,7 +48,7 @@ This project is still in development. The following widgets have been partially 
 		```
 		/* Path to this folder */
 
-    @targetFolder : @semanticUiFolder;
+    \@targetFolder : \@semanticUiFolder;
 
     /*******************************
       Import a common Theme config
@@ -58,7 +58,7 @@ This project is still in development. The following widgets have been partially 
 
     /* End Config */
     ```
-    
+
 - Browse to `semantic-dojo/index.html`
 
 ## Guide
