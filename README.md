@@ -45,18 +45,15 @@ This project is still in development. The following widgets have been partially 
 - Install dependencies, `bower install`
 - Create file at `libs/semantic/src/theme.config`, copy/paste the following content:
 		
-		```
-
-    `@targetFolder : @semanticUiFolder;`
-
-    /*******************************
-      Import a common Theme config
-    *******************************/
-
-    @import "../../../less/theme.config";
-
-    /* End Config */
-    ```
+		/* Path to this folder */ 
+		@targetFolder : @semanticUiFolder; 
+		
+		/*******************************
+		Import a common Theme config
+		*******************************/
+		@import "../../../less/theme.config";
+		
+		/* End Config */
 
 - Browse to `semantic-dojo/index.html`
 
