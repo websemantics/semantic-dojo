@@ -13,26 +13,39 @@
             async: true,
             isDebug: true,
             selectorEngine: 'lite',
-            tlmSiblingOfDojo: false
-        };
-    </script>
+            tlmSiblingOfDojo: false,
+            baseUrl: ".",
+            packages: [
+                { name: "dojo", location: "../libs/dojo" },
+                { name: "dijit", location: "../libs/dijit" },
+                { name: "dojox", location: "../libs/dojox" }
+            ]
 
+        };
+
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+        try {
+          var pageTracker = _gat._getTracker("UA-65742734-1");
+          pageTracker._trackPageview();
+        } catch(err) {}
+
+    </script>
     <script src="../libs/less/dist/less.min.js"></script>
     <script src="../libs/jquery/dist/jquery.min.js"></script>
     <script src="../libs/semantic/dist/semantic.min.js"></script>
     <script src="../libs/dojo/dojo.js"></script>
-    <script>require([ '/semantic-dojo/js/App.js' ]);</script>
-
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-    try {
-      var pageTracker = _gat._getTracker("UA-65742734-1");
-    pageTracker._trackPageview();
-    } catch(err) {}
-  </script>
+    <script>
+        require(["dojo/parser","dojo/ready","./widgets.js"],
+        function(parser, ready, Widgets) {
+          ready(function() {
+            parser.parse();
+            var widgets = new Widgets(null, /* div 'id' */ "widgets");
+          });
+        });
+    </script>
 
 </head>
 <body class="claro">

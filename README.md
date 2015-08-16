@@ -1,4 +1,9 @@
-# Semantic Dojo
+ ____                             _   _        ____        _       
+/ ___|  ___ _ __ ___   __ _ _ __ | |_(_) ___  |  _ \  ___ (_) ___  
+\___ \ / _ \ '_ ` _ \ / _` | '_ \| __| |/ __| | | | |/ _ \| |/ _ \ 
+ ___) |  __/ | | | | | (_| | | | | |_| | (__  | |_| | (_) | | (_) |
+|____/ \___|_| |_| |_|\__,_|_| |_|\__|_|\___| |____/ \___// |\___/ 
+ Web Semantics, Inc.                                    |__/       
 
 A Dijit Theme for powerful and modern Web apps.
 
@@ -45,18 +50,7 @@ This project is still in development. The following widgets have been partially 
 - Install dependencies, `bower install`
 - Create file at `libs/semantic/src/theme.config`, copy/paste the following content:
 
-		/*
-
-		  ____                             _   _        ____        _       
-		 / ___|  ___ _ __ ___   __ _ _ __ | |_(_) ___  |  _ \  ___ (_) ___  
-		 \___ \ / _ \ '_ ` _ \ / _` | '_ \| __| |/ __| | | | |/ _ \| |/ _ \ 
-		  ___) |  __/ | | | | | (_| | | | | |_| | (__  | |_| | (_) | | (_) |
-		 |____/ \___|_| |_| |_|\__,_|_| |_|\__|_|\___| |____/ \___// |\___/ 
-		  Web Semantics, Inc.                                    |__/       
-
-		  Use a common Config file with Semantic UI and Dijit Themes.
-
-		*/
+		/* Use a common Config file with Semantic UI and Dijit Themes. */
 	
 		@targetFolder : @semanticUiFolder; 
 		
@@ -64,7 +58,7 @@ This project is still in development. The following widgets have been partially 
 		
 		/* End Config */
 
-- Browse to `semantic-dojo/index.html`
+- Browse to `semantic-dojo/test/index.html`
 
 ## Guide
 
