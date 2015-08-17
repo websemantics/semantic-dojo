@@ -44,10 +44,15 @@
           ready(function() {
             parser.parse();
             
+            // ----------------------------------------------------
+            // Semantic UI
+            // ----------------------------------------------------
 
-
-
-
+            $('.ui.checkbox').checkbox();
+            $('.ui.radio.checkbox').checkbox();
+            $('.dropdown').dropdown({transition: 'drop'});
+            $('.menu .item').tab();
+            $('.ui.accordion').accordion();
           });
         });
     </script>
@@ -55,14 +60,6 @@
 </head>
 <body class="claro">
    
-
-
-
-
-
-
-
-
 
 
 
