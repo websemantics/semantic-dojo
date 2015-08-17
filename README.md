@@ -50,7 +50,7 @@ This project is still in development. The following widgets have been partially 
 
 - Clone locally, `git clone https://github.com/websemantics/semantic-dojo`
 - Install dependencies, `bower install`
-- Create file at `libs/semantic/src/theme.config`, copy/paste the following content:
+- Create file `libs/semantic/src/theme.config` with the following content:
 
 		/* Use a common Config file with Semantic UI and Dijit Themes. */
 	
