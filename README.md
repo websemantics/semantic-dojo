@@ -73,4 +73,4 @@ This project is still in development. The following widgets have been partially 
 ## Open Source projects used
 
 * Dojo Flat Theme - https://github.com/Esri/dojo-theme-flat
-* Semantic UI LESS - https://github.com/Semantic-Org/Semantic-UI-LESS
+* Semantic UI - https://github.com/Semantic-Org/Semantic-UI
