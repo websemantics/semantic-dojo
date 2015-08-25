@@ -124,6 +124,58 @@
   }
 }
 
+/*--------------------
+        Buttoned
+---------------------*/
+
+/* Button on Right */
+.ui.input.action.dijitTextBox:not([class*="left action"]) {
+  border-right: none;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+/* Button on Left */
+.ui[class*="left action"].input.dijitTextBox {
+  border-left: none;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+/*--------------------
+        Labeled
+---------------------*/
+
+/* Regular Label on Left */
+.ui.labeled.input.dijitTextBox:not([class*="corner labeled"]):not([class*="right labeled"]) {
+  border-left: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* Regular Label on Right */
+.ui[class*="right labeled"].input.dijitTextBox  {
+  border-right: none;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+/* Spacing with corner label */
+.ui[class*="corner labeled"]:not(.left).labeled.input.dijitTextBox {
+  padding-right: @labeledMargin !important;
+}
+.ui[class*="corner labeled"].icon.input.dijitTextBox:not(.left) {
+  padding-right: @labeledIconInputMargin !important;
+}
+
+/* Left Labeled */
+.ui[class*="corner labeled"].left.labeled.input.dijitTextBox {
+  padding-left: @labeledMargin !important;
+}
+.ui[class*="corner labeled"].icon.input.left.dijitTextBox {
+  padding-left: @labeledIconInputMargin !important;
+}
+
 /*********************************************************************
  * Select
  *********************************************************************/

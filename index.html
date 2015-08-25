@@ -42,24 +42,117 @@
                  "dijit/form/Select",
                  "dijit/form/VerticalSlider",
                  "dijit/form/CheckBox",
-                 "dijit/form/RadioButton"],
-        function(parser, ready, Select, VerticalSlider, CheckBox, RadioButton) {
+                 "dijit/form/RadioButton",
+                 "dijit/form/HorizontalSlider",
+                 "dijit/form/HorizontalRule", 
+                 "dijit/form/HorizontalRuleLabels",
+                 "dijit/form/TextBox",
+                 "dijit/form/Textarea",
+                 "dijit/form/ValidationTextBox",
+                 "dijit/layout/ContentPane",
+                 "dijit/layout/TabContainer"],
+        function(parser, ready, Select, VerticalSlider, CheckBox, 
+          RadioButton, HorizontalSlider, HorizontalRule,HorizontalRuleLabels,
+          TextBox, Textarea, ValidationTextBox, ContentPane, TabContainer) {
           ready(function() {
             parser.parse();
-            
-            // Colored Sliders
+          
+            // ----------------------------------------------------
+            // Colored Vertical Sliders
+            // ----------------------------------------------------
+
             var colors = ['red','orange','yellow','olive','green','teal','blue','violet','purple','pink','brown','grey','black'];
                 for (var i = 0; i < colors.length; i++) {
                     var color = colors[i];
                     new VerticalSlider({
                     name: "default vertical slider",
-                    'class': color + " make-disabled",value: Math.floor((Math.random() * 100) + 1),
+                    'class': color ,value: Math.floor((Math.random() * 100) + 1),
                     intermediateChanges: true,
                     style: "margin:10px 30px 10px 10px;height:240px;float:left",
                     showButtons: false
-                }, 'verticalSliderNormal' + (i+1));
+                }, 'vs_' + (i+1));
             }
 
+            // ----------------------------------------------------
+            // Create Horizontal Sliders
+            // ----------------------------------------------------
+
+            new HorizontalSlider({
+                name: "default horizontal slider",
+                value: 50, class : 'orange',
+                style: "margin:10px 10px 30px",
+                showButtons:false
+            }, "hs_1");
+
+            var sliderRulesH = new HorizontalRule({
+                count: 11,
+                style: { height: "5px" }
+            });
+
+            var sliderRuleLabelsH = new HorizontalRuleLabels({
+                labels: ["low", "mid", "high"]
+            });
+
+            var horizontalSliderAdvanced = new HorizontalSlider({
+                name: "default horizontal slider",
+                value: 50, class : 'yellow',
+                style: "margin:10px 10px 30px"
+            }, "hs_2");
+
+            sliderRulesH.placeAt(horizontalSliderAdvanced.containerNode);
+            sliderRuleLabelsH.placeAt(horizontalSliderAdvanced.containerNode); 
+
+            // ----------------------------------------------------
+            // Create Tabs
+            // ----------------------------------------------------
+            /* bottom */
+            var tcpnestedBottom1 = new ContentPane({
+                title: "Tab 1",
+                content: "&nbsp;&nbsp;Nested tab container(bottom)"
+            });
+            var tcpnestedBottom2 = new ContentPane({
+                title: "Tab 2"
+            });
+            var tcpnestedBottom3 = new ContentPane({
+                title: "Tab 3"
+            });
+            var tcnestedBottom = new TabContainer({
+                tabPosition: "top",
+                nested: true
+            });
+            tcnestedBottom.addChild(tcpnestedBottom1);
+            tcnestedBottom.addChild(tcpnestedBottom2);
+            tcnestedBottom.addChild(tcpnestedBottom3);
+
+            tcnestedBottom.startup();
+
+            var tcbp1 = new ContentPane({
+                title: "Tab 1",
+                content: tcnestedBottom
+            });
+            var tcbp2 = new ContentPane({
+                title: "Tab2"
+            });
+            var tcbp3 = new ContentPane({
+                title: "Tab 3"
+            });
+            var tcbp4 = new ContentPane({
+                title: "Tab 4"
+            });
+            var tcbp5 = new ContentPane({
+                title: "Tab 5"
+            });
+            var tcb = new TabContainer({
+                style: "height: 200px; width: 100%;",
+                tabPosition: "top"
+            }, "tabContainer");
+
+            tcb.addChild(tcbp1);
+            tcb.addChild(tcbp2);
+            tcb.addChild(tcbp3);
+            tcb.addChild(tcbp4);
+            tcb.addChild(tcbp5);
+            tcb.startup();
 
             // ----------------------------------------------------
             // Semantic UI
@@ -70,6 +163,8 @@
             $('.dropdown').dropdown({transition: 'drop'});
             $('.menu .item').tab();
             $('.ui.accordion').accordion();
+            $('.popup').popup({on: 'hover'});
+
           });
         });
     </script>
@@ -81,6 +176,12 @@
       <h1 class="ui inverted header title origami">
           SEMANTIC DOJO
         </h1>
+        <!--
+        <div>
+          <a class="github-button" href="https://github.com/websemantics/semantic-dojo" data-icon="octicon-star" data-count-href="/websemantics/semantic-dojo/stargazers" data-count-api="/repos/websemantics/semantic-dojo#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star websemantics/semantic-dojo on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/websemantics/semantic-dojo/fork" data-icon="octicon-git-branch" data-count-href="/websemantics/semantic-dojo/network" data-count-api="/repos/websemantics/semantic-dojo#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork websemantics/semantic-dojo on GitHub">Fork</a>      
+        </div>
+        -->
         <h2 class="ui inverted tagline">
           A Dojo theme that harnesses the style awesomeness of Semantic UI Framework.       
           <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
@@ -106,7 +207,7 @@
           <img src="img/paint-brush-2.svg" class="ui icon image grey">
           Unbelievable Theming
         </h1>
-        <p>Build beautiful modern Web apps with the powerful <a href="http://dojotoolkit.org/">Dojo Toolkit</a> and the awesome <a href="http://semantic-ui.com/">Semantic UI Framework</a>. Joining Semantic UI, a development framework for creating beautiful, responsive layouts using human-friendly Web with Dojo, a JavaScript toolkit with an extensive list of powerful UI widgets. This page demonstrates a number of Dijit widgets work side-by-side with Semantic UI elements.</p>
+        <p>Build beautiful modern Web apps with the powerful <a href="http://dojotoolkit.org/">Dojo Toolkit</a> and the awesome <a href="http://semantic-ui.com/">Semantic UI Framework</a>. Joining Semantic UI, a development framework for creating beautiful, responsive layouts using human-friendly Web with Dojo, a JavaScript toolkit with an extensive list of powerful UI widgets.This page demonstrates a number of Dijit widgets styled by Semantic UI and work side-by-side with its elements in a perfect harmony of grace and elegance.</p>
 
         <div class="ui warning icon message">
           <div class="content">
@@ -116,256 +217,241 @@
           </div>
         </div>
       </div>
+      <div class="ui hidden divider"></div>
       <div class="three column computer one column mobile demo row">
         <div class="column">
           <div class="no example">
             <h4 class="ui header">
-              <a href="/collections/menu.html">Menu</a>
+              <a target="_blank" class="popup" href="http://semantic-ui.com/elements/input.html" data-variation="inverted" data-content="dijit/form/TextBox">TextBox</a>
             </h4>
-            <div class="ui vertical demo menu">
-              <a class="active teal item">
-                Inbox
-                <div class="ui teal label">1</div>
-              </a>
-              <a class="item">
-                Trash
-                <div class="ui label">1</div>
-              </a>
-              <div class="item">
-                <div class="ui transparent icon input">
-                  <input type="text" placeholder="Search mail...">
-                  <i class="search icon"></i>
-                </div>
+            <div class="ui fluid input">
+              <input class="ui input" type="text"
+                data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Standard'">
+              </input>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div class="ui fluid input">
+              <input class="ui input" type="text" name="zip" required="true"
+              data-dojo-type="dijit.form.ValidationTextBox"
+              data-dojo-props="regExp:'\\d{5}', invalidMessage:'Invalid zip code.', placeholder:'Error'" />
+            </div>
+            <div class="ui hidden divider"></div>
+            <div class="ui icon fluid input">
+              <input class="ui icon input" type="text"
+                data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Search ...'" >
+              <i class="search icon"></i>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div class="ui action fluid left icon input">
+              <i class="search icon"></i>
+              <input class="ui action left icon input" type="text"
+                data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Search...'">
+              </input>
+              <div class="ui teal button">Search</div>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div class="ui right icon input loading fluid">
+              <input class="ui right icon input loading" type="text"
+                data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Loading ...'" >
+              </input>
+              <i class="search icon"></i>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div class="ui labeled fluid right icon input">
+              <div class="ui label">
+                http://
               </div>
+              <input class="ui labeled right icon input" type="text"
+                data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'mysite.com'" >
+              </input>
+              <i class="linkify link icon"></i>
             </div>
-            <div class="ui fluid demo tabular menu">
-              <a class="active item">
-                Tab
-              </a>
-              <a class="item">
-                Tab
-              </a>
-            </div>
-            <div class="ui secondary vertical demo menu">
-              <a class="active item">
-                Inbox
-              </a>
-              <a class="item">
-                Starred
-              </a>
-              <a class="item">
-                Trash
-              </a>
-            </div>
-            <div class="ui secondary pointing vertical demo menu">
-              <a class="active item">
-                Inbox
-              </a>
-              <a class="item">
-                Starred
-              </a>
-              <a class="item">
-                Trash
+            <div class="ui hidden divider"></div>
+            <div class="ui right fluid labeled input">
+              <input class="ui right labeled input" type="text"
+                data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Enter categories'" >
+              </input>
+              <a class="ui tag label">
+                Add Tags
               </a>
             </div>
           </div>
           <div class="no example">
             <h4 class="ui header">
-              <a href="/elements/divider.html">Divider</a>
-            </h4>
-            <div class="ui two column stackable center aligned grid segment">
-              <div class="column">
-                <div class="ui button">A</div>
-              </div>
-              <div class="ui vertical divider">or</div>
-              <div class="column">
-                <div class="teal ui button">B</div>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/collections/form.html" data-variation="inverted" data-content="dijit/form/Textarea">Textarea</a>
+            </h4>    
+            <div class="ui form">
+              <div class="field">
+                <textarea class="ui input" data-dojo-type="dijit.form.Textarea" rows="4" cols="30" style="resize:vertical">
+                </textarea>
+                </div>
+              <div class="field">
+                <label>Short Text</label>
+                <textarea class="ui input" data-dojo-type="dijit.form.Textarea" rows="2" cols="30" style="resize:vertical;min-height:inherit">
+                </textarea>
               </div>
             </div>
           </div>
           <div class="no example">
             <h4 class="ui header">
-              <a href="/modules/accordion.html">Accordion</a>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/elements/label.html" data-variation="inverted" data-content="dijit/layout/TabContainer">Label</a>
             </h4>
-            <div class="ui vertical fluid accordion menu">
-              <div class="item">
-                <a class="active title">
-                  <i class="dropdown icon"></i>
-                  Size
-                </a>
-                <div class="active content">
-                  <div class="ui form">
-                    <div class="grouped fields">
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="size" value="small">
-                          <label>Small</label>
-                        </div>
-                      </div>
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="size" value="medium">
-                          <label>Medium</label>
-                        </div>
-                      </div>
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="size" value="large">
-                          <label>Large</label>
-                        </div>
-                      </div>
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="size" value="x-large">
-                          <label>X-Large</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <a class="ui teal label">
+              <i class="mail icon"></i> 23 New
+            </a>
+            <a class="ui tag label">Dresses</a>
+
+            <div class="field">
+                <label>Pointing</label>
+            </div>
+            <div>
+              <form>
+                <div>
+                  <input class="ui input" type="text"
+                    data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'First name'"></input>
+                  <div class="ui pointing label">Please enter a value</div>
                 </div>
-              </div>
-              <div class="item">
-                <a class="title">
-                  <i class="dropdown icon"></i>
-                  Colors
-                </a>
-                <div class="content">
-                  <div class="ui form">
-                    <div class="grouped fields">
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="color">
-                          <label>Red</label>
-                        </div>
-                      </div>
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="color">
-                          <label>Orange</label>
-                        </div>
-                      </div>
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="color">
-                          <label>Green</label>
-                        </div>
-                      </div>
-                      <div class="field">
-                        <div class="ui radio checkbox">
-                          <input type="radio" name="color">
-                          <label>Blue</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="ui divider"></div>
+                <div class="field">
+                  <div class="ui pointing below label">Please enter a value</div>
+                  <input class="ui input" type="text"
+                    data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Last Name'"></input>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
           <div class="no example">
             <h4 class="ui header">
-              <a href="/collections/message.html">Message</a>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/collections/menu.html" data-variation="inverted" data-content="dijit/layout/TabContainer">TabContainer</a>
             </h4>
-            <div class="ui message">
-              <i class="close icon"></i>
-              This site uses cookies
-            </div>
-            <div class="ui warning icon message">
-              <div class="content">
-                <div class="header">Looking for help? </div>
-                <ul class="list">
-                  <li>Use our <a href="#">help center</a></li>
-                  <li>Check our <a href"#"="">FAQ</a></li>
-                </ul>
+              <div id="tabContainer">
               </div>
-            </div>
-            <div class="ui info message">
-              <div class="header">We're creating your profile page</div>
-              <p>It will be ready in just a second.</p>
-            </div>
           </div>
         </div>
         <div class="tablet only computer only column">
           <div class="no example">
             <h4 class="ui header">
-              <a href="/views/card.html">Card</a>
-            </h4>
-            <div class="ui card">
-              <div class="blurring dimmable image">
-                <div class="ui dimmer">
-                  <div class="content">
-                    <div class="center">
-                      <div class="ui inverted button">Add Friend</div>
-                    </div>
-                  </div>
-                </div>
-                <img src="/images/avatar2/large/rachel.png">
+              <a class="popup" target="_blank" href="http://semantic-ui.com/elements/button.html" data-variation="inverted" data-content="dijit/form/Button">Button</a>
+            </h4>    
+            <div>
+              <button class="ui icon button" data-dojo-type="dijit.form.Button" type="button"><i class="cloud icon"></i></button>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div>
+              <button class="ui button" data-dojo-type="dijit.form.Button" type="button">Standard</button>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div>
+              <button class="ui basic button" data-dojo-type="dijit.form.Button" type="button"><i class="icon user"></i>
+                Add Friend</button>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div>
+            <button class="fluid ui button" data-dojo-type="dijit.form.Button" type="button">Fits container</button>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div>
+              <div class="field">
+                <label>Groups</label>
               </div>
-              <div class="content">
-                <div class="header">Rachel Maddaw</div>
-                <div class="meta">
-                  <a class="group">Pundit</a>
-                </div>
-              </div>
-              <div class="extra content">
-                <a class="right floated created">
-                  Joined in 1998
-                </a>
-                <a class="friends">
-                  <i class="user icon"></i>
-                  22 Friends
-                </a>
+              <div class="ui buttons fluid">
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button">One</button>
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button">Two</button>
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button">Three</button>
               </div>
             </div>
-          </div>
-          <div class="no example">
-            <h4 class="ui header">
-              <a href="/views/feed.html">Feed</a>
-            </h4>
-            <div class="ui feed">
-              <div class="event">
-                <div class="label">
-                  <img src="/images/avatar2/small/mark.png">
-                </div>
-                <div class="content">
-                  <div class="summary">
-                    <a class="user">
-                      Mark
-                    </a> added you as a friend
-                  </div>
-                </div>
+            <div class="ui hidden divider"></div>
+            <div>
+              <div class="ui icon buttons">
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button"><i class="align left icon"></i></button>
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button"><i class="align center icon"></i></button>
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button"><i class="align right icon"></i></button>
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button"><i class="align justify icon"></i></button>
               </div>
-              <div class="event">
-                <div class="label">
-                  <img src="/images/avatar2/small/lena.png">
-                </div>
-                <div class="content">
-                  You added Lena to the group <a>Close Friends</a>
-                </div>
-              </div>
-              <div class="event">
-                <div class="label">
-                  <img src="/images/avatar2/small/eve.png">
-                </div>
-                <div class="content">
-                  Eve just <a>posted on your page</a>
-                </div>
+              <div class="ui icon buttons">
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button"><i class="bold icon"></i></button>
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button"><i class="underline icon"></i></button>
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button"><i class="text width icon"></i></button>
               </div>
             </div>
-          </div>
-          <div class="no example">
-            <h4 class="ui header">
-              <a href="/elements/label.html">Label</a>
-            </h4>
-            <div class="ui image label">
-              <img src="/images/avatar2/small/molly.png">
-              molly@thebears.com
-              <i class="delete icon"></i>
+            <div class="ui hidden divider"></div>
+            <div>
+              <div class="field">
+                <label>Conditionals</label>
+              </div>
+              <div class="ui buttons">
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button">Cancel</button>
+                <div class="or"></div>
+                <button class="ui positive button" data-dojo-type="dijit.form.Button" type="button">Save</button>
+              </div>
             </div>
-            <a class="ui teal label">
-              <i class="mail icon"></i> 23 New
-            </a>
-            <a class="ui tag label">Dresses</a>
+            <div class="ui hidden divider"></div>
+            <div>
+              <div class="field">
+                <label>Loading</label>
+              </div>
+              <button class="ui loading button" data-dojo-type="dijit.form.Button" type="button">Loading</button>
+              <button class="ui basic loading button" data-dojo-type="dijit.form.Button" type="button">Loading</button>
+              <button class="ui primary loading button" data-dojo-type="dijit.form.Button" type="button">Loading</button>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div>
+              <div class="field">
+                <label>Circular</label>
+              </div>
+              <button class="ui circular facebook icon button" data-dojo-type="dijit.form.Button" type="button">
+                <i class="facebook icon"></i>
+              </button>
+              <button class="ui circular twitter icon button" data-dojo-type="dijit.form.Button" type="button">
+                <i class="twitter icon"></i>
+              </button>
+              <button class="ui circular linkedin icon button" data-dojo-type="dijit.form.Button" type="button">
+                <i class="linkedin icon"></i>
+              </button>
+              <button class="ui circular google plus icon button" data-dojo-type="dijit.form.Button" type="button">
+                <i class="google plus icon"></i>
+              </button>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div>
+              <div class="field">
+                <label>Mixed</label>
+              </div>
+            <div class="ui buttons">
+              <button class="ui labeled icon button" data-dojo-type="dijit.form.Button" type="button">
+                <i class="left chevron icon"></i>Back</button>
+              <button class="ui button" data-dojo-type="dijit.form.Button" type="button">
+                <i class="stop icon"></i>Stop
+              </button>
+              <button class="ui right labeled icon button" data-dojo-type="dijit.form.Button" type="button">
+                Forward<i class="right chevron icon"></i>
+              </button>
+            </div>
+            </div>
+            <div class="ui hidden divider"></div>
+            <div>
+              <div class="field">
+                <label>Labeled Icon</label>
+              </div>
+              <button class="ui labeled icon button" data-dojo-type="dijit.form.Button" type="button">
+                <i class="pause icon"></i>
+                Pause
+              </button>
+              <button class="ui right labeled icon button" data-dojo-type="dijit.form.Button" type="button">
+                <i class="right arrow icon"></i>
+                Next
+              </button>
+            </div>
+            <div class="ui hidden divider"></div>
+              <div class="ui vertical labeled icon buttons teal">
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button">
+                  <i class="pause icon"></i>Pause</button>
+                <button class="ui button active" data-dojo-type="dijit.form.Button" type="button">
+                  <i class="play icon"></i>Play</button>
+                <button class="ui button" data-dojo-type="dijit.form.Button" type="button">
+                  <i class="shuffle icon"></i>Shuffle</button>
+              </div>
+            <div class="ui hidden divider"></div>
           </div>
           <div class="no example">
             <h4 class="ui header">
@@ -399,7 +485,7 @@
         <div class="tablet only computer only column">
           <div class="no example">
             <h4 class="ui header">
-              dijit/form/<a href="#">Select</a>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/modules/dropdown.html" data-variation="inverted" data-content="dijit/form/Select">Select</a>
             </h4>
             <select style="width:100%" data-dojo-type="dijit.form.Select" required>
               <option> -- select -- </option> 
@@ -413,39 +499,13 @@
         </div>
           <div class="no segment example">
             <h4 class="ui header">
-              dijit/<a href="#">ColorPalette</a>
+              <a class="popup" target="_blank" href="http://dojotoolkit.org/reference-guide/1.10/dijit/ColorPalette.html" data-variation="inverted" data-content="dijit/form/ColorPalette">ColorPalette</a>
             </h4>
               <div data-dojo-type="dijit/ColorPalette"></div>
           </div>
           <div class="no example">
             <h4 class="ui header">
-              <a href="/elements/input.html">Input</a>
-            </h4>
-            <div class="ui action left icon input">
-              <i class="search icon"></i>
-              <input type="text" placeholder="Search...">
-              <div class="ui teal button">Search</div>
-            </div>
-            <div class="ui hidden divider"></div>
-            <div class="ui labeled right icon input">
-              <div class="ui label">
-                http://
-              </div>
-              <input type="text" placeholder="mysite.com">
-              <i class="linkify link icon"></i>
-            </div>
-
-            <div class="ui hidden divider"></div>
-            <div class="ui right labeled input">
-              <input type="text" placeholder="Enter categories">
-              <a class="ui tag label">
-                Add Tags
-              </a>
-            </div>
-          </div>
-          <div class="no example">
-            <h4 class="ui header">
-              dijit/form/<a href="#">CheckBox</a>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/modules/checkbox.html" data-variation="inverted" data-content="dijit/form/CheckBox">CheckBox</a>
             </h4>
             <div class="ui">
               <input data-dojo-type="dijit.form.CheckBox" checked/>
@@ -459,7 +519,7 @@
           </div>
           <div class="no example">
             <h4 class="ui header">
-              dijit/form/<a href="#">RadioButton</a>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/modules/checkbox.html" data-variation="inverted" data-content="dijit/form/RadioButton">RadioButton</a>
             </h4>
             <div class="ui">
               <input data-dojo-type="dijit.form.RadioButton" />
@@ -474,11 +534,64 @@
               <label>Cheese</label>
             </div>
           </div>
+          <div class="no example">
+            <h4 class="ui header">
+              <a class="popup" target="_blank"  href="http://dojotoolkit.org/reference-guide/1.10/dijit/form/HorizontalSlider.html" data-variation="inverted" data-content="dijit/form/HorizontalSlider">HorizontalSlider</a>
+            </h4>
+            <div>
+             <div id="hs_1"></div><div id="hs_2"></div>
+            </div>
+          </div>
+          <div class="no example">
+            <h4 class="ui header">
+              <a class="popup" target="_blank" href="http://semantic-ui.com/collections/message.html" data-variation="inverted" data-content="semantic-ui/Message">Message</a>
+            </h4>
+            <div class="ui message">
+              <i class="close icon"></i>
+              This site uses cookies
+            </div>
+            <div class="ui warning icon message">
+              <div class="content">
+                <div class="header">Looking for help? </div>
+                <ul class="list">
+                  <li>Use our <a href="#">help center</a></li>
+                  <li>Check our <a href"#"="">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="ui info message">
+              <i class="close icon"></i>
+              <div class="header">
+                Was this what you wanted?
+              </div>
+              <ul class="list">
+                <li>It's good to see you again.</li>
+                <li>Did you know it's been a while?</li>
+              </ul>
+            </div>
+            <div class="ui success message">
+              <div class="header">Form Completed</div>
+              <p>You're all signed up for the newsletter.</p>
+            </div>
+            <div class="ui error message">
+              <div class="header">Action Forbidden</div>
+              <p>You can only sign up for an account once with a given e-mail address.</p>
+            </div>
+            <div class="ui icon message">
+              <i class="notched circle loading icon"></i>
+              <div class="content">
+                <div class="header">
+                  Just one second
+                </div>
+                <p>We're fetching that content for you.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
+  <!-- ******************** Sliders **************************** -->
 <div class="ui alternate stripe vertical segment">
   <div class="ui stackable center aligned grid container">
     <div class="fourteen wide column">
@@ -490,20 +603,115 @@
         <div class="eleven wide column center">
           <h3 class="ui header">Vertical Sliders</h3>
           <p>Build themes with support for custom definitions and multiple-levels of theme inheritance.</p>
-          <div style="padding-left:20px">
-            <div id="verticalSliderNormal1"></div>
-            <div id="verticalSliderNormal2"></div>
-            <div id="verticalSliderNormal3"></div>
-            <div id="verticalSliderNormal4"></div>
-            <div id="verticalSliderNormal5"></div>
-            <div id="verticalSliderNormal6"></div>
-            <div id="verticalSliderNormal7"></div>
-            <div id="verticalSliderNormal8"></div>
-            <div id="verticalSliderNormal9"></div>
-            <div id="verticalSliderNormal10"></div>
-            <div id="verticalSliderNormal11"></div>
-            <div id="verticalSliderNormal12"></div>
-            <div id="verticalSliderNormal13"></div>
+          <div style="padding-left:20px"><div id="vs_1"></div><div id="vs_2"></div><div id="vs_3"></div><div id="vs_4"></div><div id="vs_5"></div><div id="vs_6"></div><div id="vs_7"></div><div id="vs_8"></div><div id="vs_9"></div><div id="vs_10"></div><div id="vs_11"></div><div id="vs_12"></div><div id="vs_13"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ******************** Input **************************** -->
+<div class="ui stripe theming vertical segment">
+  <div class="ui stackable very relaxed two column grid container">
+    <div class="center aligned column">
+      <h1 class="ui icon header">
+        <img src="img/account-favorite.svg" class="ui icon image">
+        All Shapes and Sizes
+      </h1>
+      <p>Extremely user friendly, scalable and sexy UI styles that suits all tastes and display sizes.</p>
+    </div>
+    <div class="left aligned column">
+     
+      <div class="ui icon input mini">
+        <input class="ui icon input" type="text"
+          data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Search ...'" >
+        <i class="search icon"></i>
+      </div>
+      <div class="ui hidden divider"></div>
+      <div class="ui icon input small">
+        <input class="ui icon input" type="text"
+          data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Search ...'" >
+        <i class="search icon"></i>
+      </div>
+      <div class="ui hidden divider"></div>
+      <div class="ui icon input large">
+        <input class="ui icon input" type="text"
+          data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Search ...'" >
+        <i class="search icon"></i>
+      </div>
+      <div class="ui hidden divider"></div>
+      <div class="ui icon input big">
+        <input class="ui icon input" type="text"
+          data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Search ...'" >
+        <i class="search icon"></i>
+      </div>
+      <div class="ui hidden divider"></div>
+      <div class="ui icon input huge">
+        <input class="ui icon input" type="text"
+          data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Search ...'" >
+        <i class="search icon"></i>
+      </div>
+      <div class="ui hidden divider"></div>
+      <div class="ui icon input massive">
+        <input class="ui icon input" type="text"
+          data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'Search ...'" >
+        <i class="search icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ******************** Grid **************************** -->
+<div class="ui alternate stripe vertical segment">
+  <div class="ui stackable center aligned grid container">
+    <div class="fourteen wide column">
+      <h1 class="ui icon header">
+        <img class="ui inline icon image" src="img/muscle.svg">
+        Powerful Grid
+      </h1>
+      <div class="ui stackable center aligned vertically padded grid">
+        <div class="eleven wide column center">
+          <h3 class="ui header">Forms / Grid</h3>
+          <p>Dijit form elements fully integrated with a customizable and responsive CSS Grid. <a href="http://semantic-ui.com/collections/grid.html">Read more, ... </a></p>
+          <div class="ui hidden divider"></div>
+          <div class="ui hidden divider"></div>
+          <div class="ui hidden divider"></div>
+          <div class="ui form">
+            <div class="fields">
+              <div class="six wide field">
+                <label>First name</label>
+                <input type="text" placeholder="First Name">
+              </div>
+              <div class="four wide field">
+                <label>Middle</label>
+                <input type="text" placeholder="Middle Name">
+              </div>
+              <div class="six wide field">
+                <label>Last name</label>
+                <input type="text" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="fields">
+              <div class="two wide field">
+                <input type="text" placeholder="2 Wide">
+              </div>
+              <div class="twelve wide field">
+                <input type="text" placeholder="12 Wide">
+              </div>
+              <div class="two wide field">
+                <input type="text" placeholder="2 Wide">
+              </div>
+            </div>
+            <div class="fields">
+              <div class="eight wide field">
+                <input type="text" placeholder="8 Wide">
+              </div>
+              <div class="six wide field">
+                <input type="text" placeholder="6 Wide">
+              </div>
+              <div class="two wide field">
+                <input type="text" placeholder="2 Wide">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -511,7 +719,96 @@
   </div>
 </div>
 
-  <!-- ******************** Footer Begins **************************** -->
+<!-- ******************** Buttons **************************** -->
+<div class="ui stripe theming vertical segment">
+  <div class="ui stackable very relaxed two column grid container">
+    <div class="center aligned column four wide">
+      <h1 class="ui icon header">
+        <img src="img/party-mask.svg" class="ui icon image">
+        Buttons Party
+      </h1>
+      <p>Support for Dijit buttons themes, sizes, colors in a lively display of flexibility and style.</p><p><a href="http://semantic-ui.com/elements/button.html">Read more, ... </a></p>
+    </div>
+    <div class="left aligned column twelve wide">
+      <div>
+        <button class="mini ui button" data-dojo-type="dijit.form.Button" type="button">Mini</button>
+        <button class="tiny ui button" data-dojo-type="dijit.form.Button" type="button">Tiny</button>
+        <button class="small ui button" data-dojo-type="dijit.form.Button" type="button">Small</button>
+        <button class="medium ui button" data-dojo-type="dijit.form.Button" type="button">Medium</button>
+        <button class="large ui button" data-dojo-type="dijit.form.Button" type="button">Large</button>
+        <button class="big ui button" data-dojo-type="dijit.form.Button" type="button">Big</button>
+        <button class="huge ui button" data-dojo-type="dijit.form.Button" type="button">Huge</button>
+        <button class="massive ui button" data-dojo-type="dijit.form.Button" type="button">Massive</button>
+      </div>
+      <div class="ui hidden divider"></div>
+      <div>
+       <button class="ui facebook button" data-dojo-type="dijit.form.Button" type="button"><i class="facebook icon"></i>Facebook
+        </button>
+        <button class="ui twitter button" data-dojo-type="dijit.form.Button" type="button"><i class="twitter icon"></i>Twitter
+        </button>
+        <button class="ui google plus button" data-dojo-type="dijit.form.Button" type="button"><i class="google plus icon"></i>Google Plus
+        </button>
+        <button class="ui linkedin button" data-dojo-type="dijit.form.Button" type="button"><i class="linkedin icon"></i>LinkedIn
+        </button>
+        <button class="ui instagram button" data-dojo-type="dijit.form.Button" type="button"><i class="instagram icon"></i>Instagram
+        </button>
+        <button class="ui youtube button" data-dojo-type="dijit.form.Button" type="button"><i class="youtube icon"></i>YouTube
+        </button>
+      </div>
+      <div class="ui hidden divider"></div>
+     <div>
+      <button class="ui red button" data-dojo-type="dijit.form.Button" type="button">Red</button>
+      <button class="ui orange button" data-dojo-type="dijit.form.Button" type="button">Orange</button>
+      <button class="ui yellow button" data-dojo-type="dijit.form.Button" type="button">Yellow</button>
+      <button class="ui olive button" data-dojo-type="dijit.form.Button" type="button">Olive</button>
+      <button class="ui green button" data-dojo-type="dijit.form.Button" type="button">Green</button>
+      <button class="ui teal button" data-dojo-type="dijit.form.Button" type="button">Teal</button>
+      <button class="ui blue button" data-dojo-type="dijit.form.Button" type="button">Blue</button>
+      <button class="ui violet button" data-dojo-type="dijit.form.Button" type="button">Violet</button>
+      <button class="ui purple button" data-dojo-type="dijit.form.Button" type="button">Purple</button>
+      <button class="ui pink button" data-dojo-type="dijit.form.Button" type="button">Pink</button>
+      <button class="ui brown button" data-dojo-type="dijit.form.Button" type="button">Brown</button>
+      <button class="ui grey button" data-dojo-type="dijit.form.Button" type="button">Grey</button>
+      <button class="ui black button" data-dojo-type="dijit.form.Button" type="button">Black</button>       
+     </div>
+      <div class="ui hidden divider"></div>
+     <div>
+      <button class="ui red basic button" data-dojo-type="dijit.form.Button" type="button">Red</button>
+      <button class="ui orange basic button" data-dojo-type="dijit.form.Button" type="button">Orange</button>
+      <button class="ui yellow basic button" data-dojo-type="dijit.form.Button" type="button">Yellow</button>
+      <button class="ui olive basic button" data-dojo-type="dijit.form.Button" type="button">Olive</button>
+      <button class="ui green basic button" data-dojo-type="dijit.form.Button" type="button">Green</button>
+      <button class="ui teal basic button" data-dojo-type="dijit.form.Button" type="button">Teal</button>
+      <button class="ui blue basic button" data-dojo-type="dijit.form.Button" type="button">Blue</button>
+      <button class="ui violet basic button" data-dojo-type="dijit.form.Button" type="button">Violet</button>
+      <button class="ui purple basic button" data-dojo-type="dijit.form.Button" type="button">Purple</button>
+      <button class="ui pink basic button" data-dojo-type="dijit.form.Button" type="button">Pink</button>
+      <button class="ui brown basic button" data-dojo-type="dijit.form.Button" type="button">Brown</button>
+      <button class="ui grey basic button" data-dojo-type="dijit.form.Button" type="button">Grey</button>
+      <button class="ui black basic button" data-dojo-type="dijit.form.Button" type="button">Black</button>
+      </div>
+      <div class="ui hidden divider"></div>
+      <div class="ui inverted segment">
+        <button class="ui inverted button" data-dojo-type="dijit.form.Button" type="button">Standard</button>
+        <button class="ui inverted red button" data-dojo-type="dijit.form.Button" type="button">Red</button>
+        <button class="ui inverted orange button" data-dojo-type="dijit.form.Button" type="button">Orange</button>
+        <button class="ui inverted yellow button" data-dojo-type="dijit.form.Button" type="button">Yellow</button>
+        <button class="ui inverted olive button" data-dojo-type="dijit.form.Button" type="button">Olive</button>
+        <button class="ui inverted green button" data-dojo-type="dijit.form.Button" type="button">Green</button>
+        <button class="ui inverted teal button" data-dojo-type="dijit.form.Button" type="button">Teal</button>
+        <button class="ui inverted blue button" data-dojo-type="dijit.form.Button" type="button">Blue</button>
+        <button class="ui inverted violet button" data-dojo-type="dijit.form.Button" type="button">Violet</button>
+        <button class="ui inverted purple button" data-dojo-type="dijit.form.Button" type="button">Purple</button>
+        <button class="ui inverted pink button" data-dojo-type="dijit.form.Button" type="button">Pink</button>
+        <button class="ui inverted brown button" data-dojo-type="dijit.form.Button" type="button">Brown</button>
+        <button class="ui inverted grey button" data-dojo-type="dijit.form.Button" type="button">Grey</button>
+        <button class="ui inverted black button" data-dojo-type="dijit.form.Button" type="button">Black</button>
+      </div>
+      <div class="ui hidden divider"></div>
+    </div>
+  </div>
+</div>
+<!-- ******************** Footer Begins **************************** -->
 </div>
   <div class="ui black inverted vertical footer segment">
     <div class="ui center aligned container">
@@ -522,6 +819,6 @@
     </div>
   </div>
 </div>
-
+<!-- <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script> -->
 </body>
 </html>
