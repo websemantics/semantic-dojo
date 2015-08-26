@@ -20,7 +20,7 @@
     "dojox": "*",
     "util": "*",
     "less": "*",
-    "jquery": "2.1.4",
+    "jquery": "*",
     "semantic" : "*"
   }
 }

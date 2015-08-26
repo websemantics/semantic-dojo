@@ -9,7 +9,7 @@
  Version 1.0
 ```
 
-A Dijit Theme for powerful and modern Web apps.
+A responsive Dojo theme that harnesses the style awesomeness of Semantic UI Framework for powerful and modern Web apps.
 
 This project harness the style awesomeness of the [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets.
 
