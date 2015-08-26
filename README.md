@@ -17,7 +17,7 @@ A new method of building Dijit Themes following the Semantic UI approach with a 
 
 Dijit widgets directly import and inherint CSS from their Semantic UI conterparts, if any!
 
-Try live demo.
+Try [live demo](http://websemantics.github.io/semantic-dojo).
 
 ## Installation
 
@@ -46,7 +46,7 @@ To test different themes for the supported widgets, go to 'less/theme.config' an
 # Change Log
 All notable changes to this project will be documented in this section.
 
-### [0.1] - 2015-08-26
+### [1.0] - 2015-08-26
 #### Changed
 - Textbox
 - TextArea
