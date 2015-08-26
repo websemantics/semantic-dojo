@@ -23,14 +23,14 @@
 
         };
 
-        // var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 
-        // document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 
-        // try {
-        //   var pageTracker = _gat._getTracker("UA-65742734-1");
-        //   pageTracker._trackPageview();
-        // } catch(err) {}
+        try {
+          var pageTracker = _gat._getTracker("UA-65742734-1");
+          pageTracker._trackPageview();
+        } catch(err) {}
 
     </script>
     <script src="libs/less/dist/less.min.js"></script>
@@ -38,7 +38,9 @@
     <script src="libs/semantic/dist/semantic.min.js"></script>
     <script src="libs/dojo/dojo.js"></script>
     <script>
-        require(["dojo/parser","dojo/ready",
+        require(["dojo/parser",
+                 "dojo/ready",
+                 "dijit/registry",
                  "dijit/form/Select",
                  "dijit/form/VerticalSlider",
                  "dijit/form/CheckBox",
@@ -50,10 +52,14 @@
                  "dijit/form/Textarea",
                  "dijit/form/ValidationTextBox",
                  "dijit/layout/ContentPane",
-                 "dijit/layout/TabContainer"],
-        function(parser, ready, Select, VerticalSlider, CheckBox, 
+                 "dijit/layout/TabContainer",
+                 "dijit/form/DropDownButton",
+                 "dijit/TooltipDialog",
+                 "dijit/Tooltip"],
+        function(parser, ready, registry, Select, VerticalSlider, CheckBox, 
           RadioButton, HorizontalSlider, HorizontalRule,HorizontalRuleLabels,
-          TextBox, Textarea, ValidationTextBox, ContentPane, TabContainer) {
+          TextBox, Textarea, ValidationTextBox, ContentPane, TabContainer,
+          DropDownButton,TooltipDialog,Tooltip) {
           ready(function() {
             parser.parse();
           
@@ -155,6 +161,79 @@
             tcb.startup();
 
             // ----------------------------------------------------
+            // Create Tooltip
+            // ----------------------------------------------------
+            new Tooltip({
+              connectId: 'tooltipAbove',
+              label: "tooltip: above",
+              position: ['above']
+            });
+            new Tooltip({
+              connectId: 'tooltipAboveCentered',
+              label: "tooltip: above centered",
+              position: ['above-centered']
+            });
+            new Tooltip({
+              connectId: 'tooltipBelow',
+              label: "tooltip: below",
+              position: ['below']
+            });
+            new Tooltip({
+              connectId: 'tooltipBelowCentered',
+              label: "tooltip: below centered",
+              position: ['below-centered']
+            });
+            new Tooltip({
+              connectId: 'tooltipBefore',
+              label: "tooltip: before",
+              position: ['before']
+            });
+            new Tooltip({
+              connectId: 'tooltipAfter',
+              label: "tooltip: after",
+              position: ['after']
+            });
+            // ----------------------------------------------------
+            // Create Tooltip Dialog
+            // ----------------------------------------------------
+
+            var tooltipDialog1 = new TooltipDialog({
+              content:  '<form style="padding:5px 0px" data-dojo-type="dijit/form/Form">This tooltip dialog has an action bar.<br/><br/>' +
+                                '<div class="dijitDialogPaneActionBar">' +
+                                '<div class="ui buttons tiny">' +
+                                '<button class="ui button" data-dojo-type="dijit/form/Button" type="reset">Cancel</button>' +
+                                '<div class="or"></div>' + 
+                                '<button class="ui positive button" data-dojo-type="dijit/form/Button" type="submit">Save</button></div></form>' + 
+                                '</div>'
+            });
+
+            registry.byId('tooltipdialogButton1').set("dropDown", tooltipDialog1);
+
+            var tooltipDialog2 = new TooltipDialog({
+              content: '<span><br/>This is the content.<br/><br/></span>'
+            });
+
+            registry.byId('tooltipdialogButton2').set("dropDown", tooltipDialog2);
+
+            var tooltipDialog3 = new TooltipDialog({
+              content: '<form style="padding:5px 0px" data-dojo-type="dijit/form/Form">This tooltip dialog has an action bar.<br/><br/>' +
+                                '<div class="dijitDialogPaneActionBar">' +
+                                '<div class="ui buttons tiny">' +
+                                '<button class="ui button" data-dojo-type="dijit/form/Button" type="reset">Reset</button>' +
+                                '<div class="or"></div>' + 
+                                '<button class="ui primary button" data-dojo-type="dijit/form/Button" type="submit">Login</button></div></form>' + 
+                                '</div>'
+            });
+
+            registry.byId('tooltipdialogButton3').set("dropDown", tooltipDialog3);
+
+            var tooltipDialog4 = new TooltipDialog({
+              content: '<span><br/>This is the content.<br/><br/></span>'
+            });
+            registry.byId('tooltipdialogButton4').set("dropDown", tooltipDialog4);
+
+
+            // ----------------------------------------------------
             // Semantic UI
             // ----------------------------------------------------
 
@@ -176,16 +255,14 @@
       <h1 class="ui inverted header title origami">
           SEMANTIC DOJO
         </h1>
-        <!--
         <div>
           <a class="github-button" href="https://github.com/websemantics/semantic-dojo" data-icon="octicon-star" data-count-href="/websemantics/semantic-dojo/stargazers" data-count-api="/repos/websemantics/semantic-dojo#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star websemantics/semantic-dojo on GitHub">Star</a>
           <a class="github-button" href="https://github.com/websemantics/semantic-dojo/fork" data-icon="octicon-git-branch" data-count-href="/websemantics/semantic-dojo/network" data-count-api="/repos/websemantics/semantic-dojo#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork websemantics/semantic-dojo on GitHub">Fork</a>      
         </div>
-        -->
         <h2 class="ui inverted tagline">
-          A Dojo theme that harnesses the style awesomeness of Semantic UI Framework.       
-          <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
-            0.1
+          A responsive Dojo theme that harnesses the style awesomeness of Semantic UI Framework.       
+          <a class="ui black version label" href="https://github.com/websemantics/semantic-dojo">
+            1.0
           </a>
         </h2>
       <div class="ui hidden divider"></div>
@@ -282,19 +359,17 @@
             </h4>    
             <div class="ui form">
               <div class="field">
-                <textarea class="ui input" data-dojo-type="dijit.form.Textarea" rows="4" cols="30" style="resize:vertical">
-                </textarea>
+                <textarea class="ui input" data-dojo-type="dijit.form.Textarea" rows="4" cols="30" style="resize:vertical"></textarea>
                 </div>
               <div class="field">
                 <label>Short Text</label>
-                <textarea class="ui input" data-dojo-type="dijit.form.Textarea" rows="2" cols="30" style="resize:vertical;min-height:inherit">
-                </textarea>
+                <textarea class="ui input" data-dojo-type="dijit.form.Textarea" rows="2" cols="30" style="resize:vertical;min-height:inherit"></textarea>
               </div>
             </div>
           </div>
           <div class="no example">
             <h4 class="ui header">
-              <a class="popup" target="_blank" href="http://semantic-ui.com/elements/label.html" data-variation="inverted" data-content="dijit/layout/TabContainer">Label</a>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/elements/label.html" data-variation="inverted" data-content="semantic-ui/Label">Label</a>
             </h4>
             <a class="ui teal label">
               <i class="mail icon"></i> 23 New
@@ -322,10 +397,23 @@
           </div>
           <div class="no example">
             <h4 class="ui header">
-              <a class="popup" target="_blank" href="http://semantic-ui.com/collections/menu.html" data-variation="inverted" data-content="dijit/layout/TabContainer">TabContainer</a>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/modules/progress.html" data-variation="inverted" data-content="dijit/ProgressBar">ProgressBar</a>
             </h4>
-              <div id="tabContainer">
-              </div>
+              <div>
+                <!--
+                <div data-dojo-type="dijit/ProgressBar"  class="ui progress tiny" style="width:100%" data-dojo-props="progress:'90'"></div>
+                <div data-dojo-type="dijit/ProgressBar" class="ui small progress" style="width:100%" data-dojo-props="progress:'75'"></div>
+                -->
+                <div data-dojo-type="dijit/ProgressBar" class="ui progress success" style="width:100%" data-dojo-props="progress:'60'"></div>
+                <div data-dojo-type="dijit/ProgressBar" class="ui progress large warning" style="width:100%" data-dojo-props="progress:'45'"></div>
+                <div data-dojo-type="dijit/ProgressBar" class="ui progress big error" style="width:100%" data-dojo-props="progress:'30'" data-percent="32"></div>
+                <div class="field">
+                  <label>Indeterminate</label>
+                </div>
+                <div data-dojo-type="dijit/ProgressBar" class="ui progress indicating active" style="width:100%" data-dojo-props="indeterminate: true"></div>
+                <div data-dojo-type="dijit/ProgressBar" class="ui progress indicating active teal" style="width:100%" data-dojo-props="indeterminate: true"></div>
+                <div data-dojo-type="dijit/ProgressBar" class="ui progress indicating active blue" style="width:100%" data-dojo-props="indeterminate: true"></div>
+            </div>
           </div>
         </div>
         <div class="tablet only computer only column">
@@ -455,7 +543,27 @@
           </div>
           <div class="no example">
             <h4 class="ui header">
-              <a href="/elements/step.html">Step</a>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/modules/popup.html" data-variation="inverted" data-content="dijit/Tooltip">Tooltip</a>
+            </h4>
+            <span id="tooltipAbove">above</span><span style="color:#eeeeee"> | </span>
+            <span id="tooltipAboveCentered">above centered</span><span style="color:#eeeeee"> | </span>
+            <span id="tooltipBelow">below</span><span style="color:#eeeeee"> | </span>
+            <span id="tooltipBelowCentered">below centered</span><span style="color:#eeeeee"> | </span>
+            <span id="tooltipBefore">before</span><span style="color:#eeeeee"> | </span>
+            <span id="tooltipAfter">after </span>
+          </div>
+          <div class="no example">
+            <h4 class="ui header">
+              <a class="popup" target="_blank" href="http://semantic-ui.com/modules/popup.html" data-variation="inverted" data-content="dijit/TooltipDialog">TooltipDialog</a>
+            </h4>
+            <div data-dojo-type="dijit/form/DropDownButton" id="tooltipdialogButton2" data-dojo-props="dropDownPosition: ['above-centered']"><span>above-centered</span></div>
+            <div data-dojo-type="dijit/form/DropDownButton" id="tooltipdialogButton1" data-dojo-props="dropDownPosition: ['below-centered']"><span>below centered</span></div>
+            <div data-dojo-type="dijit/form/DropDownButton" id="tooltipdialogButton3" data-dojo-props="dropDownPosition: ['before-centered']"><span>before-centered</span></div>
+            <div data-dojo-type="dijit/form/DropDownButton" id="tooltipdialogButton4" data-dojo-props="dropDownPosition: ['after-centered']"><span>after centered</span></div>
+          </div>
+          <div class="no example">
+            <h4 class="ui header">
+              <a class="popup" target="_blank" href="http://semantic-ui.com/elements/step.html" data-variation="inverted" data-content="semantic-ui/Step">Step</a>
             </h4>
             <div class="ui fluid vertical steps">
               <a class="step">
@@ -541,6 +649,13 @@
             <div>
              <div id="hs_1"></div><div id="hs_2"></div>
             </div>
+          </div>
+          <div class="no example">
+            <h4 class="ui header">
+              <a class="popup" target="_blank" href="http://semantic-ui.com/collections/menu.html" data-variation="inverted" data-content="dijit/layout/TabContainer">TabContainer</a>
+            </h4>
+              <div id="tabContainer">
+              </div>
           </div>
           <div class="no example">
             <h4 class="ui header">
@@ -819,6 +934,6 @@
     </div>
   </div>
 </div>
-<!-- <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script> -->
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
