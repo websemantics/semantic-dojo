@@ -17,8 +17,8 @@
 
 @font-face {
   font-family: 'Conv_origami_making';
-  src: url('../fonts/origami_making.eot');
-  src: local('☺'), url('../fonts/origami_making.woff') format('woff'), url('../fonts/origami_making.ttf') format('truetype'), url('../fonts/origami_making.svg') format('svg');
+  src: url('../fonts/origami/origami_making.eot');
+  src: local('☺'), url('../fonts/origami/origami_making.woff') format('woff'), url('../fonts/origami/origami_making.ttf') format('truetype'), url('../fonts/origami/origami_making.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
