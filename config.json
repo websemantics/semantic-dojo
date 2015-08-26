@@ -1,0 +1,23 @@
+{
+  "base": "",
+
+  "paths": {
+    "source": {
+      "config"      : "less/theme.config",
+      "definitions" : "less/definitions/",
+      "site"        : "less/site/",
+      "themes"      : "less/themes/"
+    },
+    "output": {
+      "packaged"     : "dist/",
+      "uncompressed" : "dist/components/",
+      "compressed"   : "dist/components/",
+      "themes"       : "dist/themes/"
+    },
+    "clean"        : "dist/"
+  },
+
+  "permission" : false,
+  "rtl": false
+
+}
