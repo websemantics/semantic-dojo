@@ -33,7 +33,7 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 		
 		/* End Config */
 
-- Browse to `semantic-dojo/test/index.html`
+- Browse to `semantic-dojo/index.html`
 
 ## Guide
 
