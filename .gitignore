@@ -6,3 +6,4 @@
 /src/semantic
 /src/util
 /node_modules
+!/src/semantic/src/theme.config
