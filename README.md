@@ -45,9 +45,10 @@ To test different themes for the supported widgets, go to 'less/theme.config' an
 
 ## Build
 
-To build Semantic-Dojo run Gulp in main folder
+To build Semantic-Dojo do the following:
 
-`gulp`
+1- Install Nodejs required packages: `npm install`
+1- Run gulp in main folder: `gulp`
 
 This will generate the master Semantic Dojo styles at `dist/semantic-dojo.css`. Assets are located in `dist/themes/default/assets`
 
@@ -56,6 +57,12 @@ To build the demo app, run build.sh
 `./build.sh`
 
 This will build the dojo app to `dist/app` folder, and also run `gulp` for Semantic Dojo.
+
+## Development
+
+To contribute to Semantic Dojo, follwo the installation steps above then edit:
+1- The main dev page, `src/app/dev.html`
+2- Semantic Dojo home page, `src/app/index.html`
 
 # Change Log
 All notable changes to this project will be documented in this section.
