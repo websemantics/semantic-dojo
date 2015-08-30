@@ -37,14 +37,21 @@ echo " Done"
 
 "$TOOLSDIR/build.sh" --profile "$PROFILE" --releaseDir "$DISTDIR" $@
 
+cd "$DISTDIR"
+
+echo "Cleaning unused code"
+
+find . -type f -name '*.uncompressed.js' -print0 | xargs -0 rm -rdf
+find . -type f -name '*.consoleStripped.js' -print0 | xargs -0 rm -rdf 
+find . -type f -name 'build-report.txt' -print0 | xargs -0 rm -rdf 
+rm -R demo/app
+rm -R demo/dijit
+rm -R demo/dojox
+
+echo "Building semantic-dojo"
+
 cd "$BASEDIR"
 
-# Copy & minify index.html to dist
-cat "$SRCDIR/index.html" | \
-perl -pe 's/\/\/.*$//gm;       # Strip JS comments' |
-perl -pe 's/\n/ /g;            # Replace newlines with whitespace' |
-perl -pe 's/<\!--.*?-->//g;    # Strip HTML comments' |
-perl -pe 's/isDebug: *true,//; # Remove isDebug' |
-perl -pe 's/\s+/ /g;           # Collapse whitespace' > "$DISTDIR/index.html"
+gulp
 
 echo "Build complete"

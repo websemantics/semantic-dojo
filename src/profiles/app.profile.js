@@ -1,16 +1,15 @@
 var profile = (function(){
     return {
         basePath: "../",
-        // releaseDir: "../../app",
-        releaseName: "lib",
+        localeList: 'ar,ca,cs,da,de,el,en,en-gb,en-us,es,es-es,fi,fi-fi,fr,fr-fr,he,he-il,hu,it,it-it,ja,ja-jp,ko,ko-kr,nl,nl-nl,nb,pl,pt,pt-br,pt-pt,ru,sk,sl,sv,th,tr,zh,zh-tw,zh-cn',
+        releaseName: "demo",
         action: "release",
         layerOptimize: "closure",
         optimize: "closure",
         cssOptimize: "comments",
         mini: true,
-        stripConsole: "warn",
+        stripConsole: "all",
         selectorEngine: "lite",
-
         defaultConfig: {
             hasCache:{
                 "dojo-built": 1,
@@ -21,7 +20,6 @@ var profile = (function(){
             },
             async: 1
         },
-
         staticHasFeatures: {
             "config-deferredInstrumentation": 0,
             "config-dojo-loader-catches": 0,
@@ -54,9 +52,9 @@ var profile = (function(){
             "extend-dojo": 1
         },
 		packages:[{
-    		name: "dojo",
-    		location: "dojo"
-    		},{
+            name: "dojo",
+            location: "dojo"
+            },{
     		name: "dijit",
     		location: "dijit"
     		},{
@@ -68,7 +66,7 @@ var profile = (function(){
 		}],
         layers: {
             "dojo/dojo": {
-                include: [ "dojo/dojo", "dojo/i18n", "app/app"],
+                include: [ "dojo/dojo", "dojo/i18n", "dojo/domReady","app/app"],
                 customBase: true,
                 boot: true
             }
