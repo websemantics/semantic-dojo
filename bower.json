@@ -9,10 +9,10 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "js/libs/dojo",
-    "js/libs/dijit",
-    "js/libs/dojox",
-    "js/libs/util"
+    "src/dojo",
+    "src/dijit",
+    "src/dojox",
+    "src/util"
   ],
   "dependencies": {
     "dojo": "*",

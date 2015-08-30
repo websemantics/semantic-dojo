@@ -3,10 +3,10 @@
 
   "paths": {
     "source": {
-      "config"      : "less/theme.config",
-      "definitions" : "less/definitions/",
-      "site"        : "less/site/",
-      "themes"      : "less/themes/"
+      "config"      : "less/dijit/theme.config",
+      "definitions" : "less/dijit/definitions/",
+      "site"        : "less/dijit/site/",
+      "themes"      : "less/dijit/themes/"
     },
     "output": {
       "packaged"     : "dist/",

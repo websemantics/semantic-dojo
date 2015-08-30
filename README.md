@@ -23,7 +23,7 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 
 - Clone locally, `git clone https://github.com/websemantics/semantic-dojo`
 - Install dependencies, `bower install`
-- Create file `libs/semantic/src/theme.config` with the following content:
+- Create file `src/semantic/src/theme.config` with the following content:
 
 		/* Use a common Config file with Semantic UI and Dijit Themes. */
 	
@@ -64,9 +64,10 @@ All notable changes to this project will be documented in this section.
 - Merged main project and `gh-pages` into one codebase.
 
 # Screenshot
-![Screenshot](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/img/screenshot.png "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/screenshot.png "Screenshot")
 
-## Related Open Source Projects
+## Open Source Projects Used
 
 * Dojo Flat Theme - https://github.com/Esri/dojo-theme-flat
 * Semantic UI - https://github.com/Semantic-Org/Semantic-UI
+* Dojo Boilerplate - https://github.com/csnover/dojo-boilerplate

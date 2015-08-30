@@ -1,2 +1,8 @@
-/libs
+/src/dijit
+/src/dojo
+/src/dojox
+/src/jquery
+/src/less
+/src/semantic
+/src/util
 /node_modules

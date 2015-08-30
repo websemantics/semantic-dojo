@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="../../">
+	<meta charset="utf-8">
+	<title>Semantic Dojo</title>
+	<link rel="stylesheet" href="src/app/resources/css/app.css">
+  <link rel="stylesheet/less" type="text/css" href="less/semantic-dojo.less" />
+</head>
+<body class="claro index" id="example">
+	<div id="loading" class="ui active inverted dimmer">
+	  <div class="ui text loader"></div>
+	</div>
+	<script>
+		var dojoConfig = {
+			async: true,
+			baseUrl: 'src/',
+			isDebug: true,
+      parseOnLoad: true,
+			packages: ['app','dijit','dojo','dojox'],
+			selectorEngine: 'lite',
+			tlmSiblingOfDojo: false
+		};
+	</script>
+  <script src="src/less/dist/less.min.js"></script>
+  <script src="src/jquery/dist/jquery.min.js"></script>
+  <script src="src/semantic/dist/semantic.min.js"></script>
+	<script src="src/dojo/dojo.js"></script>
+	<script>require([ 'app/app' ]);</script>
+</body>
+</html>
