@@ -15,7 +15,7 @@ TOOLSDIR="$SRCDIR/util/buildscripts"
 DISTDIR="$BASEDIR/dist"
 
 # Main application package build configuration
-PROFILE="$BASEDIR/profiles/app.profile.js"
+PROFILE="$BASEDIR/src/profiles/app.profile.js"
 
 # Configuration over. Main application start up!
 
@@ -35,7 +35,6 @@ echo -n "Cleaning old files..."
 rm -rf "$DISTDIR"
 echo " Done"
 
-node_modules/.bin/stylus -c "$SRCDIR/app/resources/app.styl"
 "$TOOLSDIR/build.sh" --profile "$PROFILE" --releaseDir "$DISTDIR" $@
 
 cd "$BASEDIR"

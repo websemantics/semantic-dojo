@@ -72,7 +72,7 @@ define(["dojo/_base/declare",
 
       new HorizontalSlider({
           name: "default horizontal slider",
-          value: 50, class : 'orange',
+          value: 50, 'class' : 'orange',
           style: "margin:10px 10px 30px",
           showButtons:false
       }, this["hs_1"]);
@@ -88,7 +88,7 @@ define(["dojo/_base/declare",
 
       var horizontalSliderAdvanced = new HorizontalSlider({
           name: "default horizontal slider",
-          value: 50, class : 'yellow',
+          value: 50, 'class' : 'yellow',
           style: "margin:10px 10px 30px"
       }, this["hs_2"]);
 

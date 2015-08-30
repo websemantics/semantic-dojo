@@ -56,7 +56,6 @@ define(["dojo/_base/declare",
         "dijit/TooltipDialog",
         "dijit/ProgressBar",
         "dijit/Dialog",
-        "dijit/TooltipDialog",
         "dijit/Tooltip",
         "dijit/MenuBar",
         "dijit/MenuBarItem",
@@ -92,7 +91,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
     CurrencyTextBox,TimeTextBox,Textarea,Button,ToggleButton,DropDownButton,CheckBox,
     RadioButton,Select,ComboBox,MultiSelect,ComboButton,DateTextBox,HorizontalSlider,
     VerticalSlider,HorizontalRule,VerticalRule,HorizontalRuleLabels,VerticalRuleLabels,
-    NumberSpinner,TextBox,Menu, MenuItem,TooltipDialog,ProgressBar,Dialog,TooltipDialog,Tooltip,
+    NumberSpinner,TextBox,Menu, MenuItem,TooltipDialog,ProgressBar,Dialog,Tooltip,
     MenuBar,MenuBarItem,Form,MenuSeparator,PopupMenuItem,PopupMenuBarItem,DropDownMenu,
     CheckedMenuItem,ColorPalette,TitlePane,Tree,ObjectStoreModel,dndSource,Memory,
     InlineEditBox,Editor) {
@@ -111,7 +110,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
             //programmatically create horizontal sliders
             new HorizontalSlider({
                 name: "default horizontal slider",
-                'class': "make-disabled",
+                "class": "make-disabled",
                 value: 5,
                 minimum: -10,
                 maximum: 10,
@@ -131,7 +130,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
             
             var horizontalSliderAdvanced = new HorizontalSlider({
                 name: "default horizontal slider",
-                'class': "make-disabled",
+                "class": "make-disabled",
                 value: 5,
                 minimum: -10,
                 maximum: 10,
@@ -146,7 +145,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
             //programmatically create vertical sliders
             new VerticalSlider({
                 name: "default vertical slider",
-                'class': "make-disabled",
+                "class": "make-disabled",
                 value: 5,
                 minimum: -10,
                 maximum: 10,
@@ -167,7 +166,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
 
             var verticalSliderAdvanced = new VerticalSlider({
                 name: "default vertical slider",
-                'class': "make-disabled",
+                "class": "make-disabled",
                 value: 5,
                 minimum: -10,
                 maximum: 10,
@@ -185,7 +184,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
                     var color = colors[i];
                     new VerticalSlider({
                     name: "default vertical slider",
-                    'class': color + " make-disabled",value: Math.floor((Math.random() * 100) + 1),
+                    "class": color + " make-disabled",value: Math.floor((Math.random() * 100) + 1),
                     intermediateChanges: true,
                     style: "margin:10px 30px 10px 10px;height:240px;float:left",
                     showButtons: false
@@ -195,7 +194,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
             //programmatically create number spinners
             new NumberSpinner({
                 value: 1000,
-                'class': "make-disabled",
+                "class": "make-disabled",
                 smallDelta: 10,
                 constraints: { min: 9, max: 1550, places: 0 }
             }, this.numberSpinnerNormal);
@@ -325,7 +324,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
                 closable: true
             });
             var tcl = new TabContainer({
-                'class': "make-disabled",
+                "class": "make-disabled",
                 style: "height: 240px; width: 350px;",
                 tabPosition: "left-h"//,
                 //tabStrip: true
@@ -423,7 +422,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
                 title: "Tab 7"
             });
             var tcbp8 = new ContentPane({
-                'class': "make-disabled",
+                "class": "make-disabled",
                 title: "Tab 8"
             });
             var tcb = new TabContainer({
@@ -566,7 +565,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
         },
 
         initMenuBar: function () {
-            var pMenuBar = new MenuBar({'class':'make-disabled'});
+            var pMenuBar = new MenuBar({"class":'make-disabled'});
 
             var pSubMenu = new DropDownMenu({});
 
@@ -679,16 +678,16 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
 
             // Create the Tree.
             var tree = new Tree({
-                'class': "make-disabled",
+                "class": "make-disabled",
                 model: treeModel,
-                dndController: dijit.tree.dndSource,
+                dndController: dijit.tree.dndSource
             }, this.treeNode);
             tree.startup();
         },
 
         initEditBox: function () {
             var myEditor = new Editor({
-                                'class': "make-disabled",
+                "class": "make-disabled",
                 height: '300px',
                 //extraPlugins: [dijit._editor.plugins.AlwaysShowToolbar],
                 plugins: ['undo', 'redo', '|', 'cut', 'copy', 'paste', 'selectAll', 'delete', '|',
@@ -705,7 +704,7 @@ function (declare, dojo, dom, query, domConstruct, WidgetBase, TemplatedMixin,
 
         initInlineEditBox: function () {
             new InlineEditBox({
-                'class': "make-disabled",
+                "class": "make-disabled",
                 editor: dijit.form.NumberTextBox,
                 autoSave: false
             }, this.InlineEditBoxNode).startup();
