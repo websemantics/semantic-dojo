@@ -43,8 +43,27 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 
 To test different themes for the supported widgets, go to 'less/theme.config' and change the Button theme for example from 'default' to 'raised': `@button     : 'raised';`, refresh and enjoy!
 
+## Build
+
+To build Semantic-Dojo run Gulp in main folder
+
+`gulp`
+
+This will generate the master Semantic Dojo styles at `dist/semantic-dojo.css`. Assets are located in `dist/themes/default/assets`
+
+To build the demo app, run build.sh
+
+`./build.sh`
+
+This will build the dojo app to `dist/app` folder, and also run `gulp` for Semantic Dojo.
+
 # Change Log
 All notable changes to this project will be documented in this section.
+
+### [1.1] - 2015-08-3
+#### Changed
+- Update demo app
+- Optomize build process
 
 ### [1.0] - 2015-08-26
 #### Changed
