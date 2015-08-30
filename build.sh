@@ -37,7 +37,7 @@ echo " Done"
 
 "$TOOLSDIR/build.sh" --profile "$PROFILE" --releaseDir "$DISTDIR" $@
 
-cd "$DISTDIR/demo"
+cd "$DISTDIR/app"
 
 echo "Cleaning unused code"
 
@@ -50,7 +50,7 @@ rm -R app
 rm -R dijit
 rm -R dojox
 
-cd "$DISTDIR/demo/dojo"
+cd "$DISTDIR/app/dojo"
 shopt -s extglob
 rm -R !(dojo.js|nls|resources)
 

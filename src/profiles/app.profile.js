@@ -2,7 +2,7 @@ var profile = (function(){
     return {
         basePath: "../",
         localeList: 'ar,ca,cs,da,de,el,en,en-gb,en-us,es,es-es,fi,fi-fi,fr,fr-fr,he,he-il,hu,it,it-it,ja,ja-jp,ko,ko-kr,nl,nl-nl,nb,pl,pt,pt-br,pt-pt,ru,sk,sl,sv,th,tr,zh,zh-tw,zh-cn',
-        releaseName: "demo",
+        releaseName: "app",
         action: "release",
         layerOptimize: "closure",
         optimize: "closure",
