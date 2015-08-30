@@ -37,21 +37,28 @@ echo " Done"
 
 "$TOOLSDIR/build.sh" --profile "$PROFILE" --releaseDir "$DISTDIR" $@
 
-cd "$DISTDIR"
+cd "$DISTDIR/demo"
 
 echo "Cleaning unused code"
 
-find . -type f -name '*.uncompressed.js' -print0 | xargs -0 rm -rdf
-find . -type f -name '*.consoleStripped.js' -print0 | xargs -0 rm -rdf 
+# find . -type f -name '*.uncompressed.js' -print0 | xargs -0 rm -rdf
+# find . -type f -name '*.consoleStripped.js' -print0 | xargs -0 rm -rdf 
 find . -type f -name 'build-report.txt' -print0 | xargs -0 rm -rdf 
-rm -R demo/app
-rm -R demo/dijit
-rm -R demo/dojox
+
+# Remove app, dijit, dojox and dojo except some files/folders
+rm -R app
+rm -R dijit
+rm -R dojox
+
+cd "$DISTDIR/demo/dojo"
+shopt -s extglob
+rm -R !(dojo.js|nls|resources)
 
 echo "Building semantic-dojo"
 
 cd "$BASEDIR"
 
+# Use gulp to build Semantic-Dojo
 gulp
 
 echo "Build complete"
