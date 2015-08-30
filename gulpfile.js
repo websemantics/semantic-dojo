@@ -6,7 +6,7 @@ var
   gulp            = require('gulp-help')(require('gulp')),
   gulpif          = require('gulp-if'),
   less            = require('gulp-less'),
-  chmod        = require('gulp-chmod'),
+  chmod           = require('gulp-chmod'),
   requireDotFile  = require('require-dot-file'),
   minifyCSS       = require('gulp-minify-css'),
   config;
