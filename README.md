@@ -19,7 +19,6 @@ Dijit widgets directly import and inherint CSS from their Semantic UI conterpart
 
 Try [live demo](http://websemantics.github.io/semantic-dojo).
 
-# Screenshot
 ![Screenshot](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/screenshot.png "Screenshot")
 
 ## Installation
