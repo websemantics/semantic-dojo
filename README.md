@@ -6,7 +6,7 @@
 |____/ \___|_| |_| |_|\__,_|_| |_|\__|_|\___| |____/ \___// |\___/ 
  Web Semantics, Inc.                                    |__/       
 
- Version 1.0
+ Version 1.1
 ```
 
 A responsive Dojo theme that harnesses the style awesomeness of [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets, for modern Web apps.
