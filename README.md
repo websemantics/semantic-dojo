@@ -9,7 +9,7 @@
  Version 1.1
 ```
 
-![Semantic Dojo](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/favicon-32x32.png "Semantic Dojo") A responsive Dojo theme that harnesses the style awesomeness of [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets, for modern Web apps.
+A responsive Dojo theme that harnesses the style awesomeness of [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets, for modern Web apps.
 
 A new method of building Dijit Themes following the Semantic UI approach with a similar folder structure throught this project.
 
@@ -42,6 +42,10 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 [Semantic Dojo](https://github.com/websemantics/semantic-dojo) brings these awesome features to Dojo Toolkit, allowing those who love DTK to build modern Web apps.
 
 To test different themes for the supported widgets, go to 'less/theme.config' and change the Button theme for example from 'default' to 'raised': `@button     : 'raised';`, refresh and enjoy!
+
+### Logo
+
+![Semantic Dojo](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/logo.png "Semantic Dojo")
 
 ## Build
 
