@@ -19,6 +19,9 @@ Dijit widgets directly import and inherint CSS from their Semantic UI conterpart
 
 Try [live demo](http://websemantics.github.io/semantic-dojo).
 
+# Screenshot
+![Screenshot](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/screenshot.png "Screenshot")
+
 ## Installation
 
 - Clone locally, `git clone https://github.com/websemantics/semantic-dojo`
@@ -63,9 +66,6 @@ This will build the dojo app to `dist/app` folder, and also run `gulp` for Seman
 To contribute to Semantic Dojo, follwo the installation steps above then edit:
 - The main dev page, `src/app/dev.html`
 - Semantic Dojo home page, `src/app/index.html`
-
-# Screenshot
-![Screenshot](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/screenshot.png "Screenshot")
 
 # Change Log
 All notable changes to this project will be documented in this section.
