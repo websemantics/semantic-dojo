@@ -43,10 +43,6 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 
 To test different themes for the supported widgets, go to 'less/theme.config' and change the Button theme for example from 'default' to 'raised': `@button     : 'raised';`, refresh and enjoy!
 
-### Logo
-
-![Semantic Dojo](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/logo.png "Semantic Dojo")
-
 ## Build
 
 To build Semantic-Dojo do the following:
@@ -75,6 +71,9 @@ All notable changes to this project will be documented in this section.
 #### Changed
 - Update demo app
 - Optomize build process
+- Add logo
+![Semantic Dojo](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/logo.png "Semantic Dojo")
+
 
 ### [1.0] - 2015-08-26
 #### Changed
