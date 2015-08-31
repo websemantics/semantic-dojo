@@ -213,20 +213,15 @@ define(["dojo/_base/declare",
       // ---------------------------------------------------------------
 			dojo.destroy("loading");
 
-		  // ----------------------------------------------------
-		  // Semantic UI
-		  // ----------------------------------------------------
-		  $('.ui.checkbox').checkbox();
-		  $('.ui.radio.checkbox').checkbox();
-		  $('.dropdown').dropdown({transition: 'drop'});
-		  $('.menu .item').tab();
-		  $('.ui.accordion').accordion();
-		  $('.popup').popup({on: 'hover'});
 
-		}/*,
+		},
 		startup: function () {
 			this.inherited(arguments);
+      // ----------------------------------------------------
+      // Semantic UI
+      // ----------------------------------------------------
+      $('.popup').popup({on: 'hover'});
 
-		}*/
+		}
 	});
 });
