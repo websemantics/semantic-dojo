@@ -221,6 +221,9 @@ define(["dojo/_base/declare",
       // Semantic UI
       // ----------------------------------------------------
       $('.popup').popup({on: 'hover'});
+      $(".close.icon").click(function(){
+        $(this).parent().hide();
+      });
 
 		}
 	});
