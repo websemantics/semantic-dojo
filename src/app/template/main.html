@@ -403,8 +403,11 @@
             <h4 class="ui header">
               <a class="popup" target="_blank" href="http://semantic-ui.com/collections/menu.html" data-variation="inverted" data-content="dijit/layout/TabContainer">TabContainer</a>
             </h4>
-              <div data-dojo-attach-point="tabContainer">
-              </div>
+            <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar', gutters:false, liveSplitters:false" style="height:190px;width:100%">
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">
+                  <div data-dojo-attach-point="tabContainer"></div>
+                </div>
+            </div>
           </div>
           <div class="no example">
             <h4 class="ui header">
