@@ -71,9 +71,6 @@ All notable changes to this project will be documented in this section.
 #### Changed
 - Update demo app
 - Optomize build process
-- Add logo
-![Semantic Dojo](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/logo.png "Semantic Dojo")
-
 
 ### [1.0] - 2015-08-26
 #### Changed
@@ -91,6 +88,10 @@ All notable changes to this project will be documented in this section.
 - Checkbox.
 - Use [Bower](http://bower.io/) for dependancies.
 - Merged main project and `gh-pages` into one codebase.
+
+## Logo
+
+![Semantic Dojo](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/logo.png "Semantic Dojo")
 
 ## Open Source Projects Used
 
