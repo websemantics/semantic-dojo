@@ -9,9 +9,7 @@
  Version 1.0
 ```
 
-A responsive Dojo theme that harnesses the style awesomeness of Semantic UI Framework for powerful and modern Web apps.
-
-This project harness the style awesomeness of the [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets.
+A responsive Dojo theme that harnesses the style awesomeness of [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets, for modern Web apps.
 
 A new method of building Dijit Themes following the Semantic UI approach with a similar folder structure throught this project.
 
