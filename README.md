@@ -64,6 +64,9 @@ To contribute to Semantic Dojo, follwo the installation steps above then edit:
 - The main dev page, `src/app/dev.html`
 - Semantic Dojo home page, `src/app/index.html`
 
+# Screenshot
+![Screenshot](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/screenshot.png "Screenshot")
+
 # Change Log
 All notable changes to this project will be documented in this section.
 
@@ -88,9 +91,6 @@ All notable changes to this project will be documented in this section.
 - Checkbox.
 - Use [Bower](http://bower.io/) for dependancies.
 - Merged main project and `gh-pages` into one codebase.
-
-# Screenshot
-![Screenshot](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/screenshot.png "Screenshot")
 
 ## Open Source Projects Used
 
