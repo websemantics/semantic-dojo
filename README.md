@@ -60,7 +60,7 @@ This will build the dojo app to `dist/app` folder, and also run `gulp` for Seman
 
 ## Development
 
-To contribute to Semantic Dojo, follwo the installation steps above then edit:
+To contribute to Semantic Dojo, follow the installation steps above then edit:
 - The main dev page, `src/app/dev.html`
 - Semantic Dojo home page, `src/app/index.html`
 
