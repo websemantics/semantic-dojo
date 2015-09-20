@@ -80,7 +80,12 @@
 ---------------*/
 
 .ui.button .dijitButtonText > .icon {
-  .ui.button > .icon;
+  height: @iconHeight;
+  opacity: @iconOpacity;
+  margin: @iconMargin;
+  transition: @iconTransition;
+  vertical-align: @iconVerticalAlign;
+  color: @iconColor;
 }
 
 .ui.icon.buttons .button .dijitButtonText > .icon,
@@ -89,7 +94,7 @@
 }
 
 .ui.button .dijitButtonText > .right.icon {
-  .ui.button > .right.icon;
+  margin: @rightIconMargin;
 }
 
 .ui.icon.button .dijitButtonNode {
