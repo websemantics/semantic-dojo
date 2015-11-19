@@ -69,7 +69,7 @@ All notable changes to this project will be documented in this section.
 
 ### [Dev] 
 #### Changes
-- CSS fixed and improve visual for the Tab widget @ 19th Nov 2015
+- CSS fixes and improve visual for the Tab widget @ 19th Nov 2015
 
 ### [1.1] - 2015-08-31
 #### Changed
