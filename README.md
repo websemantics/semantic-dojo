@@ -67,6 +67,10 @@ To contribute to Semantic Dojo, follow the installation steps above then edit:
 # Change Log
 All notable changes to this project will be documented in this section.
 
+### [Dev] 
+#### Changes
+- CSS fixed and improve visual for the Tab widget @ 19th Nov 2015
+
 ### [1.1] - 2015-08-31
 #### Changed
 - Update demo app
