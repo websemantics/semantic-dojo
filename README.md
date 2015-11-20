@@ -70,6 +70,7 @@ All notable changes to this project will be documented in this section.
 ### [Dev] 
 #### Changes
 - CSS fixes and improve visual for the Tab widget @ 19th Nov 2015
+- Implementation of the Tree widget @ 19th Nov 2015
 
 ### [1.1] - 2015-08-31
 #### Changed
@@ -96,6 +97,10 @@ All notable changes to this project will be documented in this section.
 ## Logo
 
 ![Semantic Dojo](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/logo.png "Semantic Dojo")
+
+## Credits
+
+Few of this themes elements have been a port from [Dojo Flat Theme](https://github.com/Esri/dojo-theme-flat) with adjucements for the Semantic Ui generic styles and user experince. 
 
 ## Open Source Projects Used
 

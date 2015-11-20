@@ -37,13 +37,16 @@ define(["dojo/_base/declare",
 				"dijit/form/Form",
 				"dijit/ColorPalette",
 				"dijit/ProgressBar",
-        "dijit/layout/BorderContainer"
+        "dijit/layout/BorderContainer",
+        "dijit/Tree",
+        "dijit/tree/ForestStoreModel",
+        "dojo/data/ItemFileWriteStore"
 
  ], function (declare, dojo, registry, WidgetBase, TemplatedMixin,WidgetsInTemplateMixin, 
  	template, Select, VerticalSlider, CheckBox,RadioButton, HorizontalSlider, 
  	HorizontalRule,HorizontalRuleLabels,TextBox, Textarea, ValidationTextBox, 
  	ContentPane, TabContainer,DropDownButton,TooltipDialog,Tooltip, Form, 
- 	ColorPalette, ProgressBar, BorderContainer) {
+ 	ColorPalette, ProgressBar, BorderContainer, Tree, ForestStoreModel, ItemFileWriteStore) {
 	return declare([WidgetBase, TemplatedMixin, WidgetsInTemplateMixin], {
     templateString: template,
     widgetsInTemplate: true,
@@ -52,45 +55,7 @@ define(["dojo/_base/declare",
       
       this.inherited(arguments);
      
-      // ----------------------------------------------------
-      // Create Tabs
-      // ----------------------------------------------------
-    
-      var tcpnestedBottom1 = new ContentPane({
-          title: "Tab 1",
-          content: "&nbsp;&nbsp;Nested tab container(bottom)"
-      });
-      var tcpnestedBottom2 = new ContentPane({
-          title: "Tab 2"
-      });
-      var tcpnestedBottom3 = new ContentPane({
-          title: "Tab 3"
-      });
-      var tcnestedBottom = new TabContainer({
-          tabPosition: "top",
-          nested: true
-      });
-      tcnestedBottom.addChild(tcpnestedBottom1);
-      tcnestedBottom.addChild(tcpnestedBottom2);
-      tcnestedBottom.addChild(tcpnestedBottom3);
-
-      tcnestedBottom.startup();
-
-      var tcbp1 = new ContentPane({title: "Tab 1",content: tcnestedBottom});
-      var tcbp2 = new ContentPane({title: "Tab2"});
-      var tcbp3 = new ContentPane({title: "Tab 3"});
-      var tcbp4 = new ContentPane({title: "Tab 4"});
-      var tcbp5 = new ContentPane({title: "Tab 5"});
-      var tcb 	= new TabContainer({
-        region : 'center',
-        tabPosition: "top"},this.tabContainer);
-
-      tcb.addChild(tcbp1);
-      tcb.addChild(tcbp2);
-      tcb.addChild(tcbp3);
-      tcb.addChild(tcbp4);
-      tcb.addChild(tcbp5);
-
+   
       // ---------------------------------------------------------------
 			// Remove loading ...
       // ---------------------------------------------------------------

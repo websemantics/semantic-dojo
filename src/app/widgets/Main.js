@@ -37,13 +37,16 @@ define(["dojo/_base/declare",
 				"dijit/form/Form",
 				"dijit/ColorPalette",
 				"dijit/ProgressBar",
-        "dijit/layout/BorderContainer"
+        "dijit/layout/BorderContainer",
+        "dijit/Tree",
+        "dijit/tree/ForestStoreModel",
+        "dojo/data/ItemFileWriteStore"
 
  ], function (declare, dojo, registry, WidgetBase, TemplatedMixin,WidgetsInTemplateMixin, 
  	template, Select, VerticalSlider, CheckBox,RadioButton, HorizontalSlider, 
  	HorizontalRule,HorizontalRuleLabels,TextBox, Textarea, ValidationTextBox, 
  	ContentPane, TabContainer,DropDownButton,TooltipDialog,Tooltip, Form, 
- 	ColorPalette, ProgressBar, BorderContainer) {
+ 	ColorPalette, ProgressBar, BorderContainer, Tree, ForestStoreModel, ItemFileWriteStore) {
 	return declare([WidgetBase, TemplatedMixin, WidgetsInTemplateMixin], {
     templateString: template,
     widgetsInTemplate: true,

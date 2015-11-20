@@ -1,0 +1,111 @@
+/* Tree 
+ * 
+ * Styling Tree mostly means styling the TreeRow (dijitTreeRow)
+ * There are 4 basic states to style:
+ * 
+ * Tree Row:
+ * 1. tree row (default styling): 
+ * 		.dijitTreeRow - styles for each row of the tree
+ *
+ * 2. hovered tree row (mouse hover on a tree row)
+ * 		.dijitTreeRowHover - styles when mouse over on one row
+ * 
+ * 3. active tree row (mouse down on a tree row)
+ * 		.dijitTreeRowActive - styles when mouse down on one row
+ * 
+ * 4. selected tree row
+ * 		dijitTreeRowSelected - style when the row has been selected
+ * 
+ * Tree Expando:
+ * 	    dijitTreeExpando - the expando at the left of the text of each tree row
+ * 
+ * Drag and Drop on TreeNodes: (insert line on dijitTreeContent node so it'll aligned w/ target element)
+ * 		.dijitTreeNode .dojoDndItemBefore/.dojoDndItemAfter - use border style simulate a separate line
+ */
+
+@type    : 'module';
+@element : 'tree';
+
+@import (multiple) '../../theme.config';
+
+.dijitTreeIsRoot {
+    background: @treeBackground;
+}
+
+.dijitTreeRow,
+.dijitTreeNode .dojoDndItemBefore,
+.dijitTreeNode .dojoDndItemAfter {
+	padding: @treeRowPadding;
+	border: @treeRowBorder;
+	line-height: @treeRowLineHeight;
+	transition-property: backgroundColor, borderColor;
+	transition-duration: .15s;
+	transition-timing-function: ease-out;
+}
+
+/* Hover */
+
+.dijitTreeRowHover {
+	background: @treeRowHoverBackground;
+	border: @treeRowHoverBorder;
+	transition-duration: .15s;
+}
+
+/* Active */
+
+.dijitTreeRowActive {
+	background:@treeRowActiveBackground;
+	border: @treeRowActiveBorder;
+}
+
+/* Selected */
+
+.dijitTreeRowSelected,
+.dijitTreeRowHover.dijitTreeRowSelected,
+.dijitTreeRowActive.dijitTreeRowSelected {
+	color: @treeRowSelectedColor;
+	background: @treeRowSelectedBackground;
+	border: @treeRowSelectedBorder;
+}
+
+/* expando (open/closed) icon */
+
+
+.dijitTreeExpando {
+    .icon-style();
+	line-height: @lineHeight;
+	font-size: 12px;
+	margin-left: @treeExpandoMargin;
+	margin-right: @treeExpandoMargin;
+}
+
+.dijitTreeExpandoOpened:before {
+	content: "\f147";
+	cursor: pointer;
+}
+
+.dijitTreeExpandoClosed:before {
+	content: "\f196";
+	cursor: pointer;
+}
+
+.dijitTreeExpandoLoading {
+	&:before {
+		content: "\f110"; /* alternative "\f021"; */
+		animation: spinning 2s linear infinite;
+	}
+}
+
+.dj_ie8 .dijitTreeExpandoLoading,
+.dj_ie9 .dijitTreeExpandoLoading {
+	background:url('images/loadingAnimation.gif') no-repeat;
+
+	&:before {
+		content: "";
+	}
+}
+
+@keyframes spinning {
+	from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}

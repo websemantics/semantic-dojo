@@ -1,14 +1,14 @@
 <div>
   <div class="ui container">
-    
+
+  <div data-dojo-id="continentStore" data-dojo-type="dojo/data/ItemFileWriteStore" data-dojo-props='url:"src/app/data/countries.json"'></div>
+  <div data-dojo-id="continentModel" data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-props='store:continentStore, query:{type:"continent"},
+    rootId:"continentRoot", rootLabel:"Continents", childrenAttrs:["children"]'></div>
+
     <br/><br/><br/>
 
-    <div class="no example">
-      <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar', gutters:false, liveSplitters:false" style="height:190px;width:100%">
-          <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">
-            <div data-dojo-attach-point="tabContainer"></div>
-          </div>
-      </div>
+    <div id="mytree" data-dojo-type="dijit/Tree" aria-labelledby="mytreeLabel"
+     data-dojo-props='model:continentModel'>
     </div>
 
   </div>

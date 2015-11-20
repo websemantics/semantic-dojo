@@ -411,6 +411,24 @@
           </div>
           <div class="no example">
             <h4 class="ui header">
+              <a class="popup" target="_blank" href="https://dojotoolkit.org/reference-guide/1.10/dijit/Tree.html" data-variation="inverted" data-content="dijit/tree">Tree</a>
+            </h4>
+            <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar', gutters:false, liveSplitters:false" style="height:250px;width:100%">
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">
+
+                  <div data-dojo-id="continentStore" data-dojo-type="dojo/data/ItemFileWriteStore" data-dojo-props='url:"src/app/data/countries.json"'></div>
+                  <div data-dojo-id="continentModel" data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-props='store:continentStore, query:{type:"continent"},
+                    rootId:"continentRoot", rootLabel:"Continents", childrenAttrs:["children"]'></div>
+
+                  <div id="mytree" data-dojo-type="dijit/Tree" aria-labelledby="mytreeLabel"
+                   data-dojo-props='model:continentModel'>
+                  </div>
+
+                </div>
+            </div>
+          </div>
+          <div class="no example">
+            <h4 class="ui header">
               <a class="popup" target="_blank" href="http://semantic-ui.com/collections/message.html" data-variation="inverted" data-content="semantic-ui/Message">Message</a>
             </h4>
             <div class="ui message">

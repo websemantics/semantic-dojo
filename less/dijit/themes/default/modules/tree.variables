@@ -1,0 +1,28 @@
+/*******************************
+              Tree
+*******************************/
+
+@noBorder   								: 						0 none;
+@treeBackground								:						transparent;
+@treePadding                                :         				8px;
+
+@treeRowPadding								:						@treePadding 0;
+@treeRowBorder								:						@noBorder;
+@treeRowLineHeight							:						@lineHeight;
+
+//// Hover
+@treeRowHoverBackground						:						@lightGreyHover;
+@treeRowHoverBorder							:						@noBorder;
+
+//// Active
+@treeRowActivePadding						:						@treePadding 0;
+@treeRowActiveBackground					:						@lightGreyActive;
+@treeRowActiveBorder						:						@noBorder;
+
+//// Selected
+@treeRowSelectedBackground					:						@lightGreyFocus;
+@treeRowSelectedBorder						:						@noBorder;
+@treeRowSelectedColor						:						@white;
+
+//Expando
+@treeExpandoMargin							:						4px;
