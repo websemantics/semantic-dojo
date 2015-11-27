@@ -164,6 +164,35 @@
                 <div data-dojo-type="dijit/ProgressBar" class="ui progress indicating active blue" style="width:100%" data-dojo-props="indeterminate: true"></div>
             </div>
           </div>
+          <div class="no example">
+            <h4 class="ui header">
+              <a class="popup" target="_blank" href="http://semantic-ui.com/elements/step.html" data-variation="inverted" data-content="semantic-ui/Step">Step</a>
+            </h4>
+            <div class="ui fluid vertical steps">
+              <a class="step">
+                <i class="truck icon"></i>
+                <div class="content">
+                  <div class="title">Shipping</div>
+                  <div class="description">Choose your shipping options</div>
+                </div>
+              </a>
+              <a class="active step">
+                <i class="payment icon"></i>
+                <div class="content">
+                  <div class="title">Billing</div>
+                  <div class="description">Enter billing information</div>
+                </div>
+              </a>
+              <a class="disabled step">
+                <i class="info icon"></i>
+                <div class="content">
+                  <div class="title">Confirm Order</div>
+                  <div class="description">Verify order details</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <br/><br/>
         </div>
         <div class="tablet only computer only column">
           <div class="no example">
@@ -312,30 +341,57 @@
           </div>
           <div class="no example">
             <h4 class="ui header">
-              <a class="popup" target="_blank" href="http://semantic-ui.com/elements/step.html" data-variation="inverted" data-content="semantic-ui/Step">Step</a>
+              <a class="popup" target="_blank" href="http://semantic-ui.com/modules/popup.html" data-variation="inverted" data-content="dijit/TooltipDialog">TooltipDialog Menu</a>
             </h4>
-            <div class="ui fluid vertical steps">
-              <a class="step">
-                <i class="truck icon"></i>
-                <div class="content">
-                  <div class="title">Shipping</div>
-                  <div class="description">Choose your shipping options</div>
+            <div data-dojo-type="dijit/form/DropDownButton">
+              <span>
+                  <img src="src/app/resources/img/favicon-32x32.png" class="ui avatar image author"/>
+              </span>
+              <div class="dijitTooltipDialogMenu" data-dojo-type="dijit/TooltipDialog">
+                <div data-dojo-type="dijit/DropDownMenu">
+                  <div data-dojo-type="dijit/MenuItem" data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconPaste"'>Drama</div>
+                  <div data-dojo-type="dijit/MenuItem" data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconCut"'>Comedy</div>
+                  <div data-dojo-type="dijit/MenuItem" data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconCopy"'>Romance</div>
+                  <div data-dojo-type="dijit/MenuItem" data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconPaste"'>Documentary</div>
                 </div>
-              </a>
-              <a class="active step">
-                <i class="payment icon"></i>
-                <div class="content">
-                  <div class="title">Billing</div>
-                  <div class="description">Enter billing information</div>
+              </div>
+            </div>
+            <div data-dojo-type="dijit/form/DropDownButton">
+              <span>
+                  <img src="src/app/resources/img/favicon-32x32.png" class="ui avatar image author"/>
+              </span>
+              <div class="dijitTooltipDialogMenu" data-dojo-type="dijit/TooltipDialog">
+                <div class="ui vertical menu" data-dojo-type="dijit/DropDownMenu">
+                  <div data-dojo-type="dijit/MenuItem" data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconPaste"'>Drama</div>
+                  <div data-dojo-type="dijit/MenuItem" data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconCut"'>Comedy</div>
+                  <div data-dojo-type="dijit/MenuItem" data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconCopy"'>Romance</div>
+                  <div data-dojo-type="dijit/MenuItem" data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconPaste"'>Documentary</div>
                 </div>
-              </a>
-              <a class="disabled step">
-                <i class="info icon"></i>
-                <div class="content">
-                  <div class="title">Confirm Order</div>
-                  <div class="description">Verify order details</div>
+              </div>
+            </div>
+            <div data-dojo-type="dijit/form/DropDownButton">
+              <span>
+                  <img src="src/app/resources/img/favicon-32x32.png" class="ui avatar image author"/>
+              </span>
+              <div class="dijitTooltipDialogMenu" data-dojo-type="dijit/TooltipDialog">
+                <div class="ui vertical menu">
+                  <a class=" teal item">
+                    Inbox
+                    <div class="ui teal pointing left label">1</div>
+                  </a>
+                  <a class="item">
+                    Spam
+                    <div class="ui label">51</div>
+                  </a>
+                  <a class="item active">
+                    Updates
+                    <div class="ui label">1</div>
+                  </a>
+                  <a class="item">
+                    Logout
+                  </a>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>

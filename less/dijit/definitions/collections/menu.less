@@ -63,23 +63,24 @@ There are three areas of styling for the Menu:
 .dijitMenuItem,
 .dijitMenuItem td {
 	.ui.menu .item;
+	padding: @itemVerticalPadding 0px @itemVerticalPadding @itemHorizontalPadding;
 }
 
 /* Menu Item: Hover */
 
 .dijitMenuItemHover td,
 .dijitMenuItemHover {
-  background: @dropdownHoveredItemBackground !important;
-  color: @dropdownHoveredItemColor !important;
+  background: @hoverItemBackground!important;
+  color: @hoverItemTextColor!important;
 }
 
 /* Menu Item: Active */
 
 .dijitMenuItemActive td,
 .dijitMenuItemActive {
-  background: @dropdownActiveItemBackground !important;
-  font-weight: @dropdownActiveItemFontWeight !important;
-  color: @dropdownActiveItemColor !important;
+  background: @activeItemBackground !important;
+  font-weight: @activeItemFontWeight !important;
+  color: @activeItemTextColor !important;
 }
 
 /* Menu Item: Selected */
@@ -90,6 +91,28 @@ There are three areas of styling for the Menu:
   color: @activeItemTextColor;
   font-weight: @activeItemFontWeight;
   box-shadow: @activeItemBoxShadow;
+}
+
+/* This styles introduced semantic ui menu styles to Dijit menu, just add  'ui vertical menu' as 
+a class 'dijit/DropDownMenu' @ 27 Nov 2015 */
+
+.ui.vertical.menu {
+	&.dijitMenu{
+		width: auto!important;
+		.dijitMenuItem td:before {
+		    position: absolute;
+		    content: '';
+		    top: 0%;
+		    left: 0px;
+		    width: 100%;
+		    background: rgba(34, 36, 38, 0.1);
+		    height: 1px;
+		}
+
+		.dijitMenuItem:first-child td:before {
+		  display: none !important;
+		}
+	}
 }
 
 /* Menu Item Separator */
@@ -106,10 +129,9 @@ There are three areas of styling for the Menu:
 	// border-top: @menu-item-separator-Bottom;
 }
 
-/* TODO: Menu Item Icon */
+/* Menu Item Icon */
 
 td.dijitMenuItemIconCell {
-	padding: 0;
 	margin: 0 0 0 0;
 }
 
