@@ -73,7 +73,7 @@ All notable changes to this project will be documented in this section.
 ##### 27th Nov 2015
 - Semantic UI / dijit menus with dijitTooltipDialog via custom class 'dijitTooltipDialogMenu'
 - Icons support for dijitMenu
-- Adding examples for TooltipDialog Dropdown Menus using (Semantic UI and Dijit).
+- Adding examples for TooltipDialog dropdown menus (Semantic UI and Dijit).
 
 ##### 19th Nov 2015
 - CSS fixes and improve visual for the Tab widget
