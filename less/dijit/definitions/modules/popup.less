@@ -192,7 +192,7 @@
       border-style: solid;
       top: -@dialogArrowThickness;
       left: -@dialogArrowThickness - 1px;
-    }
+    } 
   }
   &.dijitTooltipRight .dijitTooltipConnector {
     border-color: transparent @dialogArrowBorderColor transparent transparent;
@@ -205,6 +205,19 @@
       border-style: solid;
       top: -@dialogArrowThickness;
       right: -@dialogArrowThickness - 1px;
+    }
+  }
+
+  /* Introduce new class 'dijitTooltipDialogMenu' that can be set on 'dijit/TooltipDialog' so that 
+  It will play nicely with Semantic UI and Dijit menus @ 27 Nov 2015 */
+  &.dijitTooltipDialogMenu{
+    .dijitTooltipContainer, .dijitTooltipContents {
+      padding:0px;
+      margin:0px;
+    }
+    .ui.menu, .dijitMenu {
+        box-shadow: none; 
+        border: 0 none;
     }
   }
 }

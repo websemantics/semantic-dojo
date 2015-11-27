@@ -71,6 +71,7 @@ All notable changes to this project will be documented in this section.
 #### Changes
 - CSS fixes and improve visual for the Tab widget @ 19th Nov 2015
 - Implementation of the Tree widget @ 19th Nov 2015
+- Semantic UI / dijit menus with dijitTooltipDialog via custom class 'dijitTooltipDialogMenu' @ 27th Nov 2015
 
 ### [1.1] - 2015-08-31
 #### Changed
