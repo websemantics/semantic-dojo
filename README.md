@@ -69,11 +69,15 @@ All notable changes to this project will be documented in this section.
 
 ### [Dev] 
 #### Changes
-- CSS fixes and improve visual for the Tab widget @ 19th Nov 2015
-- Implementation of the Tree widget @ 19th Nov 2015
-- Semantic UI / dijit menus with dijitTooltipDialog via custom class 'dijitTooltipDialogMenu' @ 27th Nov 2015
-- Support for icons in menu items 
+
+##### 27th Nov 2015
+- Semantic UI / dijit menus with dijitTooltipDialog via custom class 'dijitTooltipDialogMenu'
+- Support for icons in menu items
 - Adding examples for Dropdown Menus using TooltipDialog for Semantic UI and Dijit.
+
+##### 19th Nov 2015
+- CSS fixes and improve visual for the Tab widget
+- Implementation of the Tree widget
 
 ### [1.1] - 2015-08-31
 #### Changed
