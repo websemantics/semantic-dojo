@@ -1,14 +1,73 @@
 <div>
-  <div class="ui container">
 
-  <div data-dojo-id="continentStore" data-dojo-type="dojo/data/ItemFileWriteStore" data-dojo-props='url:"src/app/data/countries.json"'></div>
-  <div data-dojo-id="continentModel" data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-props='store:continentStore, query:{type:"continent"},
-    rootId:"continentRoot", rootLabel:"Continents", childrenAttrs:["children"]'></div>
+<style type="text/css">
+
+
+</style>
+
+
+  <div class="ui container">
 
     <br/><br/><br/>
 
+<!-- TREE 
+
+	  <div data-dojo-id="continentStore" data-dojo-type="dojo/data/ItemFileWriteStore" data-dojo-props='url:"src/app/data/countries.json"'></div>
+	  <div data-dojo-id="continentModel" data-dojo-type="dijit/tree/ForestStoreModel" data-dojo-props='store:continentStore, query:{type:"continent"},
+	    rootId:"continentRoot", rootLabel:"Continents", childrenAttrs:["children"]'></div>
+
     <div id="mytree" data-dojo-type="dijit/Tree" aria-labelledby="mytreeLabel"
      data-dojo-props='model:continentModel'>
-    </div>
 
+
+    <div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton2" data-dojo-props="dropDownPosition: ['below-centered']"><span>menu</span></div>
+
+        <img src="http://semantic-ui.com/images/avatar/small/elliot.jpg" class="ui avatar image author"/> <a href="#"></a>
+
+-->
+
+
+	
+    <div class="user-dropdown-button" data-dojo-type="dijit/form/DropDownButton">
+		<span>
+			<img src="http://semantic-ui.com/images/avatar/small/elliot.jpg" class="ui avatar image author"/> <a href="#"></a>
+		</span>
+		<div class="dropDownTooltip" data-dojo-type="dijit/TooltipDialog" data-dojo-props='style:"width:150px" '>
+			<div role="alert">
+				<div class="ui vertical menu">
+					  <a class="disabled item">
+					    Signed in as <br/><br/><strong>websemantics</strong>
+					  </a>
+					  <a class=" teal item">
+					    Inbox
+					    <div class="ui teal pointing left label">1</div>
+					  </a>
+					  <a class="item">
+					    Spam
+					    <div class="ui label">51</div>
+					  </a>
+					  <a class="item">
+					    Updates
+					    <div class="ui label">1</div>
+					  </a>
+					  <a class="item">
+					    Logout
+					  </a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
   </div>

@@ -6,3 +6,8 @@
 /src/semantic
 /src/util
 /node_modules
+/src/app/temp.js
+/src/app/temp.html
+/src/app/resources/less/temp.less
+/src/app/template/temp.html
+/src/app/widgets/Temp.js
