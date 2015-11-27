@@ -72,6 +72,8 @@ All notable changes to this project will be documented in this section.
 - CSS fixes and improve visual for the Tab widget @ 19th Nov 2015
 - Implementation of the Tree widget @ 19th Nov 2015
 - Semantic UI / dijit menus with dijitTooltipDialog via custom class 'dijitTooltipDialogMenu' @ 27th Nov 2015
+- Support for icons in menu items 
+- Adding examples for Dropdown Menus using TooltipDialog for Semantic UI and Dijit.
 
 ### [1.1] - 2015-08-31
 #### Changed
@@ -101,7 +103,7 @@ All notable changes to this project will be documented in this section.
 
 ## Credits
 
-Few of this themes elements have been a port from [Dojo Flat Theme](https://github.com/Esri/dojo-theme-flat) with adjucements for the Semantic Ui generic styles and user experince. 
+Few of this themes elements have been a port from [Dojo Flat Theme](https://github.com/Esri/dojo-theme-flat) with adjucements for the Semantic UI generic styles and user experince. 
 
 ## Open Source Projects Used
 
