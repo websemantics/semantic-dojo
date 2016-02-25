@@ -4,10 +4,9 @@
 \___ \ / _ \ '_ ` _ \ / _` | '_ \| __| |/ __| | | | |/ _ \| |/ _ \ 
  ___) |  __/ | | | | | (_| | | | | |_| | (__  | |_| | (_) | | (_) |
 |____/ \___|_| |_| |_|\__,_|_| |_|\__|_|\___| |____/ \___// |\___/ 
- Web Semantics, Inc.                                    |__/       
-
- Version 1.1
+                                                        |__/  v1.1      
 ```
+> Last update:  27 Nov 2015
 
 A responsive Dojo theme that harnesses the style awesomeness of [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets, for modern Web apps.
 
