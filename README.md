@@ -25,22 +25,12 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 git clone https://github.com/websemantics/semantic-dojo
 ```
 
-- Install dependencies
+- Install
 ```
-bower install
+./install.sh
 ```
 
-- Create file `src/semantic/src/theme.config` with the following content:
-
-		/* Use a common Config file with Semantic UI and Dijit Themes. */
-
-		@targetFolder : @semanticUiFolder;
-
-		@import "../../../less/theme.config";
-
-		/* End Config */
-
-- Browse to `semantic-dojo/index.html`
+- Browse to `semantic-dojo/index.html` or `semantic-dojo/src/app/index.html`
 
 ## Guide
 

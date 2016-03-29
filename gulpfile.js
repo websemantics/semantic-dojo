@@ -38,7 +38,7 @@ var
 
       console.info('Building Semantic-Dojo');
 
-      gulp.src(["src/semantic-dojo-less/less/semantic-dojo.less"])
+      gulp.src(["src/semantic-dojo-styles/less/semantic-dojo.less"])
         .pipe(less())
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist'));
