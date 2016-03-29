@@ -18,19 +18,46 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 ------
 ![Screenshot](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/screenshot.png "Screenshot")
 
-## Installation
+## Install
 
 * Clone locally
 ```
 git clone https://github.com/websemantics/semantic-dojo
 ```
 
-- Install
+- Run install script
 ```
 ./install.sh
 ```
 
 - Browse to `semantic-dojo/index.html` or `semantic-dojo/src/app/index.html`
+
+## Build
+
+#### Build Semantic-Dojo
+
+To build Semantic-Dojo theme:
+
+- Install Node.js packages
+```
+npm install
+```
+
+- Run gulp in main folder: `gulp`
+```
+gulp
+```
+
+This will generate the master Semantic Dojo styles at `dist/semantic-dojo.css`.
+
+Assets are located in `dist/themes/default/assets`
+
+#### Build App
+To build the demo app run,
+
+```
+./build.sh
+```
 
 ## Guide
 
@@ -39,19 +66,6 @@ git clone https://github.com/websemantics/semantic-dojo
 [Semantic Dojo](https://github.com/websemantics/semantic-dojo) brings these awesome features to Dojo Toolkit, allowing those who love DTK to build modern Web apps.
 
 To test different themes for the supported widgets, go to 'less/theme.config' and change the Button theme for example from 'default' to 'raised': `@button     : 'raised';`, refresh and enjoy!
-
-## Build
-
-To build Semantic-Dojo do the following:
-
-- Install Nodejs required packages: `npm install`
-- Run gulp in main folder: `gulp`
-
-This will generate the master Semantic Dojo styles at `dist/semantic-dojo.css`. Assets are located in `dist/themes/default/assets`
-
-To build the demo app, run build.sh
-
-`./build.sh`
 
 This will build the dojo app to `dist/app` folder, and also run `gulp` for Semantic Dojo.
 
