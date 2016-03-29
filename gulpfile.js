@@ -16,7 +16,7 @@ var
   Config
   *******************************/
 
-  try { 
+  try {
     config = requireDotFile('config.json');
   }
   catch(error) {
@@ -38,7 +38,7 @@ var
 
       console.info('Building Semantic-Dojo');
 
-      gulp.src(['less/semantic-dojo.less'])
+      gulp.src(["src/semantic-dojo-less/less/semantic-dojo.less"])
         .pipe(less())
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist'));
