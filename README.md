@@ -20,8 +20,16 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 
 ## Installation
 
-- Clone locally, `git clone https://github.com/websemantics/semantic-dojo`
-- Install dependencies, `bower install`
+* Clone locally
+```
+git clone https://github.com/websemantics/semantic-dojo
+```
+
+- Install dependencies
+```
+bower install
+```
+
 - Create file `src/semantic/src/theme.config` with the following content:
 
 		/* Use a common Config file with Semantic UI and Dijit Themes. */
