@@ -1,12 +1,12 @@
 ```
  ____                             _   _        ____        _       
 / ___|  ___ _ __ ___   __ _ _ __ | |_(_) ___  |  _ \  ___ (_) ___  
-\___ \ / _ \ '_ ` _ \ / _` | '_ \| __| |/ __| | | | |/ _ \| |/ _ \ 
+\___ \ / _ \ '_ ` _ \ / _` | '_ \| __| |/ __| | | | |/ _ \| |/ _ \
  ___) |  __/ | | | | | (_| | | | | |_| | (__  | |_| | (_) | | (_) |
-|____/ \___|_| |_| |_|\__,_|_| |_|\__|_|\___| |____/ \___// |\___/ 
+|____/ \___|_| |_| |_|\__,_|_| |_|\__|_|\___| |____/ \___// |\___/
                                                         |__/  v1.1      
 ```
-> Last update:  27 Nov 2015
+> Last update:  29 March 2016
 
 A responsive Dojo theme that harnesses the style awesomeness of [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets, for modern Web apps.
 
@@ -25,18 +25,18 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 - Create file `src/semantic/src/theme.config` with the following content:
 
 		/* Use a common Config file with Semantic UI and Dijit Themes. */
-	
-		@targetFolder : @semanticUiFolder; 
-		
+
+		@targetFolder : @semanticUiFolder;
+
 		@import "../../../less/theme.config";
-		
+
 		/* End Config */
 
 - Browse to `semantic-dojo/index.html`
 
 ## Guide
 
-[Semantic UI](http://semantic-ui.com/) is an awesome CSS framework that provides a wide range of UI components. A powerful feature of Semantic UI is the ability to build various themes to each of its compoenents. For example, the Button widget comes with a varity of themes for example, flat default, basic, github, raised and many more. 
+[Semantic UI](http://semantic-ui.com/) is an awesome CSS framework that provides a wide range of UI components. A powerful feature of Semantic UI is the ability to build various themes to each of its compoenents. For example, the Button widget comes with a varity of themes for example, flat default, basic, github, raised and many more.
 
 [Semantic Dojo](https://github.com/websemantics/semantic-dojo) brings these awesome features to Dojo Toolkit, allowing those who love DTK to build modern Web apps.
 
@@ -63,50 +63,13 @@ To contribute to Semantic Dojo, follow the installation steps above then edit:
 - The main dev page, `src/app/dev.html`
 - Semantic Dojo home page, `src/app/index.html`
 
-# Change Log
-All notable changes to this project will be documented in this section.
-
-### [Dev] 
-#### Changes
-
-##### 27th Nov 2015
-- Semantic UI / dijit menus with dijitTooltipDialog via custom class 'dijitTooltipDialogMenu'
-- Icons support for dijitMenu
-- Adding examples for TooltipDialog dropdown menus (Semantic UI and Dijit).
-
-##### 19th Nov 2015
-- CSS fixes and improve visual for the Tab widget
-- Implementation of the Tree widget
-
-### [1.1] - 2015-08-31
-#### Changed
-- Update demo app
-- Optomize build process
-
-### [1.0] - 2015-08-26
-#### Changed
-- Textbox
-- TextArea
-- Select
-- Button
-- Progress Bar
-- Tooltip
-- DialogTooltip
-- Tab
-- Sliders
-- Color Palette
-- RadioButton
-- Checkbox.
-- Use [Bower](http://bower.io/) for dependancies.
-- Merged main project and `gh-pages` into one codebase.
-
 ## Logo
 
 ![Semantic Dojo](https://raw.githubusercontent.com/websemantics/semantic-dojo/master/src/app/resources/img/logo.png "Semantic Dojo")
 
 ## Credits
 
-Few of this themes elements have been a port from [Dojo Flat Theme](https://github.com/Esri/dojo-theme-flat) with adjucements for the Semantic UI generic styles and user experince. 
+Few of this themes elements have been a port from [Dojo Flat Theme](https://github.com/Esri/dojo-theme-flat) with adjucements for the Semantic UI generic styles and user experince.
 
 ## Open Source Projects Used
 

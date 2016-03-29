@@ -1,0 +1,31 @@
+0.2.0
+date: 2016-03-29
+changes:
+- Add CHANGELOG file
+- Move Semantic-Dojo less styles into a sub module
+- Add examples for TooltipDialog dropdown menus (Semantic UI and Dijit).
+- Optimize build process
+
+0.1.1
+  date: 2015-08-31
+  changes:
+  - Update demo app
+  - Optimize build process
+
+0.1.0
+  date: 2015-08-26
+  changes:
+  - Textbox
+  - TextArea
+  - Select
+  - Button
+  - Progress Bar
+  - Tooltip
+  - DialogTooltip
+  - Tab
+  - Sliders
+  - Color Palette
+  - RadioButton
+  - Checkbox.
+  - Use [Bower](http://bower.io/) for dependancies.
+  - Merged main project and `gh-pages` into one codebase.
