@@ -21,6 +21,7 @@
     "util": "dojo-util#*",
     "less": "*",
     "jquery": "*",
-    "semantic" : "*"
+    "semantic" : "*",
+    "semantic-dojo-less" : "*"
   }
 }
