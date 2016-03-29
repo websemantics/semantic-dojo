@@ -1,0 +1,3 @@
+[submodule "semantic-dojo-less"]
+	path = semantic-dojo-less
+	url = https://github.com/websemantics/semantic-dojo-less
