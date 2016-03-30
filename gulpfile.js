@@ -9,6 +9,7 @@ var
   chmod           = require('gulp-chmod'),
   requireDotFile  = require('require-dot-file'),
   minifyCSS       = require('gulp-minify-css'),
+  replace         = require('gulp-replace'),
   config;
 
 
@@ -40,6 +41,7 @@ var
 
       gulp.src(["src/semantic-dojo-styles/less/semantic-dojo.less"])
         .pipe(less())
+        .pipe(replace(config.paths.source.themes, config.paths.output.themes))
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist'));
 
