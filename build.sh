@@ -39,7 +39,7 @@ if [ -d "$NODE" ]; then
     rm -rf "$NODE"
 fi
 
-npm install
+sudo npm install
 
 if [ -d "$DISTDIR" ]; then
     printf '%s\n' "Removing old distribution folder ($DISTDIR)"
