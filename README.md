@@ -8,6 +8,8 @@
 ```
 > Last update:  30 March 2016
 
+[![Build Status](https://travis-ci.org/websemantics/semantic-dojo.svg?branch=master)](https://travis-ci.org/websemantics/semantic-dojo)
+
 A responsive Dojo theme that harnesses the style awesomeness of [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets, for modern Web apps.
 
 A new method of building Dijit Themes following the Semantic UI approach with a similar folder structure throught this project.

@@ -42,7 +42,7 @@ if [ -d "$NODE" ]; then
     rm -rf "$NODE"
 fi
 
-sudo npm install
+npm install
 
 if [ -d "$DISTDIR" ]; then
     printf '%s\n' "Distribution folder ($DISTDIR) already exists, .. removing it to strart afresh"
