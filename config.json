@@ -6,13 +6,15 @@
       "config"      : "../../semantic/src/theme.config",
       "definitions" : "../../semantic/src/definitions/",
       "site"        : "../../semantic/src/site/",
-      "themes"      : "../../semantic/src/themes/"
+      "themes"      : "../../semantic/src/themes/",
+      "assets"      : "../../themes"
     },
     "output": {
-      "packaged"     : "dist/",
-      "uncompressed" : "dist/components/",
-      "compressed"   : "dist/components/",
-      "themes"       : "dist/themes/"
+      "packaged"     : "",
+      "uncompressed" : "components/",
+      "compressed"   : "components/",
+      "themes"       : "themes/",
+      "assets"       : "themes/"
     },
     "clean"        : "dist/"
   },

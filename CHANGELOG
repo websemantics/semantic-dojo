@@ -1,7 +1,8 @@
 0.2.1
 date: 2016-03-30
 changes:
-- Fix issues with font icons in dist
+- Fix issues with font icons in 'dist'
+- Make 'dist' folder self-contained app
 
 0.2.0
 date: 2016-03-29

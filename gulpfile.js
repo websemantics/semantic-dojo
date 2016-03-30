@@ -42,6 +42,7 @@ var
       gulp.src(["src/semantic-dojo-styles/src/semantic-dojo.less"])
         .pipe(less())
         .pipe(replace(config.paths.source.themes, config.paths.output.themes))
+        .pipe(replace(config.paths.source.assets, config.paths.output.assets))
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist'));
 

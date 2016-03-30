@@ -63,6 +63,10 @@ echo "Copy app resources from, '$SRCDIR/app/resources' to, '$DISTDIR'"
 
 cp -r "$SRCDIR/app/resources" "$DISTDIR"
 
+echo "Copy index.html to '$DISTDIR'"
+
+sed "s/dist\///" index.html > "$DISTDIR/index.html"
+
 echo "Run gulp to generate Semantic Dojo styles / css"
 
 gulp
