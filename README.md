@@ -20,44 +20,19 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 
 ## Install
 
-* Clone locally
+This will generate the master Semantic Dojo styles at `dist/semantic-dojo.css`, assets at `dist/themes` and compiled Dojo app at `dist/app`
+
+Clone locally
 ```
 git clone https://github.com/websemantics/semantic-dojo
 ```
 
-- Run install script
-```
-./install.sh
-```
-
-- Browse to `semantic-dojo/index.html` or `semantic-dojo/src/app/index.html`
-
-## Build
-
-#### Build Semantic-Dojo
-
-To build Semantic-Dojo theme:
-
-- Install Node.js packages
-```
-npm install
-```
-
-- Run gulp in main folder: `gulp`
-```
-gulp
-```
-
-This will generate the master Semantic Dojo styles at `dist/semantic-dojo.css`.
-
-Assets are located in `dist/themes/default/assets`
-
-#### Build App
-To build the demo app run,
-
+Run build script
 ```
 ./build.sh
 ```
+
+View `index.html` or `src/app/index.html`
 
 ## Guide
 
@@ -72,6 +47,7 @@ This will build the dojo app to `dist/app` folder, and also run `gulp` for Seman
 ## Development
 
 To contribute to Semantic Dojo, follow the installation steps above then edit:
+
 - The main dev page, `src/app/dev.html`
 - Semantic Dojo home page, `src/app/index.html`
 
@@ -85,6 +61,8 @@ Few of this themes elements have been a port from [Dojo Flat Theme](https://gith
 
 ## Open Source Projects Used
 
+* Semantic Dojo Styles
+https://github.com/websemantics/semantic-dojo-styles
 * Dojo Flat Theme - https://github.com/Esri/dojo-theme-flat
 * Semantic UI - https://github.com/Semantic-Org/Semantic-UI
 * Dojo Boilerplate - https://github.com/csnover/dojo-boilerplate
