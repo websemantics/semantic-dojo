@@ -1,0 +1,5 @@
+script: bash ./deploy.sh
+env:
+  global:
+  - GH_REF: github.com/websemantics/semantic-dojo.git
+  - secure:
