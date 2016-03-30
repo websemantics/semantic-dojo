@@ -4,9 +4,9 @@
 \___ \ / _ \ '_ ` _ \ / _` | '_ \| __| |/ __| | | | |/ _ \| |/ _ \
  ___) |  __/ | | | | | (_| | | | | |_| | (__  | |_| | (_) | | (_) |
 |____/ \___|_| |_| |_|\__,_|_| |_|\__|_|\___| |____/ \___// |\___/
-                                                        |__/  v0.2.0      
+                                                        |__/  v0.2.1      
 ```
-> Last update:  29 March 2016
+> Last update:  30 March 2016
 
 A responsive Dojo theme that harnesses the style awesomeness of [Semantic UI](http://semantic-ui.com/) Framework with [Dojo Toolkit](https://dojotoolkit.org/) powerful UI widgets, for modern Web apps.
 
