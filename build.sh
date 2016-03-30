@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This bash file installs all dependancies and build semantic-dojo css and dojo app
+# This bash file installs all dependancies (bower & npm), build semantic-dojo css and the dojo app
 
 set -e
 
@@ -21,6 +21,10 @@ PROFILE="$BASEDIR/src/profiles/app.profile.js"
 # Node.js modules folder
 NODE="$BASEDIR/node_modules"
 
+echo "------------------------------------------------------------------"
+echo "| Building Semantic Dojo ... "
+echo "------------------------------------------------------------------"
+
 echo "Install Bower dependencies"
 
 bower install
@@ -29,48 +33,48 @@ echo "Create theme config file @ src/semantic/src/theme.config "
 
 echo '/* Use a common Config file with Semantic UI and Dijit Themes. */
 @targetFolder : @semanticUiFolder;
-@import "../../semantic-dojo-styles/less/theme.config";
+@import "../../semantic-dojo-styles/src/theme.config";
 /* End Config */' > src/semantic/src/theme.config
 
 echo "Install Node.js packages"
 
 if [ -d "$NODE" ]; then
-    printf '%s\n' "Removing Node.js pacjages folder ($NODE)"
+    printf '%s\n' "Already exists, .. removing old Node.js pacjages folder ($NODE)"
     rm -rf "$NODE"
 fi
 
 sudo npm install
 
 if [ -d "$DISTDIR" ]; then
-    printf '%s\n' "Removing old distribution folder ($DISTDIR)"
+    printf '%s\n' "Distribution folder ($DISTDIR) already exists, .. removing it to strart afresh"
     rm -rf "$DISTDIR"
 fi
 
 mkdir "$DISTDIR"
 
-echo "Copy theme assets"
+echo "Copy theme assets from, '$SRCDIR/semantic/src/themes' to, '$DISTDIR'"
 
 mkdir "$DISTDIR/themes"
 mkdir "$DISTDIR/themes/default"
 
 cp -r "$SRCDIR/semantic/src/themes/default/assets" "$DISTDIR/themes/default"
 
-echo "Copy app resources"
+echo "Copy app resources from, '$SRCDIR/app/resources' to, '$DISTDIR'"
 
 cp -r "$SRCDIR/app/resources" "$DISTDIR"
 
-echo "Run gulp"
+echo "Run gulp to generate Semantic Dojo styles / css"
 
 gulp
 
-echo "Configuration over. Main application start up"
+echo "Building Dojo app"
 
 if [ ! -d "$TOOLSDIR" ]; then
 	echo "Can't find Dojo build tools -- did you initialise submodules? (git submodule update --init --recursive)"
 	exit 1
 fi
 
-echo "Building application with $PROFILE to $DISTDIR."
+echo "Building application with '$PROFILE' to '$DISTDIR'"
 
 "$TOOLSDIR/build.sh" --profile "$PROFILE" --releaseDir "$DISTDIR" $@
 
@@ -91,4 +95,4 @@ cd "$DISTDIR/app/dojo"
 shopt -s extglob
 rm -R !(dojo.js|nls|resources)
 
-echo "Build complete"
+echo "Build complete, enjoy!"

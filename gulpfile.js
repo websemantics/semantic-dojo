@@ -39,7 +39,7 @@ var
 
       console.info('Building Semantic-Dojo');
 
-      gulp.src(["src/semantic-dojo-styles/less/semantic-dojo.less"])
+      gulp.src(["src/semantic-dojo-styles/src/semantic-dojo.less"])
         .pipe(less())
         .pipe(replace(config.paths.source.themes, config.paths.output.themes))
         .pipe(minifyCSS())

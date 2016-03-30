@@ -3,10 +3,10 @@
 
   "paths": {
     "source": {
-      "config"      : "src/semantic/src/theme.config",
-      "definitions" : "src/semantic/src/definitions/",
-      "site"        : "src/semantic/src/site/",
-      "themes"      : "src/semantic/src/themes/"
+      "config"      : "../../semantic/src/theme.config",
+      "definitions" : "../../semantic/src/definitions/",
+      "site"        : "../../semantic/src/site/",
+      "themes"      : "../../semantic/src/themes/"
     },
     "output": {
       "packaged"     : "dist/",
