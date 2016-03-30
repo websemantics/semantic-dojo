@@ -99,6 +99,6 @@ cp -r "$SRCDIR/app/resources" "$DISTDIR/src/app"
 
 echo "Copy index.html to '$DISTDIR'"
 
-sed "s/dist\///" index.html > "$DISTDIR/index.html"
+sed "s/dist\///" "$BASEDIR/index.html" > "$DISTDIR/index.html"
 
 echo "Build complete, enjoy!"
