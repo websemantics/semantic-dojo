@@ -1,8 +1,13 @@
+0.2.1
+date: 2016-03-29
+changes:
+- Greatly improve build script
+
 0.2.0
 date: 2016-03-29
 changes:
 - Add CHANGELOG file
-- Move Semantic-Dojo less styles into a sub module
+- Move Semantic-Dojo less styles into a bower package
 - Add examples for TooltipDialog dropdown menus (Semantic UI and Dijit).
 - Optimize build process
 
