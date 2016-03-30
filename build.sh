@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # This bash file installs all dependancies (bower & npm), build semantic-dojo css and the dojo app
-
 set -e
 
 # Base directory for this entire project
