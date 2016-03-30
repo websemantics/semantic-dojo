@@ -20,7 +20,7 @@ Try [live demo](http://websemantics.github.io/semantic-dojo).
 
 ## Install
 
-This will generate the master Semantic Dojo styles at `dist/semantic-dojo.css`, assets at `dist/themes` and compiled Dojo app at `dist/app`
+This will generate the master Semantic Dojo styles at `dist/semantic-dojo.css`, assets at `dist/themes` and compiled Dojo app at `dist/src/app`
 
 Clone locally
 ```
