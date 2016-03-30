@@ -1,3 +1,8 @@
+0.2.1
+date: 2016-03-30
+changes:
+- Fix issues with font icons in dist
+
 0.2.0
 date: 2016-03-29
 changes:
