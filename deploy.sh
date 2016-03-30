@@ -16,12 +16,12 @@ cd "$DISTDIR"
 git init
 
 # Set user details
-git config user.name "Ibuild CI"
-git config user.email "ibuild@ibuild.io"
+git config user.name "${USER_NAME}"
+git config user.email "${USER_EMAIL}"
 
 # First commit, .. horray!
 git add .
 git commit -m "Deploy to gh-pages"
 
 # Force push ...
-# git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
+git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
