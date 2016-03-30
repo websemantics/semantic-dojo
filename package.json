@@ -13,9 +13,6 @@
   "bugs": {
     "url": "https://github.com/websemantics/semantic-dojo.git/issues"
   },
-  "scripts": {
-    "install": "gulp install"
-  },
   "peerDependencies": {
     "better-console": "*",
     "del": "*",
