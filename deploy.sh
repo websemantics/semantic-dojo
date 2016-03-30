@@ -9,7 +9,7 @@ BASEDIR=$(cd $(dirname $0) && pwd)
 DISTDIR="$BASEDIR/dist"
 
 # run the build script
-# ./build.sh
+./build.sh
 
 # Create a new Git repo in dist folder
 cd "$DISTDIR"
