@@ -93,9 +93,10 @@ mkdir "$DISTDIR/themes/default"
 
 cp -r "$SRCDIR/semantic/src/themes/default/assets" "$DISTDIR/themes/default"
 
-echo "Copy app resources from, '$SRCDIR/app/resources' to, '$DISTDIR/src/app'"
+echo "Copy app resources & data from, '$SRCDIR/app' to, '$DISTDIR/src/app'"
 
 cp -r "$SRCDIR/app/resources" "$DISTDIR/src/app"
+cp -r "$SRCDIR/app/data" "$DISTDIR/src/app"
 
 echo "Copy index.html to '$DISTDIR'"
 
