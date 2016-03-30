@@ -52,37 +52,24 @@ fi
 
 mkdir "$DISTDIR"
 
-echo "Copy theme assets from, '$SRCDIR/semantic/src/themes' to, '$DISTDIR'"
-
-mkdir "$DISTDIR/themes"
-mkdir "$DISTDIR/themes/default"
-
-cp -r "$SRCDIR/semantic/src/themes/default/assets" "$DISTDIR/themes/default"
-
-echo "Copy app resources from, '$SRCDIR/app/resources' to, '$DISTDIR'"
-
-cp -r "$SRCDIR/app/resources" "$DISTDIR"
-
-echo "Copy index.html to '$DISTDIR'"
-
-sed "s/dist\///" index.html > "$DISTDIR/index.html"
-
 echo "Run gulp to generate Semantic Dojo styles / css"
 
 gulp
 
-echo "Building Dojo app"
+echo "------------------------------------------------------------------"
+echo "| Building Dojo App... "
+echo "------------------------------------------------------------------"
 
 if [ ! -d "$TOOLSDIR" ]; then
 	echo "Can't find Dojo build tools -- did you initialise submodules? (git submodule update --init --recursive)"
 	exit 1
 fi
 
-echo "Building application with '$PROFILE' to '$DISTDIR'"
+echo "Building application with '$PROFILE' to '$DISTDIR/src'"
 
-"$TOOLSDIR/build.sh" --profile "$PROFILE" --releaseDir "$DISTDIR" $@
+"$TOOLSDIR/build.sh" --profile "$PROFILE" --releaseDir "$DISTDIR/src" $@
 
-cd "$DISTDIR/app"
+cd "$DISTDIR/src/app"
 
 echo "Cleaning unused code"
 
@@ -95,8 +82,23 @@ rm -R app
 rm -R dijit
 rm -R dojox
 
-cd "$DISTDIR/app/dojo"
+cd "$DISTDIR/src/app/dojo"
 shopt -s extglob
 rm -R !(dojo.js|nls|resources)
+
+echo "Copy theme assets from, '$SRCDIR/semantic/src/themes' to, '$DISTDIR'"
+
+mkdir "$DISTDIR/themes"
+mkdir "$DISTDIR/themes/default"
+
+cp -r "$SRCDIR/semantic/src/themes/default/assets" "$DISTDIR/themes/default"
+
+echo "Copy app resources from, '$SRCDIR/app/resources' to, '$DISTDIR/src/app'"
+
+cp -r "$SRCDIR/app/resources" "$DISTDIR/src/app"
+
+echo "Copy index.html to '$DISTDIR'"
+
+sed "s/dist\///" index.html > "$DISTDIR/index.html"
 
 echo "Build complete, enjoy!"
