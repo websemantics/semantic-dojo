@@ -3,6 +3,8 @@ date: 2016-03-30
 changes:
 - Fix issues with font icons in 'dist'
 - Make 'dist' folder self-contained app
+- Add deploy script to 'gh-pages'
+- Add Travis-CI support
 
 0.2.0
 date: 2016-03-29
