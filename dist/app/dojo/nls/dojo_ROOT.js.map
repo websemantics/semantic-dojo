@@ -1,8 +1,0 @@
-{
-"version":3,
-"file":"dojo_ROOT.js",
-"lineCount":12,
-"mappings":"A;AAAAA,MAAA,uBACA,yBADA,sQACqV,OADrV,gDAC8Z,OAD9Z,KAGA,sBAHA,yBAGiD,6CAHjD;uEAGiM,iDAHjM,aAG+P,qBAH/P,QAG4R,6CAH5R,iCAGyW,gDAHzW,aAGsa,8CAHta,mGAGgjB,oBAHhjB;AAGsnB,8CAHtnB,yEAG0vB,OAH1vB,kBAGyxB,OAHzxB,gDAGk2B,OAHl2B,2CAGo6B,SAHp6B,GAGg7B,OAHh7B,GAG07B,OAH17B,KAKA,mBALA,iMAKwQ,OALxQ;6CAKiV,OALjV,KAOA,kBAPA,yMAOmR,OAPnR,gDAO4V,OAP5V,KASA,iBATA;;;;;;;+OASuvH,OATvvH,gDASg0H,OATh0H;",
-"sources":["dojo_ROOT.js.uncompressed.js"],
-"names":["define"]
-}

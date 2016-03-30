@@ -1,8 +1,0 @@
-{
-"version":3,
-"file":"dojo_en.js",
-"lineCount":10,
-"mappings":"A;AAAAA,MAAA,qBACA,yBADA,sJAGA,sBAHA,yBAGiD,6CAHjD,mGAGiM,iDAHjM,aAG+P,qBAH/P,QAG4R,6CAH5R;uBAGyW,gDAHzW,aAGsa,8CAHta,8GAG2jB,oBAH3jB,sDAGyoB,8CAHzoB,sCAG4tB,OAH5tB,KAKA,mBALA;AAOA,kBAPA,yFASA,iBATA;;;;;;;",
-"sources":["dojo_en.js.uncompressed.js"],
-"names":["define"]
-}

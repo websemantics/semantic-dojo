@@ -1,8 +1,0 @@
-{
-"version":3,
-"file":"dojo_fi-fi.js",
-"lineCount":12,
-"mappings":"A;AAAAA,MAAA,wBACA,yBADA,kLAGA,sBAHA,yBAGiD,6CAHjD,wGAGiM,iDAHjM,aAG+P,qBAH/P;AAGmS,6CAHnS,0CAGoX,gDAHpX,aAGib,8CAHjb,8GAG4jB,oBAH5jB,uDAG2oB,8CAH3oB,yCAKA,mBALA;+CAOA,kBAPA,8FASA,iBATA;;;;;;;;;",
-"sources":["dojo_fi-fi.js.uncompressed.js"],
-"names":["define"]
-}
