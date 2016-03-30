@@ -16,7 +16,7 @@ cd "$DISTDIR"
 git init
 
 # Set user details
-git config user.name "IBUILD.IO"
+git config user.name "ibuild.io"
 git config user.email "ibuild@ibuild.io"
 
 # First commit, .. horray!

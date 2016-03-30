@@ -1,4 +1,7 @@
 script: bash ./deploy.sh
+before_script:
+  - npm install -g bower
+  - bower install
 env:
   global:
   - GH_REF: github.com/websemantics/semantic-dojo.git
