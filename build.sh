@@ -55,6 +55,10 @@ mkdir "$DISTDIR/themes/default"
 
 cp -r "$SRCDIR/semantic/src/themes/default/assets" "$DISTDIR/themes/default"
 
+echo "Copy app resources"
+
+cp -r "$SRCDIR/app/resources" "$DISTDIR"
+
 echo "Run gulp"
 
 gulp
