@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="">
+	<meta charset="utf-8">
+	<title>Semantic Dojo</title>
+	<link rel="image_src" type="image/jpeg" href="src/app/resources/img/logo.png" />
+	<link rel="icon" type="image/png" href="src/app/resources/img/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="fresources/img/avicon-16x16.png" sizes="16x16" />
+	<link rel="stylesheet" href="src/app/resources/css/app.css">
+  <link rel="stylesheet" type="text/css" href="semantic-dojo.css">
+</head>
+<body class="claro index" id="example">
+	<div id="loading" class="ui active dimmer">
+	  <div class="ui text loader"></div>
+	</div>
+	<script>
+    var dojoConfig = {async: true,isDebug: false,locale: location.search.match(/locale=([\w\-]+)/) ? RegExp.$1 : "en-us"};
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    try {
+      var pageTracker = _gat._getTracker("UA-65742734-1");
+      pageTracker._trackPageview();
+    } catch(err) {}
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.min.js"></script>
+	<script type="text/javascript" src="src/app/dojo/dojo.js"></script>
+	<script type="text/javascript">require([ 'app/app' ]);</script>
+</body>
+</html>

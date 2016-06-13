@@ -1,0 +1,19 @@
+/**
+ * Semantic Dojo Styles
+ *
+ * @author    Adnan M.Sagar, PhD. <adnan@websemantics.ca>
+ * @copyright 2002-2015 Web Semantics, Inc. (http://websemantics.ca)
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT
+ * @link      http://websemantics.ca
+ * @package   websemantics/semantic-dojo
+ */
+
+/*
+  Credits:
+   - https://github.com/Esri/dojo-theme-flat
+   - https://github.com/Semantic-Org/Semantic-UI
+   - http://www.dafont.com/origami-making.font
+ */
+
+@import 'example.css';
+@import 'main.css';
